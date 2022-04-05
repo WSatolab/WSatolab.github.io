@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+ xml:lang="ja">
+	<channel>
+		<title>SatoLaboratoryHomepage</title>
+		<link>http://www.waseda.jp/sem-sato/</link>
+		<description></description>
+		<language>ja</language>
+		<copyright>Copyright (c) 2008, Sato Tetsuya</copyright>
+		<lastBuildDate>Wed, 21 May 2008 02:10:15 +0900</lastBuildDate>
+		<generator>http://www.nishishi.com/soft/rssmaker/</generator>
+		<dc:creator>shunyo</dc:creator>
+		<dc:subject></dc:subject>
+		<sy:updatePeriod>monthly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<!-- ENTRIES -->
+		<item>
+			<title>早稲田大学基幹理工学部機械科学航空学科・機械科学専攻　佐藤研究室｜Home</title>
+			<link>http://www.f.waseda.jp/sato.tetsuya/index.html</link>
+			<guid isPermaLink="true">http://www.f.waseda.jp/sato.tetsuya/index.html</guid>
+			<category>早稲田,理工,佐藤研,航空,佐藤哲也,機械,プリクーラ,インテーク,着霜,基幹理工,エンジン</category>
+			<pubDate>Wed, 21 May 2008 02:04:52 +0900</pubDate>
+			<description><![CDATA[早稲田大学基幹理工学部機械科学航空学科の佐藤研究室です。]]></description>
+		</item>
+		<!-- /ENTRIES -->
+	</channel>
+</rss>

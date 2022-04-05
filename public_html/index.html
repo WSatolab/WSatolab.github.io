@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+	<!--==============================header===================================-->
+	<head>
+		<!--文字コードの指定-->
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+		<!--スマホ画面対応-->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+		<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空宇宙学科／大学院 基幹理工学研究科 機械科学・航空宇宙専攻 佐藤哲也研究室のWebサイトです。">
+		<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
+
+		<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
+
+		<!--IEの互換表示設定の指示-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!--SNS共有用情報の指定　使うときに有効化-->
+		<!--
+		<meta property="og:title" content="佐藤研究室｜早稲田大学 基幹理工学部 機械科学・航空学科" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.waseda.jp/sem-sato/" />
+		<meta property="og:image" content="http://www.waseda.jp/sem-sato/images/top.jpg" />
+		<meta property="og:description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。" />
+		-->
+
+		<!--styleの指定-->
+		<meta http-equiv="default-style" content="default">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="./style.css?20190720" title="default">
+
+
+		<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
+
+		<!--アイコン用画像の指定-->
+		<link rel="shortcut icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
+
+
+		<title>佐藤研究室｜早稲田大学 基幹理工学部 機械科学・航空宇宙学科</title>
+
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-139184956-1');
+		</script>
+	</head>
+
+	<!--==============================body===================================-->
+	<body>
+		<div class="base">
+			<header>
+				<div class="titlebar">
+					<a href="./index.html">
+						<p class="toplogo" align="center">
+							<img src="./image/lablogo.png">
+						</p>
+					</a>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+				<a class="navbar-brand" href="./index.html">
+					<img src="./image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
+					Sato Lab.
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-link active">
+							<a class="nav-link" href="./index.html">
+								Home
+								<span class="sr-only">HOME</span>
+							</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./topics/index.html">Topics</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./research/index.html">Research</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./himico/index.html">HIMICO</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./professor/index.html">Professor</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./member/index.html">Member</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./publications/index.html">Publications</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./events/index.html">Events</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="./access/index.html">Access</a>
+						</li>
+						<!--
+						<li class="nav-link">
+							<a class="nav-link" href="./contact/index.html">Contact</a>
+						</li>
+						-->						
+						<li class="nav-link">
+							<a class="nav-link" href="./Link/index.html">Link</a>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+
+			<div class="punkz" align="bottom"><a href="index.html">[HOME]</a></div>
+
+			<div class="container-fluid basecontainer">
+				<div class="row">
+
+					<!--sidebar-->
+					<div class="sidebar col-md-4 d-none d-md-block">
+						<div class="midashibig">
+							Home
+						</div>
+						<div class="sticky_sidebar">
+							<div class="contents_label">
+								<strong>Contents</strong>
+							</div>
+							<ul class="sidebarNav">
+								<li>
+									<a href=#Notice>お知らせ / Notice</a>
+								</li>
+								<li>
+									<a href=#whatissatolab>佐藤研とは??</a>
+								</li>
+								<li>
+									<a href=#history>更新履歴</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!--本文部分-->
+					<div class="col-md-8 maincontainer home">
+						<h1 id="Notice" class="midashi">
+							お知らせ / Notice
+						</h1>
+						<div class="mainpara">
+							現在、お知らせはありません。
+
+							<ul class="inside_itemize">
+								<!--<li>
+									佐藤研究室 研究室紹介実施いたしました。<br>
+										12月11日に研究室紹介を実施いたしました。<br>
+										たくさんの方に来ていただきありがとうございました。<br>
+										聞きたい事がある方は、sato_kiko2019@yahoo.co.jpまで、ご連絡ください。
+
+								</li> -->
+
+
+							</ul>
+
+						</div>
+
+
+						<h1 id="whatissatolab" class="midashi">
+							佐藤研とは？？
+						</h1>
+						<div class="mainpara">
+
+							<div class="image homeimg">
+								<img src="home/plane161123_01.jpg" alt="極超音速旅客機">
+								<img src="home/plane161130_01.jpg" alt="二段式スペースプレーン">
+							</div>
+							<div class="imgtitle">
+								<p>
+									極超音速旅客機(左)と二段式スペースプレーン(右) &copy;JAXA
+								</p>
+							</div>
+
+							<p>
+								佐藤研究室では、将来の宇宙往還機（スペースプレーン）および極超音速航空機の実現を目指し、JAXAや他大学と共同で、キーテクノロジーのひとつである極超音速予冷ターボエンジンの研究を行っています。このエンジンは、空気予冷却システムの採用により、地上静止状態からマッハ数6までの広範囲において、連続作動できる点が特長です。<br>
+								<br>
+								極超音速機用エンジンは、熱流体力学をはじめとする様々な分野の研究要素が詰まっています。本研究室では将来を見据えて、以下のようなシステム、要素研究を行っています。<br><br>
+							</p>
+
+							<ul class="inside_itemize">
+								<li>エンジンシステムの動的シミュレーション</li>
+								<li>機体とエンジンの干渉に関する研究</li>
+								<li>エアインテーク（空気取り入れ口）のバズに関する研究</li>
+								<li>圧縮機の温度/圧力ディストーションに関する研究</li>
+								<li>燃焼器の数値解析</li>
+								<li>液体水素の流動（気液二相流）に関する研究</li>
+								<li>着霜（固気二相流）に関する研究</li>
+								<li>その他、航空機やエンジンに関連する研究</li>
+							</ul>
+							<br>
+
+
+							<p>
+								近年は、観測ロケットを用いた機体／エンジン統合制御実験（HIMICO: High Mach Integrated Control Experiment）の計画を進めています。 <br>
+								<br>
+							</p>
+							<div class="image">
+								<div class="img_center maxwidth100">
+									<img src="home/Sengine_01.jpg" alt="予冷ターボエンジン（Sエンジン）">
+									<div class="imgtitle">
+										<p>
+											風洞内でマッハ4作動実証中の予冷ターボエンジン　&copy;JAXA
+										</p>
+									</div>
+									<br>
+								</div>
+							</div>
+							<div class="image">
+								<div class="img_center maxwidth100">
+									<img src="home/HIMICO_01.png" alt="HIMICO">
+								</div>
+								<div class="imgtitle">
+									<p>
+										HIMICOシーケンス　&copy;JAXA
+									</p>
+								</div>
+							</div>
+							<br>
+							<br>
+							<p>
+								SATO laboratory mainly conducts R&D of the hypersonic precooled turbojet engine to apply for hypersonic cruisers and spaceplanes in cooperation with JAXA.We are currently involved in preliminary studies such as an engine system unsteady simulation, study of supersonic inlet buzz, study of the cryogenic two phase flow, study of the frost formation on the precooler and CFD analysis of the mixed-flow compressor under the windmill condition or with temperature distorted inflow.Recently, we have proposed a Mach 5 flight experiment of a small scale ramjet vehicle using a sounding rocket called HIMICO: High Mach Integrated Control Experiment.
+							</p>
+						</div>
+
+
+						<h1 id="history" class="midashi">更新履歴
+							<a href="http://feed.goo.ne.jp/grp1/feed.php?id=FDM89bh0r008r00">
+								<img src="image/feed.png" alt="RSS" border="0" height="14" width="14">
+							</a>
+						</h1>
+						<div class="mainpara">
+							<ul id="history" class="inside_itemize">
+								<li>2022年02月14日　Topics更新</li>									
+								<li>2021年08月10日　Topics, Publications更新</li>	
+								<li>2021年04月09日　Topics, Member更新, Accessにお問い合わせフォーム作成</li>	
+								<li>2021年02月08日　Topics更新</li>
+								<li>2020年06月19日　Professor, Member更新</li>
+								<li>2020年04月01日　お知らせ等更新</li>
+								<li>2019年12月11日　お知らせ更新</li>
+								<li>2019年12月09日　お知らせの追加, Topics等更新</li>
+								<li>2019年07月01日　Topics等更新</li>
+								<li>2019年06月01日　Research更新</li>
+								<li>2019年05月01日　Memberなど更新, ホームページ一新</li>
+							  <li>2018年04月05日　Memberなど更新</li>
+							  <li>2016年11月30日　トップページ更新</li>
+							  <li>2016年04月11日　Member更新</li>
+							  <li>2015年04月01日　Member更新</li>
+							  <li>2015年03月27日　研究テーマ更新</li>
+							  <li>2014年02月03日　レイアウト変更、Topics等更新</li>
+							  <li>2013年12月16日　レイアウト変更、Topics等更新</li>
+							  <li>2013年06月17日　レイアウト変更、Topics等更新</li>
+							  <li>2013年04月17日　レイアウト変更、News等更新</li>
+							  <li>2013年03月28日　Memberなど更新</li>
+							  <li>2012年04月19日　Memberなど更新</li>
+							  <li>2011年05月10日　Memberなど更新</li>
+							  <li>2010年10月26日　Researchなど更新，レイアウト変更</li>
+							  <li>2009年05月11日　更新</li>
+							  <li>2009年02月10日　更新</li>
+							  <li>2008年09月11日　People、Researchなどを更新</li>
+							  <li>2008年05月19日　People、Access、Researchなど更新</li>
+							  <li>2007年11月17日　Peopleなど更新</li>
+							  <li>2007年10月初頭　このWebサイトができる</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--footer-->
+			<div class="footer">
+				無断転載を禁止します
+				copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.
+			</div>
+		</div>
+
+
+		<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./bootstrap/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./bootstrap/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

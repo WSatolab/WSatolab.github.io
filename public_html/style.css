@@ -1,0 +1,514 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+/*-----------------リセット------------------------*/
+/*要素のフォントサイズやマージン・パディングをリセットしています*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/*行の高さをフォントサイズと同じにしています*/
+body {
+    line-height:1;
+}
+
+/*新規追加要素のデフォルトはすべてインライン要素になっているので、section要素などをブロック要素へ変更しています*/
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+/*nav要素内ulのマーカー（行頭記号）を表示しないようにしています*/
+ol, ul {
+    list-style: none;
+}
+/*引用符の表示が出ないようにしています*/
+blockquote, q {
+    quotes:none;
+}
+
+/*blockquote要素、q要素の前後にコンテンツを追加しないように指定しています*/
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+/*a要素のフォントサイズなどをリセットしフォントの縦方向の揃え位置を親要素のベースラインに揃えるようにしています*/
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* ins要素のデフォルトをセットし、色を変える場合はここで変更できるようにしています */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* mark要素のデフォルトをセットし、色やフォントスタイルを変える場合はここで変更できるようにしています
+また、mark要素とは、文書内の検索結果で該当するフレーズをハイライトして、目立たせる際に使用するようです。*/
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+/*テキストに打ち消し線が付くようにしています*/
+del {
+    text-decoration: line-through;
+}
+
+/*IEではデフォルトで点線を下線表示する設定ではないので、下線がつくようにしています
+また、マウスオーバー時にヘルプカーソルの表示が出るようにしています*/
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+/*隣接するセルのボーダーを重ねて表示し、間隔を0に指定しています*/
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/*水平罫線のデフォルトである立体的な罫線を見えなくしています*/
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+/*縦方向の揃え位置を中央揃えに指定しています*/
+input, select {
+    vertical-align:middle;
+}
+/*画像を縦に並べたときに余白が出てしまわないように*/
+img {
+　　　vertical-align: top;
+　　　font-size:0;
+　　　line-height: 0;
+}
+
+@font-face { font-family: "Huiji" ;
+	src: url("./fonts/HuiFont29.woff") format("woff") , url("./fonts/HuiFont29.eot") format("eot") , url("./fonts/HuiFont29.ttf") format("ttf") ; }
+/*-----------------------------独自の初期化----------------------------------*/
+*{
+	padding:0;
+	margin:0;
+	font-family: Verdana,"メイリオ","Meiryo" ,arial, helvetica, geneva, sans-serif,"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+	html{
+		font-size: calc(80% + 0.5vmin );
+		line-height: 1.2em;
+	}
+}
+@media screen and (min-width: 900px) {
+	html{
+		font-size: 16px;
+		line-height: 1.2em;
+	}
+}
+
+
+p{
+	padding:0;
+	margin:0;
+	font-family: Verdana,"メイリオ","Meiryo" ,arial, helvetica, geneva, sans-serif,"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+}
+ul{
+	padding:0;
+	margin:0;
+	font-family: Verdana,"メイリオ","Meiryo" ,arial, helvetica, geneva, sans-serif,"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+}
+
+/*リンク部の色　初期*/
+a:link {
+	color:#59B3FB;
+}
+/*リンク部の色　一度開いたリンク*/
+a:visited {
+	color:#0b39b9;
+}
+/*リンク部の色　マウスオーバー時*/
+a:hover {
+	color:#072474;
+	text-decoration:none;
+}
+/*リンク部の色　クリック時*/
+a:active {
+	color:#072474;
+	text-decoration:none;
+}
+/*--------------------------ページ全体の設定---------------------------*/
+.base{
+	margin: 0;
+	min-height: 100vh;
+	width: 100vw
+}
+/*---------------------------title bar-------------------------------*/
+header{
+	background:url(./image/headerback3.jpg);
+	background-size: 100% 100%;
+}
+
+.toplogo img{
+	padding-top: 2rem;
+	max-width: 90%;
+	max-height: 10rem;
+}
+
+/*---------------------------footer-------------------------------*/
+.footer{
+	width: 100%;
+	font-size: 0.8em;
+	font-size: 0.8rem;
+	color: #ffffff;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	background-color: #303030;
+	padding:4px 0;
+	z-index:100;
+}
+
+/*--------------------------一番上の帯 upper line---------------------------*/
+.punkz{
+	background-color:#ffffff;
+	margin: 3px;
+	height:1.2em;
+	font-size:1rem;
+	color:#303030;
+}
+.punkz a:hover {
+	color: #ffffff;
+	background-color:#072474;
+	text-decoration:none;
+}
+/*リンク部の色　クリック時*/
+.punkz a:active{
+	color: rgb(250, 255, 0);
+	background-color:#072474;
+	text-decoration:none;
+}
+
+/*Navigation bar*/
+.navbar-brand{
+	width:10rem
+}
+#navbarNav{
+	max-width: calc(100%-15rem);
+}
+ul.navbar-nav li.active { /* 修正 */
+  color: #ffffff;
+  border-bottom: 4px solid #d08047;
+}
+
+/*-----------------------------side bar------------------------------------*/
+.sidebar{
+	min-height: 80vh;
+	max-width: 18rem;
+	/*background: linear-gradient(180deg,rgba(0, 210, 44, 0.98),rgba(50, 218, 255, 0.5));*/
+	background: url(image/chalkboard-green-pattern-01.jpg);
+	background-size: cover;
+	background-repeat: repeat-y;
+}
+
+.sidebarNav{
+	list-style: none;
+	padding: 0.3rem 0.3rem;
+}
+
+.sidebarNav li a{
+	display: block;
+	padding: 0.3rem 0.3rem;
+	margin-right: 10px;
+	line-height: 1.8rem;
+	font-size:1.4em;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #ffffff;
+	border-bottom: 3px solid rgb(224, 122, 2);
+	font-family: Huiji,Verdana,"メイリオ","Meiryo" ,arial, helvetica, geneva, sans-serif,"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+}
+.sidebarNav li a:hover {
+	background: #EEE;
+	color: #ff0000;
+}
+
+.sticky_sidebar{
+	position: -webkit-sticky; /* Safari用 */
+	position:sticky; /* 要素をスクロールに応じて固定 */
+	top:80px; /* 縦スクロールに追従 */
+	z-index: 100; /* z-indexで最前面に持ってくる */
+}
+
+/*大見出し*/
+.midashibig {
+	text-align: center;
+	font-size:1.5em;
+	font-size: 1.5rem;
+	margin-top: 0.3em;
+	margin-bottom: 1em;
+  padding: 0.6rem 0.5rem;
+  text-decoration: none;
+  background: #f7f7f7;
+  border-left: solid 6px #ff7c5c;/*左線*/
+  color: #ff7c5c;/*文字色*/
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+.contents_label{
+	padding-left: 0.35rem;
+	text-align: left;
+	font-size:1.5em;
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+	color: #ffffff;
+}
+/*-----------------------------本文部分------------------------------------*/
+.row{
+	width: 100%
+}
+
+.basecontainer {
+	min-height: 80vh;
+}
+.maincontainer{
+	min-height: 80vh;
+	padding: 0 0.5rem;
+	border-left: solid;
+	border-right: none;
+	border-color: #004494;
+	border-width: thick;
+}
+.mainpara{
+	padding-top: 1rem;
+	padding-bottom: 1.5rem;
+	line-height: 1.2rem;
+}
+
+.padding10{
+	padding: 0 1rem;
+}
+/*見出し部分*/
+.midashi{
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	border-top: none;
+	border-bottom: solid;
+	border-color: #004494;
+	border-width: thick;
+}
+
+h1.midashi{
+	margin-top: -90px;
+	padding-top: 90px;
+}
+
+/*画像関係*/
+.image {
+	padding: 0.3rem;
+}
+
+.img_center{
+	display: block;
+	text-align: center;
+}
+
+.imgtitle{
+	font-size: 0.9rem;
+	padding: 0.4rem 0px;
+	text-align: center;
+}
+
+.homeimg{
+	text-align: center;
+	width: 100%;
+}
+.homeimg img{
+	max-width: 45%;
+}
+.maxwidth100 img{
+	max-width: 100%;
+}
+
+.imgwidth80 img{
+	width: 80%;
+}
+
+.home p{
+	padding: 0 1rem;
+}
+
+/*箇条書き部分*/
+.inside_itemize{
+	font-size: 1rem;
+	padding-left: 3rem;
+	list-style: initial;
+}
+
+.inside_itemize p{
+	margin-bottom: 1rem;
+}
+
+.research ul p{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-right: 1rem;
+}
+.research ul li{
+	font-size: 1.2rem;
+}
+
+/*Google map - Access*/
+#gmap{
+	width: 100%;
+	height: 12rem;
+}
+
+/*professor page*/
+.profname{
+	font-size: 1.3rem;
+	line-height:1.5rem;
+	text-align: left;
+}
+.profname strong{
+	font-size: 1.5rem;
+}
+.profname img{
+	width: 40%;
+}
+
+table.tableprof{
+	margin-left: 1rem;
+	width: 85%;
+	font-size: 1rem;
+	table-layout: fixed;
+}
+
+table.tableprof td {
+	/*word-break: break-all;*/
+	overflow-wrap : break-word;
+}
+table.tableprof th{
+	font-weight: normal;
+	width: 6rem;
+}
+
+
+/*Publication page*/
+ol.list_brackets{
+	font-size: 1rem;
+	line-height: 1.2rem;
+  padding:0 0 0 2rem;
+	margin-left: 2rem;
+}
+
+ol.list_brackets li{
+  list-style-type:none;
+  list-style-position:outside;
+  counter-increment: cnt;
+	margin-bottom: 1rem;
+}
+ol.list_brackets li:before{
+  display: marker;
+  content: "[" counter(cnt) "] ";
+	margin-left:-2rem;
+  width: 2rem;
+}
+
+h1.seminar1{
+	font-size: 1.1rem;
+	padding-left: 0.5em;
+}
+p.seminar1{
+	margin: 0.5em;
+	padding: 0 1em;
+}
+
+/*Topics page*/
+.topicspad{
+	padding: 0.5rem 0;
+}
+
+/*Member page*/
+.block {
+	margin 0.5rem;
+  padding: 20px 0px;
+  background: #fff;
+  border: 4px #591f0a solid;
+  position: relative;
+  z-index: 10;
+}
+
+.block:before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    margin: 3px;
+    border: 2px #672e1a solid;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: -10;
+}
+.poeple img{
+	border-radius: 0.5rem;
+	width: 100%;
+	max-width: 8rem;
+}
+.poeple{
+	margin: 0.5em;
+	margin-right: 0;
+	width: 100%;
+	vertical-align: middle;
+	align-items: center;
+}
+
+.memproperty{
+	padding-left: 0;
+	vertical-align: middle;
+	line-height: 1.5rem;
+	padding-top:0.5rem;
+}
+
+.memname {
+	font-size: 1.2rem;
+	text-decoration: none;
+}

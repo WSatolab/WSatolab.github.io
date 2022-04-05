@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+	<!--==============================header===================================-->
+	<head>
+		<!--文字コードの指定-->
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+		<!--スマホ画面対応-->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+		<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空宇宙学科／大学院 基幹理工学研究科 機械科学・航空宇宙専攻 佐藤哲也研究室のWebサイトです。">
+		<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
+
+		<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
+
+		<!--IEの互換表示設定の指示-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!--SNS共有用情報の指定　使うときに有効化-->
+		<!--
+		<meta property="og:title" content="佐藤研究室｜早稲田大学 基幹理工学部 機械科学・航空学科" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.waseda.jp/sem-sato/" />
+		<meta property="og:image" content="http://www.waseda.jp/sem-sato/images/top.jpg" />
+		<meta property="og:description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。" />
+		-->
+
+		<!--styleの指定-->
+		<meta http-equiv="default-style" content="default">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="../../style.css?20190720" title="default">
+
+		<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
+
+		<!--アイコン用画像の指定-->
+		<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon">
+
+		<title>Topics｜早稲田大学 基幹理工学部 佐藤研究室</title>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-139184956-1');
+		</script>
+	</head>
+
+	<!--==============================body===================================-->
+	<body>
+		<div class="base">
+			<header>
+				<div class="titlebar">
+					<a href="../../index.html">
+						<p class="toplogo" align="center"><img src="../../image/lablogo.png"></p>
+					</a>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+				<a class="navbar-brand" href="../../index.html">
+					<img src="../../image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
+					Sato Lab.
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-link">
+							<a class="nav-link" href="../../index.html">Home</a>
+						</li>
+						<li class="nav-link active">
+							<a class="nav-link" href="../../topics/index.html">
+								Topics
+								<span class="sr-only">Topics</span>
+							</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../research/index.html">Research</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../himico/index.html">HIMICO</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../professor/index.html">Professor</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../member/index.html">Member</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../publications/index.html">Publications</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../events/index.html">Events</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../access/index.html">Access</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../../Link/index.html">Link</a>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+
+			<div class="punkz" align="bottom">
+				<a href="../../index.html">[HOME]</a>>[Topics]
+			</div>
+
+			<div class="container-fluid basecontainer">
+				<div div class="row">
+
+					<!--サイドバー部分-->
+					<div class="sidebar col-md-4 d-none d-md-block">
+						<div class="midashibig">
+							Topics
+						</div>
+						<div class="sticky_sidebar">
+							<div class="contents_label">
+								<strong>Contents</strong>
+							</div>
+							<ul class="sidebarNav">
+								<li>
+									<a href=#topics2020>2020年度</a>
+								</li>								
+								<li>
+									<a href=#topics2019>2019年度</a>
+								</li>
+								<li>
+									<a href=#topics2018>2018年度</a>
+								</li>
+								<li>
+									<a href=#topics2017>2017年度</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!--本文部分-->
+					<div class="col-md-8 maincontainer">
+<!--    TEMPLATE
+						<h1 id="topics《年度》" class="midashi">
+							〇〇年度
+						</h1>
+						<div class="mainpara">
+							<ul class="inside_itemize">
+
+							##############################
+							Format
+							<li>
+								《学会名》(〇〇年〇月〇日-〇月〇日)
+							</li>
+							<div class="row topicspad">
+								<div class="col-lg-5">
+									《場所》で開催された《学会名》にて《参加者名》が講演を行いました.
+								</div>
+								<div class="col-lg-6">
+									<div class="image img_center maxwidth100">
+											<img src="./img/2019/《画像のファイル名》">
+										</a>
+									</div>
+								</div>
+							</div>
+							##########################
+
+							</ul>
+						</div>
+-->
+<!-- 20210810更新 -->
+						<h1 id="topics2020" class="midashi">
+							辻村光樹（D1）が早大理工総研アーリーバードプログラム成果報告会プレゼンコンテストで「優秀賞」を受賞
+						</h1>
+						<div class="mainpara">
+							<p>
+								&nbsp;辻村光樹（D1）が2021年3月12日、早稲田大学理工学術院総合研究所（理工総研）が実施する「アーリーバードプログラム」の成果報告会で発表し、プレゼンコンテストで「優秀賞」を受賞しました。<br><br>
+
+								&nbsp;アーリーバードプログラムは、理工系の若手研究員で構成されるメンバーによる自主的な活動として、異分野交流やキャリア形成に向けた活動を実施するプログラムです。メンバーは学内の博士後期課程在籍者および博士学位取得後3年以内の研究員を対象に募集され、2020年度は12名が採択されました。採用期間は1年間で、研究奨励金の支給があります。<br><br>
+
+								&nbsp;成果報告会は、1年間の活動成果を報告するとともに、高校生や大学生を対象としたアウトリーチ活動を行う場で、本年はオンラインで実施されました。メンバーによる研究報告は、5分間の口頭発表形式で実施されました。辻村は「気液二相流の格子・粒子ハイブリッド解析に向けた気液間運動量相互作用モデルの研究」と題した研究のプレゼンテーションを行い、学内審査員、外部審査員、および一般投票の結果、「優秀賞」を受賞しました。<br><br>
+
+								&nbsp;本研究では、液体燃料の噴射や農薬散布、印刷など、幅広い産業領域に出現する液体微粒化を、液体を粒子法、気体を格子法で解くハイブリッド手法でシミュレーションすることを目指しています。本年度は横風中への液体噴射や、消防飛行艇からの放水を解き、既往の実験研究との比較を行いました。本シミュレーション手法の研究開発により、液体挙動を簡便に予測することが可能となり、機械設計の効率化に貢献すると期待されます。<br><br>
+
+								&nbsp;成果報告会では、一人5分の研究報告（プレゼンコンテスト）のほか、「はやぶさ2」の誘導制御を担当したJAXA宇宙科学研究所の照井冬人氏の招待講演、アーリーバードメンバーによるパネルディスカッションも実施されました。アーリーバードプログラムおよび成果報告会につきましては、下記のウェブサイトもあわせてご覧ください。<br><br>
+
+								<a href="https://www.waseda.jp/fsci/wise/earlybird/faculty/">https://www.waseda.jp/fsci/wise/earlybird/faculty/
+								</a>
+							</p> <br>
+							
+							<div class="image img_center maxwidth100">
+								<img src="./img/hybrid_method.png"> <img src="./img/flying_boat_for_firefighting.png">
+								<div class="imgtitle">
+									格子・粒子ハイブリッド手法（左）による消防飛行艇からの放水計算（右）
+								</div>
+								<br>
+							</div>									
+							<div class="image img_center maxwidth100">
+								<img src="./img/tsujimura_with_trophy.jpg">
+							
+								<div class="imgtitle">
+									記念品のトロフィーを手にする辻村（左）
+								</div>
+								<br>
+							</div>									
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--footer-->
+			<footer class="footer container-fluid">
+				無断転載を禁止します
+				copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
+			</footer>
+		</div>
+
+
+		<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../bootstrap/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../bootstrap/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

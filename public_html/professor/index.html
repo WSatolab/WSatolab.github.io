@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+	<!--==============================header===================================-->
+	<head>
+		<!--文字コードの指定-->
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+		<!--スマホ画面対応-->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+		<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空宇宙学科／大学院 基幹理工学研究科 機械科学・航空宇宙専攻 佐藤哲也研究室のWebサイトです。">
+		<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
+
+		<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
+
+		<!--IEの互換表示設定の指示-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!--SNS共有用情報の指定　使うときに有効化-->
+		<!--
+		<meta property="og:title" content="佐藤研究室｜早稲田大学 基幹理工学部 機械科学・航空学科" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.waseda.jp/sem-sato/" />
+		<meta property="og:image" content="http://www.waseda.jp/sem-sato/images/top.jpg" />
+		<meta property="og:description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。" />
+		-->
+
+		<!--styleの指定-->
+		<meta http-equiv="default-style" content="default">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="../style.css?20190720" title="default">
+
+		<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
+
+		<!--アイコン用画像の指定-->
+		<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+
+		<title>Professor｜早稲田大学 基幹理工学部 佐藤研究室</title>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-139184956-1');
+		</script>
+	</head>
+
+	<!--==============================body===================================-->
+	<body>
+		<div class="base">
+			<header>
+				<div class="titlebar">
+					<a href="../index.html">
+						<p class="toplogo" align="center"><img src="../image/lablogo.png"></p>
+					</a>
+				</div>
+			</header>
+
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+				<a class="navbar-brand" href="../index.html">
+					<img src="../image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
+					Sato Lab.
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-link">
+							<a class="nav-link" href="../index.html">Home</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../topics/index.html">Topics</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../research/index.html">Research</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../himico/index.html">HIMICO</a>
+						</li>
+						<li class="nav-link active">
+							<a class="nav-link" href="../professor/index.html">Professor</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../member/index.html">Member</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../publications/index.html">Publications</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../events/index.html">Events</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../access/index.html">Access</a>
+						</li>
+						<li class="nav-link">
+							<a class="nav-link" href="../Link/index.html">
+								Link
+								<span class="sr-only">HOME</span>
+							</a>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+
+			<div class="punkz" align="bottom">
+				<a href="../index.html">[HOME]</a>>[Professor]
+			</div>
+
+			<div class="container-fluid basecontainer">
+				<div class="row">
+
+					<!--サイドバー部分-->
+					<div class="sidebar col-md-4 d-none d-md-block">
+						<div class="midashibig">
+							Professor
+						</div>
+						<div class="sticky_sidebar">
+							<div class="contents_label">
+								<strong>Contents</strong>
+							</div>
+							<ul class="sidebarNav">
+								<li>
+									<a href=#incubment>現職</a>
+								</li>
+								<li>
+									<a href=#biography>略歴</a>
+								</li>
+								<li>
+									<a href=#additional_post>併任等</a>
+								</li>
+								<li>
+									<a href=#research_history>研究歴</a>
+								</li>
+								<li>
+									<a href=#achievement>業績一覧</a>
+								</li>
+								<li>
+									<a href=#message>ひとこと</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
+					<!--本文部分-->
+					<div class="col-md-8 maincontainer">
+						<div class="mainpara">
+								<div class="row">
+									<div class="col-5 maxwidth100">
+										<img src="./img/sato.jpg">
+									</div>
+									<div class="col-7 d-flex align-items-center">
+										<div class="profname">
+											<strong>
+												佐藤 哲也
+											</strong>
+											<br>
+											Tetsuya&nbsp;SATO, Dr. of Eng.
+										</div>
+									</div>
+			          </div>
+							</div>
+						<h1 id="incubment" class="midashi">
+							現職
+						</h1>
+						<div class="mainpara">
+							<p class="padding10">
+								早稲田大学 基幹理工学部 機械科学・航空宇宙学科　教授
+							</p>
+						</div>
+
+						<h1 id="biography" class="midashi">
+							略歴
+						</h1>
+						<div class="mainpara">
+
+							<table class="tableprof">
+	              <tr>
+	                <th>1983年</th>
+
+	                <td>筑波大学附属駒場高等学校 卒業</td>
+	              </tr>
+	              <tr>
+	                <th>1987年</th>
+
+	                <td><div>東京大学 工学部航空学科 卒業</div></td>
+	              </tr>
+	              <tr>
+	                <th>1992年</th>
+
+	                <td>
+	                  <div>東京大学大学院 工学系研究科航空学専攻 博士課程修了 (博士(工学))</div>
+	                </td>
+	              </tr>
+	              <tr>
+	                <td>1992年</td>
+
+	                <td><div>文部省 宇宙科学研究所 宇宙推進研究系　助手</div></td>
+	              </tr>
+	              <tr>
+	                <td>2002年</td>
+
+	                <td><div>同助教授</div></td>
+	              </tr>
+	              <tr>
+	                <td>2003年</td>
+
+	                <td><div>宇宙航空研究開発機構 総合技術研究本部<br>エンジン試験技術開発センター　主任研究員</div></td>
+	              </tr>
+	              <tr>
+	                <td>2006年</td>
+
+	                <td><div>宇宙航空研究開発機構 総合技術研究本部<br>航空エンジン技術開発センター　主幹研究員</div></td>
+	              </tr>
+	              <tr>
+	                <td>2007年</td>
+
+	                <td><div>早稲田大学 基幹理工学部 機械科学・航空学科　教授</div></td>
+	              </tr>
+							</table>
+
+						</div>
+
+						<h1 id="additional_post" class="midashi">
+							併任等
+						</h1>
+						<div class="mainpara">
+								<table class="tableprof">
+									<tr>
+		                <th>1991年</th>
+
+		                <td><div>日本学術振興会　特別研究員DC</div></td>
+		              </tr>
+		              <tr>
+		                <th><div>1992年-<br>2002年</div></th>
+
+		                <td><div>東京大学大学院　工学系研究科　航空学専攻　助手</div></td>
+		              </tr>
+		              <tr>
+		                <th>
+		                  <div>2002年-<br>2005年</div>
+		                </th>
+
+		                <td><div>総合研究大学院大学　数物科学研究科宇宙科学専攻　助教授</div></td>
+		              </tr>
+		              <tr>
+		                <th>2004年</th>
+
+		                <td><div>英国ブリストル大学　航空宇宙工学科　客員研究員</div></td>
+		              </tr>
+		              <tr>
+		                <th>2005年-<br>2007年</th>
+
+		                <td><div>東京大学大学院　工学系研究科航空学専攻　助教授</div></td>
+		              </tr>
+								</table>
+						</div>
+						<h1 id="research_history" class="midashi">
+							研究歴
+						</h1>
+						<div class="mainpara">
+							<ul class="inside_itemize">
+                <li>スクラムジェットエンジンの内部流れに関する研究</li>
+                <li>エア・ターボ・ラムジェットエンジン(ATREX)に関する研究</li>
+                <li>予冷ターボジェットエンジンに関する研究</li>
+							</ul>
+						</div>
+						<h1 id="achievement" class="midashi">
+							業績一覧
+						</h1>
+						<div class="mainpara">
+							<p class="padding10">
+								<a href="http://researchers.waseda.jp/profile/ja.51f0847cfa7d1aaca1c47bc22433fa63.html" target="_parent" onClick="window.event.cancelBubble=true;">
+									ここをご覧になって下さい。
+								</a>
+							</p>
+						</div>
+						<h1 id="message" class="midashi">
+							ひとこと
+						</h1>
+						<div class="mainpara">
+							<p class="padding10">
+								　当研究室は、極超音速で飛行する宇宙航空機の実現を目指しています。
+								要素についての基礎現象の解明から、エンジンシステム全体に関するプロジェクト志向の強いものまで、多岐にわたる面白い研究テーマです。
+								物事を詳細に、正確に突き詰めていくのもひとつのやり方ですが、大きな視点から全体をイメージすることを常に考えていきたいと思っています。 <br>
+								　最近、子供と一緒に剣道を習い始めました。体力的についていけるかどうか心配ですが、新しいことを始めるというのは、非常に楽しいということを実感しています。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--footer-->
+			<div class="footer container-fluid">
+				無断転載を禁止します
+				copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
+			</div>
+		</div>
+
+
+		<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../bootstrap/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

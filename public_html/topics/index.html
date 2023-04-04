@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 
-	<!--==============================header===================================-->
-	<head>
-		<!--文字コードの指定-->
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Style-Type" content="text/css">
-		<meta http-equiv="Content-Script-Type" content="text/javascript">
+<!--==============================header===================================-->
 
-		<!--スマホ画面対応-->
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+	<!--文字コードの指定-->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
 
-		<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空宇宙学科／大学院 基幹理工学研究科 機械科学・航空宇宙専攻 佐藤哲也研究室のWebサイトです。">
-		<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
+	<!--スマホ画面対応-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
+	<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空宇宙学科／大学院 基幹理工学研究科 機械科学・航空宇宙専攻 佐藤哲也研究室のWebサイトです。">
+	<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
 
-		<!--IEの互換表示設定の指示-->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
+	<meta http-equiv="Content-Security-Policy"
+		content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
 
-		<!--SNS共有用情報の指定　使うときに有効化-->
-		<!--
+	<!--IEの互換表示設定の指示-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--SNS共有用情報の指定　使うときに有効化-->
+	<!--
 		<meta property="og:title" content="佐藤研究室｜早稲田大学 基幹理工学部 機械科学・航空学科" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://www.waseda.jp/sem-sato/" />
@@ -29,129 +31,135 @@
 		<meta property="og:description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。" />
 		-->
 
-		<!--styleの指定-->
-		<meta http-equiv="default-style" content="default">
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" >
-		<link rel="stylesheet" href="../style.css?20190720" title="default">
+	<!--styleの指定-->
+	<meta http-equiv="default-style" content="default">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../style.css?20190720" title="default">
 
-		<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
+	<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
 
-		<!--アイコン用画像の指定-->
-		<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+	<!--アイコン用画像の指定-->
+	<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
 
-		<title>Topics｜早稲田大学 基幹理工学部 佐藤研究室</title>
+	<title>Topics｜早稲田大学 基幹理工学部 佐藤研究室</title>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
-		<script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
+	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'UA-139184956-1');
-		</script>
-	</head>
+	</script>
+</head>
 
-	<!--==============================body===================================-->
-	<body>
-		<div class="base">
-			<header>
-				<div class="titlebar">
-					<a href="../index.html">
-						<p class="toplogo" align="center"><img src="../image/lablogo.png"></p>
-					</a>
-				</div>
-			</header>
+<!--==============================body===================================-->
 
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-				<a class="navbar-brand" href="../index.html">
-					<img src="../image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
-					Sato Lab.
+<body>
+	<div class="base">
+		<header>
+			<div class="titlebar">
+				<a href="../index.html">
+					<p class="toplogo" align="center"><img src="../image/lablogo.png"></p>
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-link">
-							<a class="nav-link" href="../index.html">Home</a>
-						</li>
-						<li class="nav-link active">
-							<a class="nav-link" href="../topics/index.html">
-								Topics
-								<span class="sr-only">Topics</span>
-							</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../research/index.html">Research</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../himico/index.html">HIMICO</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../professor/index.html">Professor</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../member/index.html">Member</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../publications/index.html">Publications</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../events/index.html">Events</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../access/index.html">Access</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../Link/index.html">Link</a>
-						</li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</nav>
-
-			<div class="punkz" align="bottom">
-				<a href="../index.html">[HOME]</a>>[Topics]
 			</div>
+		</header>
 
-			<div class="container-fluid basecontainer">
-				<div div class="row">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+			<a class="navbar-brand" href="../index.html">
+				<img src="../image/logo.png" style="background-color:#ffffff" width="30" height="30"
+					class="d-inline-block align-top rounded" alt="ブランド">
+				Sato Lab.
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-					<!--サイドバー部分-->
-					<div class="sidebar col-md-4 d-none d-md-block">
-						<div class="midashibig">
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-link">
+						<a class="nav-link" href="../index.html">Home</a>
+					</li>
+					<li class="nav-link active">
+						<a class="nav-link" href="../topics/index.html">
 							Topics
-						</div>
-						<div class="sticky_sidebar">
-							<div class="contents_label">
-								<strong>Contents</strong>
-							</div>
-							<ul class="sidebarNav">
-								<li>
-									<a href=#topics2021>2021年度</a>
-								</li>									
-								<li>
-									<a href=#topics2020>2020年度</a>
-								</li>								
-								<li>
-									<a href=#topics2019>2019年度</a>
-								</li>
-								<li>
-									<a href=#topics2018>2018年度</a>
-								</li>
-								<li>
-									<a href=#topics2017>2017年度</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+							<span class="sr-only">Topics</span>
+						</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../research/index.html">Research</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../himico/index.html">HIMICO</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../professor/index.html">Professor</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../member/index.html">Member</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../publications/index.html">Publications</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../events/index.html">Events</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../access/index.html">Access</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../Link/index.html">Link</a>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
 
-					<!--本文部分-->
-					<div class="col-md-8 maincontainer">
-<!--    TEMPLATE
+		<div class="punkz" align="bottom">
+			<a href="../index.html">[HOME]</a>>[Topics]
+		</div>
+
+		<div class="container-fluid basecontainer">
+			<div div class="row">
+
+				<!--サイドバー部分-->
+				<div class="sidebar col-md-4 d-none d-md-block">
+					<div class="midashibig">
+						Topics
+					</div>
+					<div class="sticky_sidebar">
+						<div class="contents_label">
+							<strong>Contents</strong>
+						</div>
+						<ul class="sidebarNav">
+							<li>
+								<a href=#topics2022>2022年度</a>
+							</li>
+							<li>
+								<a href=#topics2021>2021年度</a>
+							</li>
+							<li>
+								<a href=#topics2020>2020年度</a>
+							</li>
+							<li>
+								<a href=#topics2019>2019年度</a>
+							</li>
+							<li>
+								<a href=#topics2018>2018年度</a>
+							</li>
+							<li>
+								<a href=#topics2017>2017年度</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--本文部分-->
+				<div class="col-md-8 maincontainer">
+					<!--    TEMPLATE
 						<h1 id="topics《年度》" class="midashi">
 							〇〇年度
 						</h1>
@@ -180,216 +188,347 @@
 						</div>
 -->
 
-<!-- 20220214更新 -->
-						<h1 id="topics2021" class="midashi">
-							2021年度
-						</h1>
-						<div class="mainpara">
-							<ul class="inside_itemize">
+					<!--2022/4/4更新-->
+					<h1 id="toipcs2022" class="midashi">
+						2022年度
+					</h1>
+					<div clasa="mainpara">
+						<ul class="inside_itemize">
 							<li>
-							    令和3年度宇宙輸送シンポジウム（2022年1月13日-14日）
-						    </li>
+								Asian Joint Conference on Propulsion and Power 2023(2023年3月15日-18日)
+							</li>
 							<div class="row topicspad">
 								<p>
-								　　森永（M2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>									
-							<li>
-							    AIAA SciTech 2022 Forum（2022年1月2日-7日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								　　辻村（D1）、坂野（M2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>							
-							<li>
-							    第35回数値流体力学シンポジウム（2021年12月14日-16日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								　　辻村（D1）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>							
-							<li>
-							    第59回燃焼シンポジウム（2021年11月22日-24日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								　　坂野（M2）が、オンラインで開催された本講演会にて講演を行いました。
+									佐藤教授, 植田(M2), 干谷(M2), 中尾(M2), 松本(M1)が金沢で開催された本講演会にて講演を行いました。
 								</p>
 							</div>
+							
 							<li>
-							    AIAA 2021 ASCEND（2021年11月15日-17日）
-						    </li>
+								令和4年度 宇宙輸送シンポジウム(2023年1月12日-13日)
+							</li>
 							<div class="row topicspad">
 								<p>
-								    藤井（M2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>															
-							<li>
-							    日本機械学会第99期流体工学部門講演会（2021年11月8日-10日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								    藤井（M2）が、オンラインで開催された本講演会にて講演を行いました。
+									佐藤教授, 植田(M2), 干谷(M2), 中尾(M2), 松本(M1)が相模原で開催された本講演会にて講演を行いました。
 								</p>
 							</div>
-							<li>
-							    第49回日本ガスタービン学会定期講演会（2021年10月13日-14日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								    正木（M2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>	
-							<li>
-							    the Second Asian Conference on Thermal Sciences（2nd ACTS）（2021年10月3日-7日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								    服部（D1）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>													
-							<li>
-							    2021年度日本冷凍空調学会年次大会（2021年9月8日-10日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								    服部（D1）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>																							
-							<li>
-							   第39回航空宇宙数値シミュレーション技術シンポジウム (ANSS) （2021年6月30日-7月2日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-								    辻村（D2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>									
 
-							</ul>
-						</div>
+							<li>
+								令和4年度 宇宙航行の力学シンポジウム(2022年12月12日-13日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									有吉(B4)が熊本で開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+
+							<li>
+								第66回宇宙科学技術連合講演会(2022年11月1日-4日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									佐藤教授, 有吉(B4)が熊本で開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+
+							<li>
+								日本機械学会 第100期 流体工学部門 講演会(2022年11月12日-13日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									干谷(M2)が新潟と熊本大学で開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+
+							<li>
+								The 2022 Asia-Pacific International Symposium on Aerospace Technology (2022年10月12日-14日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									干谷(M2)が新潟とオンラインのハイブリッドで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+
+							<li>
+								第50回日本ガスタービン学会定期講演会(2022年10月12日-14日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									河野(M2)が福岡で開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+
+							<li>
+								混相流シンポジウム(2022年8月19日-21日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									宮瀬(M2)と吉田(M1)が岡山とオンラインのハイブリッドで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								日本冷凍空調学会年次大会(2022年9月7日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									服部(D2)が岡山とオンラインのハイブリッドで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							
+							<li>
+								第54回流体力学講演会/第40回航空宇宙数値シミュレーション技術シンポジウム(ANSS)(2022年6月29日-7月1日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									田中(M1)が藤井(D1)とオンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+
+							<li>
+								第27回計算工学講演会(2022年6月1日-3日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									辻村(D3)が秋田とオンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								The 10th Asian Conference on Refrigeration and Air-conditioning(2022年4月9日-10日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									服部(D2)が相模原とオンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+						</ul>
+					</div>
+
+					<!-- 20220214更新 -->
+					<h1 id="topics2021" class="midashi">
+						2021年度
+					</h1>
+					<div class="mainpara">
+						<ul class="inside_itemize">
+							<li>
+								第4回観測ロケットシンポジウム(2022年3月14日-15日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									佐藤教授が相模原とオンラインのハイブリッドで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第61回航空原動機・宇宙推進講演会(2022年3月9日-11日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									佐藤教授, 藤井(M2), 坂野(M2), 河野(M1), 松本(B4)が, 米子で開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								令和3年度宇宙輸送シンポジウム(2022年1月13日-14日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									森永(M2), 中尾(M1), 桑原(B4)が、オンラインで開催された本講演会にて講演を行いました。中尾(M1)が本講演で宇宙輸送シンポジウム優秀学生賞を受賞しました。
+								</p>
+							</div>
+							<li>
+								AIAA SciTech 2022 Forum(2022年1月2日-7日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									辻村(D2)、坂野(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第35回数値流体力学シンポジウム(2021年12月14日-16日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									辻村(D2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第59回燃焼シンポジウム(2021年11月22日-24日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									坂野(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								AIAA 2021 ASCEND(2021年11月15日-17日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									藤井(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								日本機械学会第99期流体工学部門講演会(2021年11月8日-10日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									藤井(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第49回日本ガスタービン学会定期講演会(2021年10月13日-14日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									正木(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								the Second Asian Conference on Thermal Sciences(2nd ACTS)(2021年10月3日-7日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									服部(D1)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								2021年度日本冷凍空調学会年次大会(2021年9月8日-10日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									服部(D1)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第39回航空宇宙数値シミュレーション技術シンポジウム (ANSS) (2021年6月30日-7月2日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									辻村(D2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+
+						</ul>
+					</div>
 
 
-<!-- 20210810更新 -->
-						<h1 id="topics2020" class="midashi">
-							2020年度
-						</h1>
-						<div class="mainpara">
-							<ul class="inside_itemize">
+					<!-- 20210810更新 -->
+					<h1 id="topics2020" class="midashi">
+						2020年度
+					</h1>
+					<div class="mainpara">
+						<ul class="inside_itemize">
 							<li>
-							   辻村光樹（D1）が早大理工総研アーリーバードプログラム成果報告会プレゼンコンテストで「優秀賞」を受賞
-						    </li>
+								辻村光樹(D1)が早大理工総研アーリーバードプログラム成果報告会プレゼンコンテストで「優秀賞」を受賞
+							</li>
 							<div class="row topicspad">
 								<p>
-									辻村光樹（D1）が2021年3月12日、早稲田大学理工学術院総合研究所（理工総研）が実施する「アーリーバードプログラム」の成果報告会で発表し、プレゼンコンテストで「優秀賞」を受賞しました。
-								<br><br>
-								詳細は
-								<a href="../topics_detail/20210312_tsujimura/index.html">こちら
-								</a>
-								</p> 
-							</div>								
-							<li>
-							   Asian Joint Conference on Propulsion and Power (AJCPP) 2021（2021年3月3日-3月6日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-									新井（M2）、小倉（M2）、横井（M2）、坂野（M1）、藤井（M1）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>									
-							<li>
-							   令和2年度 宇宙輸送シンポジウム（2021年1月14日-1月15日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-									服部（M2）、藤森（B4）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>									
-							<li>
-							   第34回数値流体力学シンポジウム（2020年12月21日-12月23日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-									服部（M2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>								
-							<li>
-							   第29回微粒化シンポジウム（2020年12月17日-12月18日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-									坂野（M1）が、オンラインで開催された本講演会にて講演を行いました。
+									辻村光樹(D1)が2021年3月12日、早稲田大学理工学術院総合研究所(理工総研)が実施する「アーリーバードプログラム」の成果報告会で発表し、プレゼンコンテストで「優秀賞」を受賞しました。
+									<br><br>
+									詳細は
+									<a href="../topics_detail/20210312_tsujimura/index.html">こちら
+									</a>
 								</p>
 							</div>
 							<li>
-							   令和2年度 宇宙航行の力学シンポジウム（2020年12月14日-12月15日）
-						    </li>
+								Asian Joint Conference on Propulsion and Power (AJCPP) 2021(2021年3月3日-3月6日)
+							</li>
 							<div class="row topicspad">
 								<p>
-									小倉（M2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>																
-							<li>
-							   第58回燃焼シンポジウム（2020年12月2日-12月4日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-									坂野（M1）が、オンラインで開催された本講演会にて講演を行いました。
+									新井(M2)、小倉(M2)、横井(M2)、坂野(M1)、藤井(M1)が、オンラインで開催された本講演会にて講演を行いました。
 								</p>
 							</div>
 							<li>
-							   第58回飛行機シンポジウム（2020年11月25日-11月27日）
-						    </li>
+								令和2年度 宇宙輸送シンポジウム(2021年1月14日-1月15日)
+							</li>
 							<div class="row topicspad">
 								<p>
-									横井（M2）が、オンラインで開催された本講演会にて講演を行いました。
-								</p>
-							</div>															
-							<li>
-							   18th International Symposium on Transport Phenomena and Dynamics of Rotating Machinery（2020年11月23日-11月26日）
-						    </li>
-							<div class="row topicspad">
-								<p>
-									正木（M1）が、オンラインで開催された本講演会にて講演を行いました。
+									服部(M2)、藤森(B4)が、オンラインで開催された本講演会にて講演を行いました。
 								</p>
 							</div>
 							<li>
-							  第64回宇宙科学技術連合講演会（2020年10月27日-10月30日）
-						    </li>
+								第34回数値流体力学シンポジウム(2020年12月21日-12月23日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									服部(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第29回微粒化シンポジウム(2020年12月17日-12月18日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									坂野(M1)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								令和2年度 宇宙航行の力学シンポジウム(2020年12月14日-12月15日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									小倉(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第58回燃焼シンポジウム(2020年12月2日-12月4日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									坂野(M1)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第58回飛行機シンポジウム(2020年11月25日-11月27日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									横井(M2)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								18th International Symposium on Transport Phenomena and Dynamics of Rotating
+								Machinery(2020年11月23日-11月26日)
+							</li>
+							<div class="row topicspad">
+								<p>
+									正木(M1)が、オンラインで開催された本講演会にて講演を行いました。
+								</p>
+							</div>
+							<li>
+								第64回宇宙科学技術連合講演会(2020年10月27日-10月30日)
+							</li>
 							<div class="row topicspad">
 								<p>
 									佐藤教授が、オンラインで開催された本講演会にて講演を行いました。
 								</p>
 							</div>
 							<li>
-							   流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム 2020 オンライン（2020年9月28日-9月30日）
-						    </li>
+								流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム 2020 オンライン(2020年9月28日-9月30日)
+							</li>
 							<div class="row topicspad">
 								<p>
-									辻村（D1）、小倉（M2）、坂野（M1）が、オンラインで開催された本講演会にて講演を行いました。
+									辻村(D1)、小倉(M2)、坂野(M1)が、オンラインで開催された本講演会にて講演を行いました。
 								</p>
 							</div>
 							<li>
-							   早大理工総研「アーリーバードプログラム」に採択
-						    </li>
+								早大理工総研「アーリーバードプログラム」に採択
+							</li>
 							<div class="row topicspad">
 								<p>
-									辻村（D1）が、早稲田大学理工学術院総合研究所アーリーバードプログラムの第10期メンバーに採択されました。
+									辻村(D1)が、早稲田大学理工学術院総合研究所アーリーバードプログラムの第10期メンバーに採択されました。
 								</p>
 								詳細は
 								<a href="https://www.waseda.jp/fsci/wise/earlybird/faculty/">こちら
 								</a>
 							</div>
-							</ul>
-						</div>
+						</ul>
+					</div>
 
-						<h1 id="topics2019" class="midashi">
-							2019年度
-						</h1>
-						<div class="mainpara">
-							<ul class="inside_itemize">
+					<h1 id="topics2019" class="midashi">
+						2019年度
+					</h1>
+					<div class="mainpara">
+						<ul class="inside_itemize">
 
-								<!--Format
+							<!--Format
 								<li>
 									《学会名》(〇〇年〇月〇日-〇月〇日)
 								</li>
@@ -404,11 +543,11 @@
 									</div>
 								</div>
 							-->
-<!-- 20200401掲載順序変更 -->
-<!-- 20191209更新 -->
+							<!-- 20200401掲載順序変更 -->
+							<!-- 20191209更新 -->
 							<li>
-							   International Gas Turbine Congress (IGTC) (2019年11月17日-11月22日)
-						    </li>
+								International Gas Turbine Congress (IGTC) (2019年11月17日-11月22日)
+							</li>
 							<div class="row topicspad">
 								<div class="col-lg-5">
 									東京都虎ノ門ヒルズで開催されたInternational Gas Turbine Congress (IGTC)にてD4山本，M2鶴田が講演を行いました.
@@ -421,8 +560,8 @@
 							</div>
 
 							<li>
-							   第63回宇宙科学技術連合講演会(2019年11月6日-11月8日)
-						    </li>
+								第63回宇宙科学技術連合講演会(2019年11月6日-11月8日)
+							</li>
 							<div class="row topicspad">
 								<div class="col-lg-5">
 									徳島県徳島市で開催された第63回宇宙科学技術連合講演会にて佐藤教授が講演を行いました.
@@ -435,8 +574,8 @@
 							</div>
 
 							<li>
-							   第47回日本ガスタービン学会定期講演会(2019年9月18日-9月20日)
-						  </li>
+								第47回日本ガスタービン学会定期講演会(2019年9月18日-9月20日)
+							</li>
 							<div class="row topicspad">
 								<div class="col-lg-5">
 									北海道函館市で開催された第47回日本ガスタービン学会定期講演会にてM2小松が講演を行いました.
@@ -477,8 +616,8 @@
 							</div>
 
 							<li>
-							   カリフォルニア工科大(Caltech)との研究交流会(2019年9月5日)
-						  </li>
+								カリフォルニア工科大(Caltech)との研究交流会(2019年9月5日)
+							</li>
 							<div class="row topicspad">
 								<div class="col-lg-5">
 									アメリカ合衆国カリフォルニア州パサデナのカリフォルニア工科大学で開催された研究交流会にて，佐藤教授，M2倉田，小松，辻村が講演を行いました.
@@ -504,7 +643,7 @@
 								</div>
 							</div>
 
-<!-- 201907更新 -->
+							<!-- 201907更新 -->
 							<li>
 								第51回流体力学講演会/第37回航空宇宙数値シミュレーション技術シンポジウム(2019年7月1日-7月3日)
 							</li>
@@ -520,40 +659,41 @@
 							</div>
 
 							<li>
-								The 32nd International Symposium on Space Technology and Science (ISTS) (2019年6月15日-6月21日)
+								The 32nd International Symposium on Space Technology and Science (ISTS)
+								(2019年6月15日-6月21日)
 							</li>
-								<div class="row topicspad">
-									<div class="col-lg-5">
-										福井県福井市で開催された 32nd ISTS にて，佐藤教授，M2 小松，佐野，千賀，辻村が講演を行いました.
-									</div>
-									<div class="col-lg-6">
-										<div class="image img_center maxwidth100">
-											<img src="./img/2019/ists.jpg">
-										</div>
+							<div class="row topicspad">
+								<div class="col-lg-5">
+									福井県福井市で開催された 32nd ISTS にて，佐藤教授，M2 小松，佐野，千賀，辻村が講演を行いました.
+								</div>
+								<div class="col-lg-6">
+									<div class="image img_center maxwidth100">
+										<img src="./img/2019/ists.jpg">
 									</div>
 								</div>
+							</div>
 
 							<li>
-									第50期年会講演会(2019年4月18日-4月19日)
-								</li>
-								<div class="row topicspad">
-									<div class="col-lg-5">
-										東京都東京大学で開催された第50期年会講演会にてM1横井が講演を行いました.
-									</div>
-									<div class="col-lg-6">
-										<div class="image img_center maxwidth100">
-											<img src="./img/2019/nennkai_toudai.jpg">
-										</div>
+								第50期年会講演会(2019年4月18日-4月19日)
+							</li>
+							<div class="row topicspad">
+								<div class="col-lg-5">
+									東京都東京大学で開催された第50期年会講演会にてM1横井が講演を行いました.
+								</div>
+								<div class="col-lg-6">
+									<div class="image img_center maxwidth100">
+										<img src="./img/2019/nennkai_toudai.jpg">
 									</div>
 								</div>
-							</ul>
-						</div>
-						<h1 id="topics2018" class="midashi">
-							2018年度
-						</h1>
-						<div class="mainpara">
-							<ul class="inside_itemize">
-								<!--
+							</div>
+						</ul>
+					</div>
+					<h1 id="topics2018" class="midashi">
+						2018年度
+					</h1>
+					<div class="mainpara">
+						<ul class="inside_itemize">
+							<!--
 								<li>
 									《学会名》(〇〇年〇月〇日-〇月〇日)
 								</li>
@@ -569,60 +709,62 @@
 									</div>
 								</div>
 							-->
-							</ul>
-						</div>
-
-
-						<h1 id="topics2017" class="midashi">
-							2017年度
-						</h1>
-						<div class="mainpara">
-							<ul class="inside_itemize">
-								<li>
-									AIAA Propulsion&amp;Energy Forum(2017年7月10日-7月12日)
-								</li>
-								<div class="row topicspad">
-									<div class="col-lg-5">
-										アメリカ合衆国ジョージア州アトランタ市で開催されたAIAA Propulsion&amp;Energy Forum にて佐藤先生, M1吉田が講演を行いました.
-									</div>
-									<div class="col-lg-6">
-										<div class="image img_center maxwidth100">
-											<img src="./img/AIAA.jpg">
-										</div>
-									</div>
-								</div>
-
-								<li>
-									AJCPP2018(2018年3月14日-3月17日)
-								</li>
-								<div div class="row topicspad">
-									<div class="col-lg-5">
-										中華人民共和国福建省厦門市で開催されたAsian Joint Conference on Propulsion and Power2018(AJCPP2018)にてD2山本, M2金親, M1吉田, M1中島が講演を行いました.
-									</div>
-									<div class="col-lg-6">
-										<div class="image img_center maxwidth100">
-											<img src="./img/group.jpg">
-										</div>
-									</div>
-								</div>
-							</ul>
-						</div>
-
+						</ul>
 					</div>
+
+
+					<h1 id="topics2017" class="midashi">
+						2017年度
+					</h1>
+					<div class="mainpara">
+						<ul class="inside_itemize">
+							<li>
+								AIAA Propulsion&amp;Energy Forum(2017年7月10日-7月12日)
+							</li>
+							<div class="row topicspad">
+								<div class="col-lg-5">
+									アメリカ合衆国ジョージア州アトランタ市で開催されたAIAA Propulsion&amp;Energy Forum にて佐藤先生, M1吉田が講演を行いました.
+								</div>
+								<div class="col-lg-6">
+									<div class="image img_center maxwidth100">
+										<img src="./img/AIAA.jpg">
+									</div>
+								</div>
+							</div>
+
+							<li>
+								AJCPP2018(2018年3月14日-3月17日)
+							</li>
+							<div div class="row topicspad">
+								<div class="col-lg-5">
+									中華人民共和国福建省厦門市で開催されたAsian Joint Conference on Propulsion and
+									Power2018(AJCPP2018)にてD2山本, M2金親, M1吉田, M1中島が講演を行いました.
+								</div>
+								<div class="col-lg-6">
+									<div class="image img_center maxwidth100">
+										<img src="./img/group.jpg">
+									</div>
+								</div>
+							</div>
+						</ul>
+					</div>
+
 				</div>
 			</div>
-			<!--footer-->
-			<footer class="footer container-fluid">
-				無断転載を禁止します
-				copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
-			</footer>
 		</div>
+		<!--footer-->
+		<footer class="footer container-fluid">
+			無断転載を禁止します
+			copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
+		</footer>
+	</div>
 
 
-		<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../bootstrap/jquery/dist/jquery.slim.min.js"></script>
-    <script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-	</body>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="../bootstrap/jquery/dist/jquery.slim.min.js"></script>
+	<script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+
 </html>

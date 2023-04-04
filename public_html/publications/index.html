@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 
-	<!--==============================header===================================-->
-	<head>
-		<!--文字コードの指定-->
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Style-Type" content="text/css">
-		<meta http-equiv="Content-Script-Type" content="text/javascript">
+<!--==============================header===================================-->
 
-		<!--スマホ画面対応-->
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+	<!--文字コードの指定-->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
 
-		<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空宇宙学科／大学院 基幹理工学研究科 機械科学・航空宇宙専攻 佐藤哲也研究室のWebサイトです。">
-		<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
+	<!--スマホ画面対応-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
+	<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空宇宙学科／大学院 基幹理工学研究科 機械科学・航空宇宙専攻 佐藤哲也研究室のWebサイトです。">
+	<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
 
-		<!--IEの互換表示設定の指示-->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
+	<meta http-equiv="Content-Security-Policy"
+		content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
 
-		<!--SNS共有用情報の指定　使うときに有効化-->
-		<!--
+	<!--IEの互換表示設定の指示-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--SNS共有用情報の指定　使うときに有効化-->
+	<!--
 		<meta property="og:title" content="佐藤研究室｜早稲田大学 基幹理工学部 機械科学・航空学科" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://www.waseda.jp/sem-sato/" />
@@ -29,447 +31,965 @@
 		<meta property="og:description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。" />
 		-->
 
-		<!--styleの指定-->
-		<meta http-equiv="default-style" content="default">
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" >
-		<link rel="stylesheet" href="../style.css?20190720" title="default">
+	<!--styleの指定-->
+	<meta http-equiv="default-style" content="default">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../style.css?20190720" title="default">
 
-		<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
+	<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
 
-		<!--アイコン用画像の指定-->
-		<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+	<!--アイコン用画像の指定-->
+	<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
 
-		<title>Publications｜早稲田大学 基幹理工学部 佐藤研究室</title>
+	<title>Publications｜早稲田大学 基幹理工学部 佐藤研究室</title>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
-		<script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
+	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'UA-139184956-1');
-		</script>
-	</head>
+	</script>
+</head>
 
-	<!--==============================body===================================-->
-	<body>
-		<div class="base">
-			<header>
-				<div class="titlebar">
-					<a href="../index.html">
-						<p class="toplogo" align="center"><img src="../image/lablogo.png"></p>
-					</a>
-				</div>
-			</header>
+<!--==============================body===================================-->
 
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-				<a class="navbar-brand" href="../index.html">
-					<img src="../image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
-					Sato Lab.
+<body>
+	<div class="base">
+		<header>
+			<div class="titlebar">
+				<a href="../index.html">
+					<p class="toplogo" align="center"><img src="../image/lablogo.png"></p>
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-link">
-							<a class="nav-link" href="../index.html">Home</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../topics/index.html">Topics</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../research/index.html">Research</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../himico/index.html">HIMICO</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../professor/index.html">Professor</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../member/index.html">Member</a>
-						</li>
-						<li class="nav-link active">
-							<a class="nav-link" href="../publications/index.html">
-								Publications
-								<span class="sr-only">Publications</span>
-							</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../events/index.html">Events</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../access/index.html">Access</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../Link/index.html">Link</a>
-						</li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</nav>
-
-			<div class="punkz" align="bottom">
-				<a href="../index.html">[HOME]</a>>[Publications]
 			</div>
+		</header>
 
-			<div class="container-fluid basecontainer">
-				<div class="row">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+			<a class="navbar-brand" href="../index.html">
+				<img src="../image/logo.png" style="background-color:#ffffff" width="30" height="30"
+					class="d-inline-block align-top rounded" alt="ブランド">
+				Sato Lab.
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-					<!--サイドバー部分-->
-					<div class="sidebar col-md-4 d-none d-md-block">
-						<div class="midashibig">
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-link">
+						<a class="nav-link" href="../index.html">Home</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../topics/index.html">Topics</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../research/index.html">Research</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../himico/index.html">HIMICO</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../professor/index.html">Professor</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../member/index.html">Member</a>
+					</li>
+					<li class="nav-link active">
+						<a class="nav-link" href="../publications/index.html">
 							Publications
-						</div>
-						<div class="sticky_sidebar">
-							<div class="contents_label">
-								<strong>Contents</strong>
-							</div>
-							<ul class="sidebarNav">
-								<li>
-									<a href=#Pub020>2020年度</a>
-								</li>								
-								<li>
-									<a href=#Pub019>2019年度</a>
-								</li>
-								<li>
-									<a href=#Pub018>2018年度</a>
-								</li>
-								<li>
-									<a href=#PubPre>2017年度以前</a>
-								</li>
-							</ul>
+							<span class="sr-only">Publications</span>
+						</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../events/index.html">Events</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../access/index.html">Access</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../Link/index.html">Link</a>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
 
+		<div class="punkz" align="bottom">
+			<a href="../index.html">[HOME]</a>>[Publications]
+		</div>
+
+		<div class="container-fluid basecontainer">
+			<div class="row">
+
+				<!--サイドバー部分-->
+				<div class="sidebar col-md-4 d-none d-md-block">
+					<div class="midashibig">
+						Publications
+					</div>
+					<div class="sticky_sidebar">
+						<div class="contents_label">
+							<strong>Contents</strong>
 						</div>
+						<ul class="sidebarNav">
+							<li>
+								<a href=#Pub022>2022年度</a>
+							</li>
+							<li>
+								<a href=#Pub021>2021年度</a>
+							</li>
+							<li>
+								<a href=#Pub020>2020年度</a>
+							</li>
+							<li>
+								<a href=#Pub019>2019年度</a>
+							</li>
+							<li>
+								<a href=#Pub018>2018年度</a>
+							</li>
+							<li>
+								<a href=#PubPre>2017年度以前</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!--本文部分-->
+				<div class="col-md-8 maincontainer">
+					<h1 id="Pub022" class="midashi">
+						2022年度
+					</h1>
+					<div class="mainpara">
+						<font color="#003399">論文 / Journal Articles</font><br><br>
+						<ol class="list_brackets">
+							<li>
+								Yukari Sakano, Taisuke Nambu, Yasuhiro Mizobuchi, Tetsuya Sato : Evaluation of
+								three-dimensional droplet shape for analysis of the crossflow-type atomization,
+								<i>Mechanical Engineering Journal</i>, <b>9</b>, 1(2022), p.21.
+							</li>
+							<li>
+								Ogura, S., Fujii, M., Hoshiya, Y., Fujimori, Y., Sato, T., Taguchi, H., Kojima, T., Oki,
+								J. : Experimental study of high-speed air intake performance by side clearance,
+								<i>Aerospace Science and Technology</i>, <b>123</b> (2022), 107439.
+							</li>
+							<li>
+								Moojoong Kim, Kanta Komeda, Jongsoo Jeong, Mizuki Oinuma, Tetsuya Sato and Kiyoshi Saito
+								: Optimizing Calibration for a Capacitance-Based Void Fraction Sensor with Asymmetric
+								Electrodes under Horizontal Flow in a Smoothed Circular Macro-Tube, <i>Sensors</i>,
+								<b>22</b>, 9(2022), 3511.
+							</li>
+							<li>
+								Manami Fujii, Shogo Ogura, Tetsuya Sato, Hideyuki Taguchi, Atsushi Hashimoto, Takashi
+								Takahashi : Effect of angle of attack on the performance of the supersonic intake for
+								High Mach Integrated Control Experiment (HIMICO), <i>Aerospace Science and
+									Technology</i>, <b>127</b>(2022), 107687.
+							</li>
+							<li>
+								中尾圭吾，坂野友香理，坂本勇樹，樺山昂生，井上裕介，佐藤哲也 : 双方向長短期記憶ネットワークによる気液二相流の流動様式判別に関する研究, 航空宇宙技術(オンライン論文集),
+								<b>21</b>(2022), pp 68 &ndash;76.
+							</li>
+							<li>
+								河野雅大, 岡井敬一, 正木亮好, 小桐間智也, 佐藤哲也, 賀澤順一, 正木大作 : エンジン/機体統合モデルを用いた境界層吸込み(BLI)の実験・解析による性能評価, 航空宇宙技術(オンライン論文集), <b>22</b>(2023), pp 11 &ndash;19. 
+							</li>
+							<!--
+							<li>
+								Manami Fujii, Yuki Fujimori, Yusuke Hoshiya, Yuki Kuwabara, Rintaro Tanaka, Tetsuya Sato, Hidemi Takahashi, Hideyuki Taguchi : Experimental Investigation on the Effect of the Intake Throat Height on the Buzz Characteristics in the Ramjet Engine for High-Mach Integrated Control Experiment (HIMICO), <i>Journal of Evolving Space Activities (JESA) </i>
+							</li>
+							-->
+						</ol>
+
+						<font color="#003399">国際会議 / International Conferences</font><br><br>
+						<ol class="list_brackets">
+							<li>
+								"Akihiro HATTORI, Satoru TOKAWA, Yudai MORINAGA, Weiwei CHEN, Akihiro UEDA, Mikio
+								YOSHIDA, Tetsuya SATO" : "Numerical prediction of frost formation on a
+								cryogenic plate considering mist generation using general dynamic equation", The 10th
+								Asian Conference on Refrigeration and Air-conditioning, Apr. 2022.
+							</li>
+							<li>
+								Hideyuki Taguchi, Tomonari Hirotani, Tetsuya Sato, Asei Tzuka, Takeshi Tsuchiya and Takahiro Fujikawa : Design Study of High Mach Integrated Control Experimental Aircraft (HIMICO), 2nd International Conference on High-Speed Vehicle Science & Technology, Sep. 2022.
+							</li>
+							<li>
+								"Yusuke Hoshiya, Manami Fujii, Yuki Fujimori, Yuki Kuwabara, Rintaro Tanaka,
+								Tetsuya Sato, Hidemi Takahashi and Hideyuki Taguchi" : The Developmental Progress of the Supersonic Intake for High Mach Integrated Control Experiment (HIMICO), The 2022 Asia-Pacific International Symposium on Aerospace Technology, Oct. 2022. 
+							</li>
+							<li>
+								Hiroki Tsujimura, Kenichi Kubota, Tetsuya Sato : Particle-grid Hybrid Analysis of Liquid Jet Primary Breakup in Gaseous Crossflow, Asian Joint Conference on Propulsion and Power 2023, AJCPP2023-095, Mar. 2023. 
+							</li>
+							<li>
+								Yuki Fujimori, Manami Fujii, Yusuke Hoshiya, Yuki Kuwabara, Rintaro Tanaka, Shima Ariyoshi, Ayuto Suzuki, Tetsuya Sato, Hideyuki Taguchi, Takayuki Kojima, Hidemi Takahashi : Experimental Investigation on the Effects of the Bleed System on A Ramjet-Intake of High Mach Integrated Control Experiment (HIMICO), Asian Joint Conference on Propulsion and Power 2023, AJCPP2023-133, Mar. 2023. 
+							</li>
+							<li>
+								Manami Fujii, Yusuke Hoshiya, Yuki Fujimori, Yuki Kuwabara, Rintaro Tanaka, Shima Ariyoshi, Ayuto Suzuki, Tetsuya Sato, Hideyuki Taguchi, Atsushi Hashimoto : Numerical Investigation on the Effects of the Exit Nozzle Throat Height on the Buzz Characteristics Occurring in the Hypersonic Intake for High Mach Integrated Control Experiment (HIMICO), Asian Joint Conference on Propulsion and Power 2023, AJCPP2023-105, Mar. 2023. 
+							</li>
+							<li>
+								Yusuke Maru, Kazuma Matsumoto, Daiki Watanabe, Haruaki Seta, Tetsuya Sato : Flow and Performance Characteristics of a Streamline-traced Air Inlet Designed at Mach 2 for the ATRIUM Engine, Asian Joint Conference on Propulsion and Power 2023, AJCPP2023-072, Mar. 2023. 
+							</li>
+						</ol>
+
+						<font color="#003399">国内会議 / Japanese Domestic Conferences</font><br><br>
+						<ol class="list_brackets">
+							<li>
+								南部太介, 溝渕泰寛、 坂野友香理、佐藤哲也 : 二相流詳細数値解析による燃料インジェクタ微粒化過程の評価, 自動車技術会2022年春季大会, No.66-2,
+								2022年5月.
+							</li>
+							<li>
+								辻村光樹, 窪田健一, 佐藤哲也 : 粒子・格子ハイブリッド法による乱流液体噴流の数値解析, 第27回計算工学講演会, A-05-04, 2022年6月.
+							</li>
+							<li>
+								藤井愛実，干谷祐輔，藤森勇輝，桒原宥希，田中凜太郎，佐藤哲也，橋本敦，田口秀之 :
+								極超音速統合制御実験(HIMICO)用ラムジェットインテークで発生するバズ現象に関する数値的研究,
+								第54回流体力学講演会/第40回航空宇宙数値シミュレーション技術シンポジウム, 1D12, 2022年6月.
+							</li>
+							<li>
+								田中凜太郎，藤井愛実，藤森勇輝，干谷祐輔，桒原宥希，佐藤哲也，髙橋英美，小島孝之，田口秀之 : 主流マッハ数が極超音速可変インテークの性能に与える影響の考察,
+								第54回流体力学講演会/第40回航空宇宙数値シミュレーション技術シンポジウム(ANSS), 1D11, 2022年6月.
+							</li>
+							<li>
+								服部皓大, 十川悟, 植田晃弘, 吉田幹男, 佐藤哲也 : エアロゾルを用いたミスト化促進による着霜低減効果に関する研究, 日本冷凍空調学会年次大会, B112,
+								2022年9月.
+							</li>
+							<li>
+								吉田幹男， 十川 悟，服部 皓大，植田 晃弘 (早稲田大院)佐藤哲也 (早稲田大) : 線香を用いたミスト化促進による円管伝熱面への着霜低減効果に関する研究,
+								混相流シンポジウム, E0102, 2022年8月.
+							</li>
+							<li>
+								宮瀬拓海，坂本勇樹，中尾圭吾，阿久津元秀，船木響吾，池嶋隼，佐藤哲也 : 静電容量型探針式ボイド率計の開発, 混相流シンポジウム, E0120, 2022年8月.
+							</li>
+							<li>
+								河野雅大，小桐間智也, 安藤翔, 佐藤哲也，岡井敬一，賀澤順一，正木大作, 小島孝之 : Blended Wing Body の推進統合設計における境界層吸い込みの検討,
+								第50回日本ガスタービン学会定期講演会, 1A07, 2022年10月.
+							</li>
+							<li>
+								宮瀬拓海，坂本勇樹，中尾圭吾，阿久津元秀，下田泰聖，島田航太郎，佐藤哲也 : 気液二相流用静電容量式オール金属複数極板型ボイド率計の開発, 日本機械学会 第100期 流体工学部門 講演会, OS06-39, 2022年11月. 
+							</li>
+								有吉志満、森岡悠輔 : SDGs×宇宙の事例からみた成功要素に関する考察, 第66回宇宙科学技術連合講演会, 2H05, 2022年11月. 
+							<li>
+								坂本 勇樹, 小林 弘明, 丸 祐介, 徳留 真一郎, 野中 聡, 澤井秀次郎, 大山 聖, 三浦 政司, 正木 大作, 髙田 仁志, 角銅 洋実,加賀 亨, 山城 龍馬, 杵淵 紀世志, 真子 弘泰, 内海 政春, 中田 大将, 江口 光, Richardson Matthew, 佐藤 哲也 : ATRIUMエンジンを適用する小規模飛行実証試験の検討状況, 第66回宇宙科学技術連合講演会, 1G12, 2022年11月. 
+							</li>
+							<li>
+								佐藤哲也, 田口秀之, 小林弘明 : 空気吸い込みエンジンを用いたJAXA-大学連携 プロジェクトの紹介, 第66回宇宙科学技術連合講演会, 4B02, 2022年11月. 
+							</li>
+							<li>
+								有吉志満、藤井愛実、藤森勇輝、干谷祐輔、桒原宥希、田中凜太郎、鈴木歩都、佐藤哲也、田口秀之、髙橋英美、大木純一 : 極超音速統合制御実験機(HIMICO)用矩形インテークのマッハ2風洞実験による性能調査, 令和4年度 宇宙航行の力学シンポジウム, ISAS2022-SFMA-04, 2022年12月. 
+							</li>
+							<li>
+								丸 祐介，徳留 真一郎，佐藤 哲也 : ISAS輸送系研究三本柱の取り組み状況, 令和4年度 宇宙輸送シンポジウム, STCP-2022-046, 2023年1月. 
+							</li>
+							<li>
+								徳留 真一郎，野中 聡，丸 祐介，小林 弘明，佐藤 哲也，三浦 政司，坂本 勇樹 : 宇宙科学分野における宇宙輸送系研究の中長期戦略改訂に向けて, 令和4年度 宇宙輸送シンポジウム, STCP-2022-045, 2023年1月. 
+							</li>
+							<li>
+								佐藤哲也，丸祐介 : ISAS宇宙輸送系専門委員会での議論の紹介, 令和4年度 宇宙輸送シンポジウム, STCP-2022-044, 2023年1月. 
+							</li>
+							<li>
+								植田晃弘, 服部皓大, 陳衛偉, 吉田幹男, 平井理久, 佐藤哲也 : 極低温冷却面上の霜結晶構造に関する実験的研究, 令和4年度 宇宙輸送シンポジウム, STCP-2022-023, 2023年1月. 
+							</li>
+							<li>
+								松本和真，瀬田晴明，渡辺大貴，丸祐介，佐藤哲也 : ATRIUMエンジンを搭載した新観測ロケット用インテークの研究, 令和4年度 宇宙輸送シンポジウム, STCP-2022-014, 2023年1月. 
+							</li>
+							<li>
+								干谷祐輔、藤井愛実、藤森勇輝、桒原宥希、田中凜太郎、佐藤哲也、田口秀之、髙橋英美、廣谷智成 : 極超音速統合制御実験(HIMICO)用ラムジェットインテークのマッハ5での 性能に関する実験的/数値的研究, STCP-2022-038, 2023年1月. 
+							</li>
+							<li>
+								中尾圭吾、宮瀬拓海、胡耀文、阿久津元秀、下田泰聖、島田航太郎、坂本勇樹、佐藤哲也 : LSTMを用いた気液二相流マルチメータの開発に向けた実験研究, 令和4年度 宇宙輸送シンポジウム, STCP-2022-024, 2022年1月. 
+						</ol>
+					</div>
+					<h1 id="Pub021" class="midashi">
+						2021年度
+					</h1>
+					<div class="mainpara">
+
+						<!-- Journal -->
+						<font color="#003399">論文 / Journal Articles</font><br><br>
+						<ol class="list_brackets">
+							<!-- 20210419更新 -->
+							<li>
+								Fukiba, K., Adachi, H. Sato, T. : Heat Transfer Enhancement in Pool Boiling of Liquid
+								Nitrogen Using a Low Thermal Conductive Layer with Openings, <i>International
+									Communications in Heat and Mass Transfer</i>, <b>127</b>, 2021.
+							</li>
+							<li>
+								服部皓大，倉田琢巳，十川悟，森永裕大，植田晃弘，佐藤哲也 : 強制対流条件下での着霜現象への冷却面温度及び主流絶対湿度の影響, 日本冷凍空調学会論文集, <b>38</b>,
+								2 (2021), pp. 59&ndash;71.
+							</li>
+							<li>
+								Kobayashi, H., Maru, Y., Richardson, M., P., Kinefuchi, K. and Sato, T. : Conceptual
+								Design Study of a Vertical Takeoff and Landing Airbreather, <i>AIAA J. Spacecraft and
+									Rockets</i>, <b>58</b>, 5 (2021), pp. 1248&ndash;1262.
+							</li>
+							<li>
+								Sato, T, Taguchi, H., Kojima, T., Tsuchiya, T., Tsue, M., Nakaya, S., Matsuo, A.,
+								Tezuka, A., Fujikawa, T. Miyaji, K. : Program of High Mach Integrated Control
+								Experiment, “HIMICO” using S-520 Sounding Rocket, <i>Transactions of JSASS, Aerospace
+									Technology Japan</i>, <b>19</b>, 6 (2021), pp. 831&ndash;837.
+							</li>
+							<li>
+								Komatsu, Y. Yamamoto, H. Sato, T., Taguchi, H. : Numerical Simulation of the Ram
+								Combustor for High-Mach Integrated Control Experiment (HIMICO), <i> Transactions of
+									JSASS, Aerospace Technology Japan </i>, <b>19</b>, 6 (2021), pp. 865&ndash;873.
+							</li>
+							<li>
+								Sano, M., Yokoi, T., Yoshida, H., Sato, T., Taguchi, H. : 3-Dimensional Numerical
+								Simulation of Hypersonic Intake for Pre-Cooled Turbo Jet Engine, <i>Transactions of
+									JSASS, Aerospace Technology Japan</i>, <b>19</b>, 5 (2021), pp. 676&ndash;681.
+							</li>
+							<li>
+								Tsujimura, H., Kubota, K., Sato, T. : Development of aerodynamic force model based on
+								potential flow for liquid droplets analyzed by particle method, <i>Transactions of
+									JSASS, Aerospace Technology Japan</i>, <b>19</b>, 5 (2021), pp. 690&ndash;699.
+							</li>
+							<li>
+								Yukari Sakano, Taisuke Nambu, Yasuhiro Mizobuchi, Tetsuya Sato : Evaluation of
+								three-dimensional droplet shape for analysis of the crossflow-type
+								atomization,<i>Mechanical Engineering Journal</i>, <b>9</b>, 1 (2021), p. 21.
+							</li>
+						</ol>
+
+						<!-- International Conferences -->
+						<font color="#003399">国際会議 / International Conferences</font><br><br>
+						<ol class="list_brackets">
+
+							<!-- 20210419更新 -->
+							<li>
+								Akihiro Hattori, Tetsuya Sato : Influence of Sublimation Models on the Computational
+								Method for Predicting Frost Formation Phenomena During the Sublimation Process, 2nd
+								Asian Conference of Thermal Science, 50421, Oct. 2021.
+							</li>
+							<li>
+								Manami Fujii, Yusuke Hoshiya, Yuki Fujimori, Tetsuya Sato, Atsushi Hashimoto, Takashi
+								Takahashi, Hideyuki Taguchi : Effect of the Turbulence Model on the Buzz Characteristics
+								Occurring on the Air Intake for High-Mach Integrated Control Experiment (HIMICO),
+								International Space Planes and Hypersonic Systems and Technologies Conferences (in
+								ASCEND), AIAA-2021-4164, Nov. 2021.
+							</li>
+							<li>
+								Richardson, M., Kobayashi, H., Sakamoto, Y., Maru, Y., Tokudome, S., Nonaka, S., Sawai,
+								S., Oyama, A., Masaki, D., Takada, S., Kakudo, H., Kaga, T., Kinefuchi, K., Sato, T. :
+								ATRIUM Combined Cycle Propulsion Flight Test Project, International Space Planes and
+								Hypersonic Systems and Technologies Conferences (in ASEND), AIAA 2021-4197, Nov. 2021.
+							</li>
+							<li>
+								Taguchi, H., Hirotani, T., Saito, T., Takahashi H., Oki, J., Sato, T., Tezuka A.,Tsue
+								M., Tsuchiya, T., Nakaya, S., Matsuo, A. : Mach 4 Propulsion Wind Tnnel Test of
+								High-Mach Integrated Control Experimental Aircraft (HIMICO), International Space Planes
+								and Hypersonic Systems and Technologies Conferences (in ASEND), AIAA 2021-4196, Nov.
+								2021.
+							</li>
+							<li>
+								Sakano, Y., Nambu, T., Mizobuchi, Y., Sato, T. : Shape Recognition of Fuel Atomization
+								in Crossflow using Deep Learning, 2022 AIAA SciTech Forum, PC-03, Jan. 2022.
+							</li>
+							<li>
+								Tsujimura, H., Kubota, K., Sato, T. : Numerical Analysis of Aerial Firefighting Using
+								Grid–Particle Coupling Method, 2022 AIAA SciTech Forum, FD-103, Jan. 2022.
+							</li>
+							<li>
+								Taguchi, H., Sato, T., Tsue, M., Tsuchiya, T., Matsuo, A., Tezuka, A., Nakaya, S.,
+								Fujikawa, T., Morita, N., Hirotani, T., Imamura, S., Takahashi, H., Oki, J. : Mach 5
+								Flight Experiment Plan of High-Mach Integrated Control Experimental Aircraft (HIMICO),
+								33rd International Symposium on Space Technology and Science, 2022-g-05, Mar. 2022.
+							</li>
+							<li>
+								Maru, Y., Seta, H., Matsumoto, K., Sato, T. : A Streamline-traced Air Inlet for the
+								Reusable Sounding Rocket with Airbreathing Engines, 33rd International Symposium on
+								Space Technology and Science, 2022-a-13, Mar. 2022.
+							</li>
+							<li>
+								Nakao, K., Oinuma, M., Sakano, Y., Miyase, T., Akutsu, M., Sakamoto, Y., Sato, T. :
+								Experimental Study of a Flow Multimeter for Gas–Liquid Two-Phase Flow Using
+								Bidirectional Long Short-Term Memory Network, 33rd International Symposium on Space
+								Technology and Science, Mar. 2022.
+							</li>
+							<li>
+								Fujii, M., Fujimori, Y., Hoshiya, Y., Kuwabara, Y., Tanaka, R., Sato, T., Takahashi, H.,
+								Taguchi, H. : Experimental Investigation on the Effect of the Intake Throat Height on
+								the Buzz Characteristics in the Ramjet Engine for High-Mach Integrated Control
+								Experiment (HIMICO), 33rd International Symposium on Space Technology and Science, Mar.
+								2022.
+							</li>
+							<li>
+								Taguchi, H., Sato, T., Tsue, M., Tsuchiya, T., Matsuo, A., Tezuka, A., Nakaya, S.,
+								Fujikawa, T., Morita, N., Hirotani, T., Imamura, S., Takahashi, H., Oki, J. : Mach 5
+								Flight Experiment Plan of High-Mach Integrated Control Experimental Aircraft (HIMICO),
+								33rd International Symposium on Space Technology and Science, Mar. 2022.
+							</li>
+							<li>
+								Maru, Y., Seta, H., Matsumoto, K., Sato, T. : A Streamline-traced Air Inlet for the
+								Reusable Sounding Rocket with Airbreathing Engines, 33rd International Symposium on
+								Space Technology and Science, Mar. 2022.
+							</li>
+
+						</ol>
+						<!-- 国内会議 -->
+						<font color="#003399">国内会議 / Japanese Domestic Conferences</font><br><br>
+
+						<ol class="list_brackets">
+							<li>
+								辻村光樹, 窪田健一, 佐藤哲也 : 粒子法と格子法の連成による液体噴流微粒化の数値解析, 第53回流体力学講演会/第39回航空宇宙数値シミュレーション技術シンポジウム,
+								1E01, 2021年6月.
+							</li>
+							<li>
+								髙橋英美, 田口秀之, 廣谷智成, 大木純一, 佐藤哲也 (早大) : 極超音速飛行実験機用エアデータ計測システムの設計,
+								第53回流体力学講演会/第39回航空宇宙数値シミュレーション技術シンポジウム, 1C02, 2021年6月.
+							</li>
+							<li>
+								服部皓大，十川悟，森永裕大，陳衛偉，植田晃弘，吉田幹男，佐藤哲也 : ヘルツ・クヌーセンの式に基づく昇華凝結モデルを用いた着霜現象の予測, 2021年度 日本冷凍空調学会
+								年次大会, A121, 2021年9月.
+							</li>
+							<li>
+								正木亮好，河野雅大，佐藤哲也，岡井敬一，賀澤順一，正木大作 : 境界層吸い込み（BLI）を模擬したディストーション下における翼傾斜がファン性能に及ぼす影響に関する数値解析,
+								第49回日本ガスタービン学会定期講演会, A-8, 2021年10月.
+							</li>
+							<li>
+								瀬田晴明, 丸祐介, 佐藤哲也, 松本和真 : エアターボロケットエンジン（ATRIUM）を搭載する「新観測ロケット」用インテークの設計および評価,
+								第65回宇宙科学技術連合講演会, P03, 2021年11月.
+							</li>
+							<li>
+								藤井愛実，藤森勇輝，干谷祐輔，桒原宥希，田中凜太郎，佐藤哲也，田口秀之，小島孝之，髙橋英美 :
+								極超音速統合制御実験（HIMICO）用インテークで発生するバズ現象に関する実験的研究, 日本機械学会 第99期 流体工学部門 講演会, OS11-01, 2021年11月.
+							</li>
+							<li>
+								坂野友香理，南部太介，溝渕泰寛，佐藤哲也 : クロスフロー燃料微粒化における時系列変化抽出手法の提案, 第59回燃焼シンポジウム, 197s, 2021年11月.
+							</li>
+							<li>
+								辻村光樹, 窪田健一, 佐藤哲也 : 粒子・格子ハイブリッド法による液体噴流微粒化の数値解析, 第35回数値流体力学シンポジウム, C10-2, 2021年12月.
+							</li>
+							<li>
+								藤森勇輝, 藤井愛実, 干谷祐輔, 桒原宥希, 田中凛太郎, 佐藤哲也, 田口秀之, 小島孝之, 髙橋英美, 大木純一 :
+								極超音速統合制御実験機(HIMICO)用ラムジェットインテークの抽気形態に関する研究 ,令和3年度宇宙航行の力学シンポジウム, 2021年12月.
+							</li>
+							<li>
+								小林弘明, 丸祐介, 徳留真一郎, 澤井秀次郎, 正木大作, 山城龍馬, 八木下剛, 加賀 亨, 高田 仁志, 角銅 洋実, 坂本 勇樹, 内海 政春, ,中田大将, 武田
+								洋一, 真子弘泰, 杵淵紀世志, 吹場活佳, Richardson Matthew, 佐藤哲也 : ATRIUMエンジンの研究開発状況, 令和３年度宇宙輸送シンポジウム,
+								STCP-2021-013, 2022年1月.
+							</li>
+							<li>
+								桒原宥希, 藤井愛実, 藤森勇輝, 干谷祐輔, 田中凛太郎, 佐藤哲也 : 極超音速統合制御実験機(HIMICO)用ラムジェットエンジンの迎角・横滑り角特性の実験的研究,
+								令和３年度宇宙輸送シンポジウム, STCP-2022-019, 2022年1月.
+							</li>
+							<li>
+								中尾圭吾, 阿久津元秀, 生沼瑞基, 宮瀬拓海, 坂本勇樹, 佐藤哲也 : 深層学習を用いた極低温二相流における計測技術の高度化に向けた実験研究,
+								令和３年度宇宙輸送シンポジウム, STCP-2022-033, 2022年1月.
+							</li>
+							<li>
+								森永裕大, 十川悟, 服部皓大, 植田晃弘, 吉田幹男, 佐藤哲也 : 極低温平板冷却面での着霜現象におけるミスト化の影響に関する実験研究, 令和３年度宇宙輸送シンポジウム,
+								STCP-2022-032, 2022年1月.
+							</li>
+							<li>
+								小林 弘明, 丸 祐介, 徳留 真一郎, 澤井 秀次郎, 正木大作, 山城龍馬, 八木下剛, 加賀 亨, 高田 仁志, 角銅 洋実, 坂本 勇樹, 内海 政春, ,中田大将,
+								武田 洋一, 真子弘泰, 杵淵紀世志, 吹場活佳, Richardson Matthew, 佐藤哲也 : ATRIUMエンジンの研究開発状況, 令和３年度宇宙輸送シンポジウム,
+								STCP-2022-013, 2022年1月.
+							</li>
+							<li>
+								桒原 宥希， 藤井 愛実， 藤森 勇輝， 干谷 祐輔， 田中 凛太郎， 佐藤 哲也 :
+								極超音速統合制御実験機(HIMICO)用ラムジェットエンジンの迎角・横滑り角特性の実験的研究, 令和３年度宇宙輸送シンポジウム, STCP-2022-019, 2022年1月.
+							</li>
+							<li>
+								吹場活佳，亀谷悠作，小林弘明，坂本勇樹，佐藤哲也 : 表面の加工による極低温燃料予冷の促進, 第61回航空原動機・宇宙推進講演会, 2C18, 2022年3月.
+							</li>
+							<li>
+								河野雅大, 正木亮好, 佐藤哲也, 岡井敬一, 賀澤順一, 正木大作 : 境界層吸い込み(BLI)を想定したエンジン/機体統合モデルにおける実験を通じた形状抗力の評価,
+								第61回航空原動機・宇宙推進講演会, 2A09, 2022年3月.
+							</li>
+							<li>
+								坂野 友香理, 南部 太介, 溝渕 泰寛, 佐藤 哲也 : 微粒化モデルにおける点群深層学習を用いた液滴挙動予測の高精度化, 第61回航空原動機・宇宙推進講演会, 2B03,
+								2022年3月.
+							</li>
+							<li>
+								田口秀之，今村俊介，西田俊介，大木純一，髙橋英美，富岡定毅, 佐藤哲也 : "高速二地点間輸送機に適用するターボ・スクラム複合エンジンの概念検討",
+								第61回航空原動機・宇宙推進講演会, 3A04, 2022年3月.
+							</li>
+							<li>
+								佐藤哲也, 田口秀之, 津江光洋, 中谷辰爾, 土屋武司, 森田直人, 松尾亜紀子, 手塚亜聖, 今村俊介, 髙橋英美, 廣谷智成, 大木純一, 増田和三 :
+								観測ロケットを用いた極超音速統合実験機HIMICOの開発状況, 第61回航空原動機・宇宙推進講演会, 3A05, 2022年3月.
+							</li>
+							<li>
+								松本和真，瀬田晴明，丸祐介，佐藤哲也 : 新観測ロケット用ATRIUMエンジンエアインテークの流路形状設計と性能評価, 第61回航空原動機・宇宙推進講演会, 2A19,
+								2022年3月.
+							</li>
+							<li>
+								藤井愛実，佐藤哲也，橋本敦，田口秀之 : 極超音速統合制御実験(HIMICO)用インテークの機体迎角特性に関する数値的研究, 第61回航空原動機・宇宙推進講演会, 3A07,
+								2022年3月.
+							</li>
+							<li>
+								今村 俊介、田口 秀之、土屋 武司、森田 直人、佐藤 哲也 : HIMICOの基準軌道と飛行安全系の検討, 第4回観測ロケットシンポジウム, SA6000175007,
+								2022年3月.
+							</li>
+							<li>
+								佐藤 哲也、田口 秀之、津江 光洋、土屋 武司、松尾 亜紀子、藤川 貴弘、鈴木 宏二郎、中谷 辰爾、渡邉 保真、森田 直人、手塚 亜聖、石村 康生、宮路 幸二、増田 和三、廣谷
+								智成、高橋 英美、今村 俊介、大木 純一、西田 俊介、本郷 素行、小島 孝之 : 極超音速統合制御実験(HIMICO)の計画概要, 第4回観測ロケットシンポジウム,
+								SA6000175006, 2022年3月.
+							</li>
+							<!-- 20210419更新 -->
+
+						</ol>
+
+						<font color="#003399">その他 / The others</font><br><br>
+						<ol class="list_brackets">
+
+							<!-- 20210419更新 -->
+
+							<li>≪解説記事≫
+								山本姫子, 溝渕泰寛, 佐藤哲也 : Laminar Flamelet Modelにおけるニューラルネットワークの活用, 日本燃焼学会誌, <b>63</b>, 203
+								(2021), pp 44&ndash;51.
+							</li>
+
+						</ol>
 					</div>
 
-<!--本文部分-->
-					<div class="col-md-8 maincontainer">
-						<h1 id="Pub020" class="midashi">
-							2020年度
-						</h1>
-						<div class="mainpara">
+					<h1 id="Pub020" class="midashi">
+						2020年度
+					</h1>
+					<div class="mainpara">
 
-<!-- Journal -->
-							<font color="#003399">論文 / Journal Articles</font><br><br>
-							<ol class="list_brackets">
+						<!-- Journal -->
+						<font color="#003399">論文 / Journal Articles</font><br><br>
+						<ol class="list_brackets">
 
-<!-- 20210810更新 -->
-								<li>
-									Sakamoto, Y., Kobayashi, H., Naruo Y., Takesaki, Y., Nakajima Y., Kabayama K.and Sato, T. : Boiling Hydrogen Flow Characteristics Under Low-Pressure Conditions - Flow Regime Transition Characteristics ,<i>International Journal of Hydrogen Energy</i>, <b>46</b>, 11 (2021), pp. 8239&ndash;8252.
-								</li>									
-								<li>
-									Yoshida, H., Sano, M., Wakabayashi, S., Chiga, T., Yokoi, T., Hashimoto, A., Murakami, K., Kojima, T., Taguchi, H., Sato, T. : "Numerical Study on the Intake Performance with Side Clearance for High Mach Integrated Control Experiment (HIMICO)" ,<i>Aerospace Technology Japan</i>, <b>19</b>, 2 (2021), pp. 135&ndash;143.
-								</li>								
-								<li>
-									Yamamoto, H., Toyonaga, R., Komatsu, Y., Kabayama, K., Mizobuchi, Y. and Sato, T. : Improved Methods of Laminar Flamelet Model for Compressible Flow ,<i>AIAA J. </i>, <b>58</b>, 8 (2020), pp. 3514&ndash;3526.
-								</li>
+							<!-- 20210810更新 -->
+							<li>
+								Sakamoto, Y., Kobayashi, H., Naruo Y., Takesaki, Y., Nakajima Y., Kabayama K.and Sato,
+								T. : Boiling Hydrogen Flow Characteristics Under Low-Pressure Conditions - Flow Regime
+								Transition Characteristics ,<i>International Journal of Hydrogen Energy</i>, <b>46</b>,
+								11 (2021), pp. 8239&ndash;8252.
+							</li>
+							<li>
+								Yoshida, H., Sano, M., Wakabayashi, S., Chiga, T., Yokoi, T., Hashimoto, A., Murakami,
+								K., Kojima, T., Taguchi, H., Sato, T. : "Numerical Study on the Intake Performance with
+								Side Clearance for High Mach Integrated Control Experiment (HIMICO)" ,<i>Aerospace
+									Technology Japan</i>, <b>19</b>, 2 (2021), pp. 135&ndash;143.
+							</li>
+							<li>
+								Yamamoto, H., Toyonaga, R., Komatsu, Y., Kabayama, K., Mizobuchi, Y. and Sato, T. :
+								Improved Methods of Laminar Flamelet Model for Compressible Flow ,<i>AIAA J. </i>,
+								<b>58</b>, 8 (2020), pp. 3514&ndash;3526.
+							</li>
 
-							</ol>
+						</ol>
 
-<!-- International Conferences -->
-							<font color="#003399">国際会議 / International Conferences</font><br><br>
-							<ol class="list_brackets">
+						<!-- International Conferences -->
+						<font color="#003399">国際会議 / International Conferences</font><br><br>
+						<ol class="list_brackets">
 
-<!-- 20210810更新 -->
-								<li>
-									Sakano, Y., Tsujimura, H., Sato, T. : Improvement of the Aerodynamic model Using a Regression-Based Deep Learning for solving Droplet Breakup Phenomena, Asian Joint Conference on Propulsion and Power (AJCPP) 2021, 4C3&ndash;2, Mar. 2021.
-								</li>
-								<li>
-									Fujii, M., Ogura, S., Sano, M., Sato, T., Oki, J., Taguchi, H., Kojima, T., Hashimoto, A., Takahashi, T. : Experimental and Numerical Study of the Supersonic Air Intake for High-Mach Integrated Control Experiment, Asian Joint Conference on Propulsion and Power (AJCPP) 2021, 4C2&ndash;3, Mar. 2021.
-								</li>
-								<li>
-									Ogura, S., Fujii, M., Fujimori, Y., Hoshiya, Y., Sato, T., Taguchi, H., Kojima, T., Oki, J. : "Effect of the Side Clearance and Inflow Conditions on the Performance of Air Intake for High Mach Integrated Control Experiment (HIMICO)", Asian Joint Conference on Propulsion and Power (AJCPP) 2021, 4C2&ndash;4, Mar. 2021.
-								</li>
-								<li>
-									Arai, F., Kojima, T., Sato, T. : Conceptual and Experimental Study on Electric Aircrafts Using PEFC, Asian Joint Conference on Propulsion and Power (AJCPP) 2021, 4E4&ndash;1, Mar. 2021.
-								</li>
-								<li>
-									Yokoi, T., Sato, T., Makino, Y., Ueno, A. : Numerical Study on the Effect of Angle of Attack on the Intake for Silent Supersonic Transport of Propulsion/Airplane Integrated Design, Asian Joint Conference on Propulsion and Power (AJCPP) 2021, 4C4&ndash;4, Mar. 2021.
-								</li>
-								<li>
-									Masaki, A., Ogushi, S., Tsuruta, R., Nishiwaki, D., Sato, T., Okai, K., Kazawa, J., Masaki, D., Harada, M. : Assessment of the Influence of Boundary Layer Ingestion (BLI) on the Axial Fan, 18th International Symposium on Transport Phenomena and Dynamics of Rotating Machinery (ISROMAC18), ISROMAC2019&ndash;00113, Nov. 2020.
-								</li>
+							<!-- 20210810更新 -->
+							<li>
+								Sakano, Y., Tsujimura, H., Sato, T. : Improvement of the Aerodynamic model Using a
+								Regression-Based Deep Learning for solving Droplet Breakup Phenomena, Asian Joint
+								Conference on Propulsion and Power (AJCPP) 2021, 4C3&ndash;2, Mar. 2021.
+							</li>
+							<li>
+								Fujii, M., Ogura, S., Sano, M., Sato, T., Oki, J., Taguchi, H., Kojima, T., Hashimoto,
+								A., Takahashi, T. : Experimental and Numerical Study of the Supersonic Air Intake for
+								High-Mach Integrated Control Experiment, Asian Joint Conference on Propulsion and Power
+								(AJCPP) 2021, 4C2&ndash;3, Mar. 2021.
+							</li>
+							<li>
+								Ogura, S., Fujii, M., Fujimori, Y., Hoshiya, Y., Sato, T., Taguchi, H., Kojima, T., Oki,
+								J. : "Effect of the Side Clearance and Inflow Conditions on the Performance of Air
+								Intake for High Mach Integrated Control Experiment (HIMICO)", Asian Joint Conference on
+								Propulsion and Power (AJCPP) 2021, 4C2&ndash;4, Mar. 2021.
+							</li>
+							<li>
+								Arai, F., Kojima, T., Sato, T. : Conceptual and Experimental Study on Electric Aircrafts
+								Using PEFC, Asian Joint Conference on Propulsion and Power (AJCPP) 2021, 4E4&ndash;1,
+								Mar. 2021.
+							</li>
+							<li>
+								Yokoi, T., Sato, T., Makino, Y., Ueno, A. : Numerical Study on the Effect of Angle of
+								Attack on the Intake for Silent Supersonic Transport of Propulsion/Airplane Integrated
+								Design, Asian Joint Conference on Propulsion and Power (AJCPP) 2021, 4C4&ndash;4, Mar.
+								2021.
+							</li>
+							<li>
+								Masaki, A., Ogushi, S., Tsuruta, R., Nishiwaki, D., Sato, T., Okai, K., Kazawa, J.,
+								Masaki, D., Harada, M. : Assessment of the Influence of Boundary Layer Ingestion (BLI)
+								on the Axial Fan, 18th International Symposium on Transport Phenomena and Dynamics of
+								Rotating Machinery (ISROMAC18), ISROMAC2019&ndash;00113, Nov. 2020.
+							</li>
 
-							</ol>
-<!-- 国内会議 -->
-							<font color="#003399">国内会議 / Japanese Domestic Conferences</font><br><br>
-							<ol class="list_brackets">
+						</ol>
+						<!-- 国内会議 -->
+						<font color="#003399">国内会議 / Japanese Domestic Conferences</font><br><br>
+						<ol class="list_brackets">
 
-<!-- 20210810更新 -->
-								<li>
-									佐藤哲也、田口秀之、津江光洋、土屋武司、松尾亜紀子、藤川貴弘、鈴木宏二郎、中谷辰爾、渡邉保真、森田直人、手塚亜聖、石村康生、宮路幸二、増田和三、廣谷智成、高橋英美、今村俊介、大木純一、西田俊介、本郷素行、小島孝之 : 極超音速統合制御実験（HIMICO）の提案, 第3回観測ロケットシンポジウム, SA6000162008, Ⅲ&ndash;1, 2021年3月.
-								</li>
-								<li>
-									小林 弘明(JAXA)、坂本 勇樹(JSPS)、丸 祐介(JAXA)、徳留 真一郎(JAXA) 野中 聡(JAXA)、澤井 秀次郎(JAXA)、佐藤 哲也(早大) : 新たな宇宙科学研究分野を創出する新観測ロケットの実現に向けて, 第3回観測ロケットシンポジウム, SA6000162015, V&ndash;1, 2021年3月.
-								</li>
-								<li>
-									佐藤哲也、田口秀之、小林弘明 : 宇宙輸送機用エアブリージングエンジンの研究開発, 宇宙輸送シンポジウム, STCP&ndash;2020&ndash;014, 2021年1月.
-								</li>
-								<li>
-									新井郁矢、小島孝之、佐藤哲也 : 低温水素ガス利用時における固体高分子型燃料電池の性能評価, 宇宙輸送シンポジウム, STCP&ndash;2020&ndash;034, 2021年1月.
-								</li>
-								<li>
-									服部皓大，十川悟，森永裕大，陳衛偉，植田晃弘，佐藤哲也 : 強制対流条件下における着霜現象への冷却面温度および絶対湿度の影響, 宇宙輸送シンポジウム, STCP&ndash;2020&ndash;039, 2021年1月.
-								</li>
-								<li>
-									藤森勇輝、小倉彰悟、藤井愛実、干谷祐輔、佐藤哲也、田口秀之、小島孝之、大木純一 : 極超音速統合制御実験機(HIMICO)用ラムジェットインテークに関する実験的研究, 宇宙輸送シンポジウム, STCP&ndash;2020&ndash;020, 2021年1月.
-								</li>
-								<li>
-									服部皓大，佐藤哲也 : エアロゾル輸送解析とCFDとの連成による着霜解析手法の提案, 第３４回数値流体力学シンポジウム, B03&ndash;1, 2020年12月.
-								</li>
-								<li>
-									坂野友香理、佐藤哲也 : 微粒化モデリングにおける深層学習を用いた液滴の三次元形状認識, 第29回微粒化シンポジウム, B&ndash;221, 2020年12月.
-								</li>
-								<li>
-									瀬田晴明、丸祐介、佐藤哲也、坂本勇樹 : エアターボロケットエンジンを搭載する再使用型弾道飛行観測ロケットのインテークの設計, 令和2年度宇宙航行の力学シンポジウム, 2020年12月.
-								</li>
-								<li>
-									小倉彰悟、藤井愛実、藤森勇輝、干谷祐輔、横井寿哉、内山和哉、佐藤哲也、田口秀之、小島孝之、大木純一 : 極超音速統合制御実験（HIMICO）用インテークのサイドクリアランスおよび主流流入角が性能に及ぼす影響, 令和2年度宇宙航行の力学シンポジウム, 2020年12月.
-								</li>
-								<li>
-									坂野友香理、佐藤哲也 : クロスフロー型微粒化における液滴の三次元形状表現方法の評価, 第58回燃焼シンポジウム, 2020年12月.
-								</li>
-								<li>
-									田口秀之、廣谷智成、大木純一、斎藤俊仁, 佐藤哲也、手塚亜聖, 津江光洋、土屋武司、中谷辰爾, 松尾亜紀子 : 極超音速統合制御実験機のマッハ４推進風洞実験, 第58回飛行機シンポジウム, 2D10, 2020年11月.
-								</li>
-								<li>
-									岡井敬一 ,正木亮好,鶴田亮祐,大串尚太郎,水鳥聖也,河野雅大,西脇大貴,佐藤哲也 ,正木大作 : 推進ファン埋め込みによる機体エンジン統合効果の実験・数値解析による評価, 第58回飛行機シンポジウム, 2A04, 2020年11月.
-								</li>
-								<li>
-									横井寿哉，佐藤哲也，牧野好和，上野篤史 : 静粛超音速機用インテーク性能への迎角の影響に関する数値的研究, 第58回飛行機シンポジウム, 3A15, 2020年11月.
-								</li>
-								<li>
-									佐藤哲也，内海政春，中田大将, 船崎健一, 武田洋一,  Richardson Matthew, 真子弘泰, 吹場活佳, 杵淵紀世志 : エアターボロケット開発における大学での取り組み, 第64回宇宙科学技術連合講演会, 2H11, 2020年10月.
-								</li>
-								<li>
-									辻村光樹, 窪田健一, 佐藤哲也 : 空気力モデルを用いた格子法・粒子法の連成計算による消防飛行艇からの放水解析, 流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム2020オンライン, 2A06, 2020年9月.
-								</li>
-								<li>
-									小倉彰悟、藤井愛実、藤森勇輝、干谷祐輔、佐藤哲也、田口秀之、小島孝之、大木純一 : "極超音速統合制御実験(HIMICO)用インテークにおけるサイドクリアランスが内部流れに及ぼす影響", 流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム2020オンライン, 2B10 , 2020年9月.
-								</li>								
-								<li>
-									坂野友香理、辻村光樹、佐藤哲也 : 粒子法計算における深層学習を用いた気液相互作用モデルの研究, 流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム2020オンライン, 3B07, 2020年9月.
-								</li>								
-							</ol>
+							<!-- 20210810更新 -->
+							<li>
+								佐藤哲也、田口秀之、津江光洋、土屋武司、松尾亜紀子、藤川貴弘、鈴木宏二郎、中谷辰爾、渡邉保真、森田直人、手塚亜聖、石村康生、宮路幸二、増田和三、廣谷智成、高橋英美、今村俊介、大木純一、西田俊介、本郷素行、小島孝之
+								: 極超音速統合制御実験（HIMICO）の提案, 第3回観測ロケットシンポジウム, SA6000162008, Ⅲ&ndash;1, 2021年3月.
+							</li>
+							<li>
+								小林 弘明(JAXA)、坂本 勇樹(JSPS)、丸 祐介(JAXA)、徳留 真一郎(JAXA) 野中 聡(JAXA)、澤井 秀次郎(JAXA)、佐藤 哲也(早大) :
+								新たな宇宙科学研究分野を創出する新観測ロケットの実現に向けて, 第3回観測ロケットシンポジウム, SA6000162015, V&ndash;1, 2021年3月.
+							</li>
+							<li>
+								佐藤哲也、田口秀之、小林弘明 : 宇宙輸送機用エアブリージングエンジンの研究開発, 宇宙輸送シンポジウム, STCP&ndash;2020&ndash;014,
+								2021年1月.
+							</li>
+							<li>
+								新井郁矢、小島孝之、佐藤哲也 : 低温水素ガス利用時における固体高分子型燃料電池の性能評価, 宇宙輸送シンポジウム, STCP&ndash;2020&ndash;034,
+								2021年1月.
+							</li>
+							<li>
+								服部皓大，十川悟，森永裕大，陳衛偉，植田晃弘，佐藤哲也 : 強制対流条件下における着霜現象への冷却面温度および絶対湿度の影響, 宇宙輸送シンポジウム,
+								STCP&ndash;2020&ndash;039, 2021年1月.
+							</li>
+							<li>
+								藤森勇輝、小倉彰悟、藤井愛実、干谷祐輔、佐藤哲也、田口秀之、小島孝之、大木純一 : 極超音速統合制御実験機(HIMICO)用ラムジェットインテークに関する実験的研究,
+								宇宙輸送シンポジウム, STCP&ndash;2020&ndash;020, 2021年1月.
+							</li>
+							<li>
+								服部皓大，佐藤哲也 : エアロゾル輸送解析とCFDとの連成による着霜解析手法の提案, 第３４回数値流体力学シンポジウム, B03&ndash;1, 2020年12月.
+							</li>
+							<li>
+								坂野友香理、佐藤哲也 : 微粒化モデリングにおける深層学習を用いた液滴の三次元形状認識, 第29回微粒化シンポジウム, B&ndash;221, 2020年12月.
+							</li>
+							<li>
+								瀬田晴明、丸祐介、佐藤哲也、坂本勇樹 : エアターボロケットエンジンを搭載する再使用型弾道飛行観測ロケットのインテークの設計, 令和2年度宇宙航行の力学シンポジウム,
+								2020年12月.
+							</li>
+							<li>
+								小倉彰悟、藤井愛実、藤森勇輝、干谷祐輔、横井寿哉、内山和哉、佐藤哲也、田口秀之、小島孝之、大木純一 :
+								極超音速統合制御実験（HIMICO）用インテークのサイドクリアランスおよび主流流入角が性能に及ぼす影響, 令和2年度宇宙航行の力学シンポジウム, 2020年12月.
+							</li>
+							<li>
+								坂野友香理、佐藤哲也 : クロスフロー型微粒化における液滴の三次元形状表現方法の評価, 第58回燃焼シンポジウム, 2020年12月.
+							</li>
+							<li>
+								田口秀之、廣谷智成、大木純一、斎藤俊仁, 佐藤哲也、手塚亜聖, 津江光洋、土屋武司、中谷辰爾, 松尾亜紀子 : 極超音速統合制御実験機のマッハ４推進風洞実験,
+								第58回飛行機シンポジウム, 2D10, 2020年11月.
+							</li>
+							<li>
+								岡井敬一 ,正木亮好,鶴田亮祐,大串尚太郎,水鳥聖也,河野雅大,西脇大貴,佐藤哲也 ,正木大作 : 推進ファン埋め込みによる機体エンジン統合効果の実験・数値解析による評価,
+								第58回飛行機シンポジウム, 2A04, 2020年11月.
+							</li>
+							<li>
+								横井寿哉，佐藤哲也，牧野好和，上野篤史 : 静粛超音速機用インテーク性能への迎角の影響に関する数値的研究, 第58回飛行機シンポジウム, 3A15, 2020年11月.
+							</li>
+							<li>
+								佐藤哲也，内海政春，中田大将, 船崎健一, 武田洋一, Richardson Matthew, 真子弘泰, 吹場活佳, 杵淵紀世志 :
+								エアターボロケット開発における大学での取り組み, 第64回宇宙科学技術連合講演会, 2H11, 2020年10月.
+							</li>
+							<li>
+								辻村光樹, 窪田健一, 佐藤哲也 : 空気力モデルを用いた格子法・粒子法の連成計算による消防飛行艇からの放水解析,
+								流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム2020オンライン, 2A06, 2020年9月.
+							</li>
+							<li>
+								小倉彰悟、藤井愛実、藤森勇輝、干谷祐輔、佐藤哲也、田口秀之、小島孝之、大木純一 :
+								"極超音速統合制御実験(HIMICO)用インテークにおけるサイドクリアランスが内部流れに及ぼす影響",
+								流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム2020オンライン, 2B10 , 2020年9月.
+							</li>
+							<li>
+								坂野友香理、辻村光樹、佐藤哲也 : 粒子法計算における深層学習を用いた気液相互作用モデルの研究,
+								流体力学講演会／航空宇宙数値シミュレーション技術シンポジウム2020オンライン, 3B07, 2020年9月.
+							</li>
+						</ol>
 
-							<font color="#003399">その他 / The others</font><br><br>
-							<ol class="list_brackets">
+						<font color="#003399">その他 / The others</font><br><br>
+						<ol class="list_brackets">
 
-<!-- 20210810更新 -->
+							<!-- 20210810更新 -->
 
-								<li>≪解説記事≫
-									<br>
-								岡井敬一、佐藤哲也: 電動航空機で期待されるエンジン埋め込み・境界層吸い込み効果, 日本ガスタービン学会誌, <b>49</b>, 1 (2021), pp. 26&ndash;32.
-								</li>
+							<li>≪解説記事≫
+								<br>
+								岡井敬一、佐藤哲也: 電動航空機で期待されるエンジン埋め込み・境界層吸い込み効果, 日本ガスタービン学会誌, <b>49</b>, 1 (2021), pp.
+								26&ndash;32.
+							</li>
 
-							</ol>
-						</div>
-
-						-------------------------------------------------------------------------------------------------------------------
-
-						<h1 id="Pub019" class="midashi">
-							2019年度
-						</h1>
-						<div class="mainpara">
-
-<!-- Journal -->
-							<font color="#003399">論文 / Journal Articles</font><br><br>
-							<ol class="list_brackets">
-
-<!-- 20210810更新 -->
-								<li>
-									Sakai, A., Miyaji, K., Hirotani, T., Sato, T., Tsuchiya T., Taguchi, H. : Numerical Analysis of Aerodynamics and Flight Trajectory of JAXA’s High-Mach Integrated Control Experiment (HIMICO),  <i>Transactions of JSASS, Aerospace Technology Japan</i>, <b>18</b>, 1 (2020), pp. 1&ndash;7.
-								</li>
-								<li>
-								箕手一眞，坂本勇樹，多根翔平，中島曜，古市敦大，樺山昂生，辻村光樹，吉田光希，小林弘明，佐藤哲也 : 均質化機構によるスリップ比モデルを用いたクオリティ計測手法の開発, 航空宇宙技術, <b>18</b> (2019), pp. 109&ndash;118.
-								</li>
-								<li>
-								山本姫子, 豊永塁, 小松湧介, 樺山昂生, 佐藤哲也, 溝渕泰寛: Artificial Neural Network(ANN)を用いた圧縮性Flameletモデルの改良, 航空宇宙技術, <b>18</b> (2019), pp. 91&ndash;100.
-								</li>
-								<li>
-									Sakamoto, Y., Kobayashi, H., Naruo, Y., Takesaki, Y., Nakajima, Y., Furuichi, A., Tsujimura, H., Kabayama, K., and Sato, T.: Investigation of the Void Fraction&ndash;quality Correlations for Two-phase Hydrogen Flow Based on the Capacitive Void Fraction Measurement,  <i>Int. J. Hydrogen Energy</i>, <b>44</b>, 33 (2019), pp. 18483&ndash;18495.
-								</li>
-								<li>
-									Kinefuchi, K., Sarae, W., Umemura, Y., Fujita, T., Okita, K., Kobayashi, H., Nonaka, S., Himeno, T. and Sato, T.: Investigation of Cryogenic Chilldown in a Complex Channel Under Low Gravity Using a Sounding Rocket, <i>AIAA J. Spacecraft Rockets</i>, <b>56</b>, 1 (2019), pp. 91&ndash;103.
-								</li>
-								<li>
-									辻村光樹, 窪田健一, 佐藤哲也, 髙橋孝, 村上桂一: 粒子法を用いた液滴解析における空気力のモデル化, ながれ, <b>38</b>, 2 (2019), pp. 105&ndash;113.
-								</li>
-								<li>
-									長尾志、吉田秀和、佐野正和、佐藤哲也、橋本敦: 超音速矩形インテークにおけるバズ発生に関する数値解析, 航空宇宙技術, <b>18</b>, (2019), pp. 81&ndash;89.
-								</li>								
-								<li>
-									坂本勇樹, 小林弘明, 東和弘, 長尾直樹, 杉森大造, 杵淵紀世志, 佐藤哲也: LE-5B-3地上燃焼試験用静電容量型ボイド率計の開発, 航空宇宙技術, <b>18</b> (2019), pp. 19&ndash;28.
-								</li>
-
-							</ol>
-
-<!-- International Conferences -->
-							<font color="#003399">国際会議 / International Conferences</font><br><br>
-							<ol class="list_brackets">
-
-<!-- 20210810更新 -->
-								<li>
-									Sakamoto, Y., Kobayashi, H., Naruo, Y., Takesaki Y., Nakajima Y., Tsujimura H., Kabayama K., Sato T. : Experimental investigation of flow regime transition for boiling hydrogen flow in horizontal pipes. , Aerospace Europe Confernece – AEC2020, Bordeaux, France, Feb. 2020.
-								</li>
-								<li>
-									Sakamoto, Y.*, Kobayashi, H., Naruo, Y., Takesaki Y., Nakajima Y., Tsujimura H., Kabayama K., Sato T. : Experimental investigation of heat transfer characteristics for boiling hydrogen flow in horizontal circular pipes , 10th ACASC/2nd Asian-ICMC/CSSJ Joint Conference, Naha, Japan, Jan. 2020.
-								</li>
-								<li>
-									Yamamoto, H., Mizobuchi, Y., and Sato, T.: A Study on Efficient Calculation of Mixture Transport Properties by Artificial Neural Network, International Gas Turbine Congress (IGTC) 2019 Tokyo, Tokyo, Japan, Nov. 2019.
-								</li>
-								<li>
-									Tsuruta, R., Mitani, Y., Ogushi, S., Okuno, A., Sato, T., Harada, M., and Okai, K.: Experimental Investigation on the Effect of Boundary Layer Ingestion Using a Two-dimensional Airfoil, International Gas Turbine Congress (IGTC) 2019 Tokyo, Tokyo, Japan, Nov. 2019.
-								</li>
-								<li>
-									Okai, K., Mitani, Y., Yoshida, H., Ogushi, S., Tsuruta, R., Okuno, A., Sato, T., and Harada, M.: Experimental and Numerical Evaluation of Boundary Ingestion Effect with Engine/Airframe Integration Model, AIAA Propulsion and Energy Forum, Indianapolis, Indiana, Aug. 2019.
-								</li>
-
-								<li>
-									Sato, T., Taguchi, H., Kojima, T., Tsuchiya, T., Tsue, M., Nakaya, S., Matsuo, A., Tezuka, A., Fujikawa, T., and Miyaji, K.: Program of High Mach Integrated Control Experiment, “HIMICO” using S-520 Sounding Rocket, 32nd International Symposium on Space Technology and Science, Fukui, Japan, 2019-m-01, Jun. 2019.
-								</li>
-								<li>
-									Tsujimura, H., Kubota, K., and Sato, T.: Development of Aerodynamic Force Model Based on Potential Flow for Liquid Droplets Analyzed by Particle Method, 32nd International Symposium on Space Technology and Science, Fukui, Japan, 2019-e-39, Jun. 2019.
-								</li>
-								<li>
-									Chiga, T., Sano, M., Ogura, S., Sato, T., Kojima, T., Taguchi, H., Ikeda, Y., Nakaya, S., and Tue, M.: Performance Investigation of Ramjet Engine for High-Mach Integrated Control Experiment (HIMICO), 32nd International Symposium on Space Technology and Science, Fukui, Japan, 2019-a-52, Jun. 2019.
-								</li>
-								<li>
-									Sano, M., Yokoi, T., Yoshida, H., Sato, T., and Taguchi, H.: 3-Dimensional Numerical Simulation of Hypersonic Intake for Pre-cooled Turbo Jet Engine, 32nd International Symposium on Space Technology and Science, Fukui, Japan, 2019-a-34, Jun. 2019.
-								</li>
-								<li>
-									Komatsu, Y., Yamamoto, H., Sato, T., and Taguchi, H., Numerical Simulation of the Ram Combustor for High-Mach Integrated Control Experiment (HIMICO), 32nd International Symposium on Space Technology and Science, Fukui, Japan, 2019-a-33, Jun. 2019.
-								</li>
-							</ol>
-<!-- 国内会議 -->
-							<font color="#003399">国内会議 / Japanese Domestic Conferences</font><br><br>
-							<ol class="list_brackets">
-
-<!-- 20210810更新 -->
-								<li>
-									佐藤哲也、田口秀之、土屋武司、津江光洋、松尾亜紀子、藤川貴弘、手塚亜聖、宮路幸二、中谷辰爾、廣谷智成、小島孝之、本郷素行、小林弘明、大木純一、鈴木宏二郎、増田和三 : 極超音速統合制御実験（HIMICO）の進捗状況, 令和元年度宇宙輸送シンポジウム, 相模原, STCP&ndash;2019&ndash;018, 2020年1月.
-								</li>
-								<li>
-									佐藤哲也、田口秀之、土屋武司、津江光洋、松尾亜紀子、手塚亜聖、藤川貴弘 : 極超音速統合制御実験機（HIMICO）1号機の設計検討, 令和元年度宇宙輸送シンポジウム, 相模原, STCP&ndash;2019&ndash;019, 2020年1月.
-								</li>
-								<li>
-									小倉彰悟,千賀崇浩,藤井愛実,近藤慎太郎,佐野正和,佐藤哲也,田口秀之,小島孝之,大木純一 : 極超音速統合制御実験(HIMICO)用インテークにおける主流流入角が性能に及ぼす影響, 令和元年度宇宙輸送シンポジウム, 東京, STCP&ndash;2019&ndash;020, 2020年1月.
-								</li>
-								<li>
-									小松湧介、佐藤哲也、溝渕泰寛、南部太介、田口秀之 : 極超音速統合制御実験（HIMICO）用ラム燃焼器内の自己着火現象に関する詳細反応機構を考慮した数値解析, 令和元年度宇宙輸送シンポジウム, 相模原, 2020年1月.
-								</li>
-								<li>
-									千賀崇浩、佐野正和、小倉彰悟、藤井愛実、近藤慎太郎、佐藤哲也、小島孝之、田口秀之 : 横滑り角による極超音速統合制御実験機( HIMICO)用ラムジェットエンジンへの影響, 令和元年度宇宙航行の力学シンポジウム, 東京, 2019年12月.
-								</li>
-								<li>
-									千賀崇浩、佐野正和、小倉彰悟、藤井愛実、近藤慎太郎、佐藤哲也、小島孝之、田口秀之 : 横滑り角による極超音速統合制御実験機( HIMICO)用ラムジェットエンジンへの影響, 令和元年度宇宙航行の力学シンポジウム, 東京, 2019年12月.
-								</li>
-								<li>
-									佐藤哲也、田口秀之、小林弘明 : 極超音速エアブリーザの研究状況, 宇宙科学技術連合講演会, 徳島, 1M09, 2019年11月.
-								</li>
-								<li>
-									丸祐介、小林弘明、大山聖、斉藤巧真、徳留真一郎、佐藤哲也 : エアターボロケットエンジンによる再使用ロケットの段階的発展, 宇宙科学技術連合講演会, 徳島, 1M10, 2019年11月.
-								</li>
-								<li>
-									小林弘明、徳留真一郎、澤井秀次郎、丸祐介、坂本勇樹、佐藤哲也 : 軌道間輸送ネットワークのシステム検討, 宇宙科学技術連合講演会, 徳島, 1M12, 2019年11月.
-								</li>
-								<li>
-									小松 湧介、山本 姫子、佐藤 哲也、溝渕 泰寛、南部 太介、田口 秀之 : 極超音速統合制御実験(HIMICO)用ラム燃焼器内の自己着火現象に関する数値解析, 第46回日本ガスタービン学会定期講演会, 函館, C20, 2019年9月.
-								</li>
-								<li>
-									丸 祐介, 佐藤 哲也, 小林 弘明, 徳留 真一郎, 野中 聡, 澤井 秀次郎 : 再使用型宇宙輸送システムにおける大気アシスト飛行の実証研究, 第2回観測ロケットシンポジウム, 相模原, SA6000142004, 2019年8月.
-								</li>
-								<li>
-									佐藤哲也, 田口秀之, 土屋武司, 藤川貴弘, 小林弘明, 増田和三, 鈴木宏二郎, 松尾亜紀子, 手塚亜聖, 宮路幸二, 青木 隆平, 横関智弘, 津江光洋, 中谷辰璽, 廣谷智成, 本郷 素行, 小島孝之 : 極超音速統合制御実験機(HIMICO)2号機の飛行実験提案, 第2回観測ロケットシンポジウム, 相模原, SA6000142008, 2019年8月.
-								</li>
-								<li>
-									佐藤哲也, 田口秀之, 土屋武司, 津江光洋, 鈴木宏二郎, 中谷辰璽,手塚亜聖,松尾亜紀子,宮路幸二,藤川貴弘,廣谷智成, 本郷 素行, 小島孝之 : 極超音速統合制御実験機(HIMICO)1号機の設計状況, 第2回観測ロケットシンポジウム, 相模原, SA6000142009, 2019年8月.
-								</li>
-								<li>
-									横井寿哉，吉田秀和，佐藤哲也，牧野好和，上野篤史 : 静粛超音速機用インテーク性能への機体干渉の影響に関する数値的研究, 第51回流体力学講演会/第37回航空宇宙数値シミュレーション技術シンポジウム, 東京, 2A13, 2019年7月.
-								</li>
-								<li>
-									中川篤紀, 古市敦大, 辻村光樹, 佐藤哲也: MPS法による配管内流れの数値解析に向けた Laplacian モデルの検討, 第37回航空宇宙数値シミュレーション技術シンポジウム, 東京, 1E16, 2019年6月.
-								</li>
-								<li>
-									横井寿哉，吉田秀和，佐藤哲也，牧野好和，上野篤史 : 静粛超音速機用インテークにおけるバズ発生条件に関する数値的研究, 日本航空宇宙学会第50期年会講演会, 東京, 2C02, 2019年4月.
-								</li>								
-							</ol>
-
-							<font color="#003399">その他 / The others</font><br><br>
-							<ol class="list_brackets">
-
-<!-- 20191209更新 -->
-
-								<li>≪解説記事≫
-									<br>
-								佐藤哲也, 山本姫子, 樺山昂生, 辻村光樹, 坂野友香理: 推進工学への機械学習の適用, 日本ガスタービン学会誌, <b>47</b> (2019), pp. 323&ndash;328.
-								</li>
-
-							</ol>
-						</div>
-
-						<h1 id="Pub018" class="midashi">
-							2018年度
-						</h1>
-						<div class="mainpara">
-							<font color="#003399">論文 / Journal Articles</font><br><br>
-							<ol class="list_brackets">
-								<li>
-									Sakamoto, Y., Peveroni, L., Kobayashi, H., Sato, T., Steelant, J., and Buchlin, J. M.: Void Fraction Measurement in Cryogenic Flows. Part II: Void Fraction Capacitive Sensor Performances in Chilldown Experiments, <i>Cryogenics</i>, <b>96</b> (2018), pp. 25&ndash;33.
-								</li>
-								<li>
-									Sakamoto, Y., Peveroni, L., Kobayashi, H., Sato, T., Steelant, J., and Vetrano, R.: Void fraction measurement in cryogenic flows. Part I : Design and validation of a void fraction capacitive sensor, <i>Cryogenics</i>, <b>94</b> (2018), pp. 36&ndash;44.
-								</li>
-								<li>
-									小林弘明, 坂本勇樹, 杵淵紀世志, 佐藤哲也: 微小重力環境下における極低温二相流のボイド率計測, 日本航空宇宙学会論文集, <b>66</b>, 6 (2018), pp. 147&ndash;152.
-								</li>
-
-							</ol>
-							<font color="#003399">国際会議 / International Conferences</font><br><br>
-							<ol class="list_brackets">
-								<li>
-									Wakabayashi, S., Yoshida, H., Chiga, T., Sato, T., Taguchi, H., Kojima, T., Okamoto, T., Ikeda, Y., Nakaya S., and Tsue, M.: Research and Development of Ramjet Engine for High-Mach Integrated Control Experiment (HIMICO), 22nd AIAA International Space Planes and Hypersonics Systems and Technologies Conference, Orlando, Florida, AIAA 2018-5319, Sep. 2018.
-								</li>
-								<li>
-									Yamamoto, H., Toyonaga, R., Komatsu, Y., Kabayama, K., Mizobuchi, Y., and Sato, T.: Generation of Thermochemical Database Using Artificial Neural Network for Compressible Flamelet Approach, 37th International Symposium on Combustion, Work-in-Progress Poster (WiPP) session, Dublin, Ireland, Aug. 2018.
-								</li>
-								<li>
-									Toyonaga, R., Yamamoto, H., Komatsu, Y., Kabayama, K., Mizobuchi, Y., and Sato, T.:  Evaluation of Compressible Flamelet Tabulation Method Using Artificial Neural Network, Asian Congress on Gas Turbine 2018, Morioka, Japan, ACGT 2018-TS66, Aug. 2018.
-								</li>
-								<li>
-									Sakamoto, Y., Kobayashi, H., Naruo, Y., Takesaki, Y., Tane, S., Minote, K., Nakajima, Y., Furuichi, A., Tsujimura, H, Kabayama, K., and Sato, T.: Thermal Fluid Characteristics of Boiling Hydrogen in a Horizontal Circular Pipe Flow, 15th International Space Conference of Pacific-basin Societies, Montreal, Canada, Jul. 2018.
-								</li>
-								<li>
-									Sano, M., Yoshida, H., Wakabayashi, S., Chiga, T., Sato, T., Hashimoto, A., and Kojima, T.: Numerical Simulation of the Side-Clearance Effect on the Supersonic Air-Inlet Performance for High Mach Integrated Control Experiment “HIMICO,” 2018 AIAA Joint Propulsion Conference, AIAA Propulsion and Energy Forum, Cincinnati, Ohio, AIAA 2018-4539, Jul. 2018.
-								</li>
-								<li>
-									Sato, T.: Overview of the Design and Performance on ATREX and PCTJ Engines, Emerging Concepts in High Speed Air-Breathing Propulsion, AIAA Propulaion and Energy Forum 2018, Cincinnati, Ohio, Jul. 2018.
-								</li>
-								<li>
-									Tokawa, S., Kinoshita, Y., Kurata, T., Osumi, R., and Sato, T.: 9th Asian Conference on Refrigeration and Air-conditioning, Experimental Study of Delaying Effect of the Frost Formation on Cryogenic Heat Exchanger Tube Surfaces Using Super-Hydrophobicity Tube by Anodic Oxidation Method, Sapporo, Japan, ACRA2018-B223, Jun. 2018.
-								</li>
-								<li>
-									Sakamoto, Y., Sato, T., Kobayashi, H., Kinefuchi, K., Sugimori, D., Higashi, K., and Nagao, N.: Development of a Capacitive Void Fraction Sensor to Mount on a Space Propulsion System for a Ground Firing Test, Space Propulsion 2018, Seville, Spain, May 2018.
-								</li>
-							</ol>
-						</div>
-
-						<h1 id="PubPre" class="midashi">
-							2017年度以前
-						</h1>
-						<div class="mainpara">
-							<a href="https://w-rdb.waseda.jp/html/100000915_ronbn_ja.html">こちらから御覧ください</a>
-						</div>
+						</ol>
+					</div>
 
 
+					<h1 id="Pub019" class="midashi">
+						2019年度
+					</h1>
+					<div class="mainpara">
 
-						<!--
+						<!-- Journal -->
+						<font color="#003399">論文 / Journal Articles</font><br><br>
+						<ol class="list_brackets">
+
+							<!-- 20210810更新 -->
+							<li>
+								Sakai, A., Miyaji, K., Hirotani, T., Sato, T., Tsuchiya T., Taguchi, H. : Numerical
+								Analysis of Aerodynamics and Flight Trajectory of JAXA’s High-Mach Integrated Control
+								Experiment (HIMICO), <i>Transactions of JSASS, Aerospace Technology Japan</i>,
+								<b>18</b>, 1 (2020), pp. 1&ndash;7.
+							</li>
+							<li>
+								箕手一眞，坂本勇樹，多根翔平，中島曜，古市敦大，樺山昂生，辻村光樹，吉田光希，小林弘明，佐藤哲也 : 均質化機構によるスリップ比モデルを用いたクオリティ計測手法の開発,
+								航空宇宙技術, <b>18</b> (2019), pp. 109&ndash;118.
+							</li>
+							<li>
+								山本姫子, 豊永塁, 小松湧介, 樺山昂生, 佐藤哲也, 溝渕泰寛: Artificial Neural Network(ANN)を用いた圧縮性Flameletモデルの改良,
+								航空宇宙技術, <b>18</b> (2019), pp. 91&ndash;100.
+							</li>
+							<li>
+								Sakamoto, Y., Kobayashi, H., Naruo, Y., Takesaki, Y., Nakajima, Y., Furuichi, A.,
+								Tsujimura, H., Kabayama, K., and Sato, T.: Investigation of the Void
+								Fraction&ndash;quality Correlations for Two-phase Hydrogen Flow Based on the Capacitive
+								Void Fraction Measurement, <i>Int. J. Hydrogen Energy</i>, <b>44</b>, 33 (2019), pp.
+								18483&ndash;18495.
+							</li>
+							<li>
+								Kinefuchi, K., Sarae, W., Umemura, Y., Fujita, T., Okita, K., Kobayashi, H., Nonaka, S.,
+								Himeno, T. and Sato, T.: Investigation of Cryogenic Chilldown in a Complex Channel Under
+								Low Gravity Using a Sounding Rocket, <i>AIAA J. Spacecraft Rockets</i>, <b>56</b>, 1
+								(2019), pp. 91&ndash;103.
+							</li>
+							<li>
+								辻村光樹, 窪田健一, 佐藤哲也, 髙橋孝, 村上桂一: 粒子法を用いた液滴解析における空気力のモデル化, ながれ, <b>38</b>, 2 (2019), pp.
+								105&ndash;113.
+							</li>
+							<li>
+								長尾志、吉田秀和、佐野正和、佐藤哲也、橋本敦: 超音速矩形インテークにおけるバズ発生に関する数値解析, 航空宇宙技術, <b>18</b>, (2019), pp.
+								81&ndash;89.
+							</li>
+							<li>
+								坂本勇樹, 小林弘明, 東和弘, 長尾直樹, 杉森大造, 杵淵紀世志, 佐藤哲也: LE-5B-3地上燃焼試験用静電容量型ボイド率計の開発, 航空宇宙技術, <b>18</b>
+								(2019), pp. 19&ndash;28.
+							</li>
+
+						</ol>
+
+						<!-- International Conferences -->
+						<font color="#003399">国際会議 / International Conferences</font><br><br>
+						<ol class="list_brackets">
+
+							<!-- 20210810更新 -->
+							<li>
+								Sakamoto, Y., Kobayashi, H., Naruo, Y., Takesaki Y., Nakajima Y., Tsujimura H., Kabayama
+								K., Sato T. : Experimental investigation of flow regime transition for boiling hydrogen
+								flow in horizontal pipes. , Aerospace Europe Confernece – AEC2020, Bordeaux, France,
+								Feb. 2020.
+							</li>
+							<li>
+								Sakamoto, Y.*, Kobayashi, H., Naruo, Y., Takesaki Y., Nakajima Y., Tsujimura H.,
+								Kabayama K., Sato T. : Experimental investigation of heat transfer characteristics for
+								boiling hydrogen flow in horizontal circular pipes , 10th ACASC/2nd Asian-ICMC/CSSJ
+								Joint Conference, Naha, Japan, Jan. 2020.
+							</li>
+							<li>
+								Yamamoto, H., Mizobuchi, Y., and Sato, T.: A Study on Efficient Calculation of Mixture
+								Transport Properties by Artificial Neural Network, International Gas Turbine Congress
+								(IGTC) 2019 Tokyo, Tokyo, Japan, Nov. 2019.
+							</li>
+							<li>
+								Tsuruta, R., Mitani, Y., Ogushi, S., Okuno, A., Sato, T., Harada, M., and Okai, K.:
+								Experimental Investigation on the Effect of Boundary Layer Ingestion Using a
+								Two-dimensional Airfoil, International Gas Turbine Congress (IGTC) 2019 Tokyo, Tokyo,
+								Japan, Nov. 2019.
+							</li>
+							<li>
+								Okai, K., Mitani, Y., Yoshida, H., Ogushi, S., Tsuruta, R., Okuno, A., Sato, T., and
+								Harada, M.: Experimental and Numerical Evaluation of Boundary Ingestion Effect with
+								Engine/Airframe Integration Model, AIAA Propulsion and Energy Forum, Indianapolis,
+								Indiana, Aug. 2019.
+							</li>
+
+							<li>
+								Sato, T., Taguchi, H., Kojima, T., Tsuchiya, T., Tsue, M., Nakaya, S., Matsuo, A.,
+								Tezuka, A., Fujikawa, T., and Miyaji, K.: Program of High Mach Integrated Control
+								Experiment, “HIMICO” using S-520 Sounding Rocket, 32nd International Symposium on Space
+								Technology and Science, Fukui, Japan, 2019-m-01, Jun. 2019.
+							</li>
+							<li>
+								Tsujimura, H., Kubota, K., and Sato, T.: Development of Aerodynamic Force Model Based on
+								Potential Flow for Liquid Droplets Analyzed by Particle Method, 32nd International
+								Symposium on Space Technology and Science, Fukui, Japan, 2019-e-39, Jun. 2019.
+							</li>
+							<li>
+								Chiga, T., Sano, M., Ogura, S., Sato, T., Kojima, T., Taguchi, H., Ikeda, Y., Nakaya,
+								S., and Tue, M.: Performance Investigation of Ramjet Engine for High-Mach Integrated
+								Control Experiment (HIMICO), 32nd International Symposium on Space Technology and
+								Science, Fukui, Japan, 2019-a-52, Jun. 2019.
+							</li>
+							<li>
+								Sano, M., Yokoi, T., Yoshida, H., Sato, T., and Taguchi, H.: 3-Dimensional Numerical
+								Simulation of Hypersonic Intake for Pre-cooled Turbo Jet Engine, 32nd International
+								Symposium on Space Technology and Science, Fukui, Japan, 2019-a-34, Jun. 2019.
+							</li>
+							<li>
+								Komatsu, Y., Yamamoto, H., Sato, T., and Taguchi, H., Numerical Simulation of the Ram
+								Combustor for High-Mach Integrated Control Experiment (HIMICO), 32nd International
+								Symposium on Space Technology and Science, Fukui, Japan, 2019-a-33, Jun. 2019.
+							</li>
+						</ol>
+						<!-- 国内会議 -->
+						<font color="#003399">国内会議 / Japanese Domestic Conferences</font><br><br>
+						<ol class="list_brackets">
+
+							<!-- 20210810更新 -->
+							<li>
+								佐藤哲也、田口秀之、土屋武司、津江光洋、松尾亜紀子、藤川貴弘、手塚亜聖、宮路幸二、中谷辰爾、廣谷智成、小島孝之、本郷素行、小林弘明、大木純一、鈴木宏二郎、増田和三 :
+								極超音速統合制御実験（HIMICO）の進捗状況, 令和元年度宇宙輸送シンポジウム, 相模原, STCP&ndash;2019&ndash;018, 2020年1月.
+							</li>
+							<li>
+								佐藤哲也、田口秀之、土屋武司、津江光洋、松尾亜紀子、手塚亜聖、藤川貴弘 : 極超音速統合制御実験機（HIMICO）1号機の設計検討, 令和元年度宇宙輸送シンポジウム, 相模原,
+								STCP&ndash;2019&ndash;019, 2020年1月.
+							</li>
+							<li>
+								小倉彰悟,千賀崇浩,藤井愛実,近藤慎太郎,佐野正和,佐藤哲也,田口秀之,小島孝之,大木純一 :
+								極超音速統合制御実験(HIMICO)用インテークにおける主流流入角が性能に及ぼす影響, 令和元年度宇宙輸送シンポジウム, 東京,
+								STCP&ndash;2019&ndash;020, 2020年1月.
+							</li>
+							<li>
+								小松湧介、佐藤哲也、溝渕泰寛、南部太介、田口秀之 : 極超音速統合制御実験（HIMICO）用ラム燃焼器内の自己着火現象に関する詳細反応機構を考慮した数値解析,
+								令和元年度宇宙輸送シンポジウム, 相模原, 2020年1月.
+							</li>
+							<li>
+								千賀崇浩、佐野正和、小倉彰悟、藤井愛実、近藤慎太郎、佐藤哲也、小島孝之、田口秀之 : 横滑り角による極超音速統合制御実験機( HIMICO)用ラムジェットエンジンへの影響,
+								令和元年度宇宙航行の力学シンポジウム, 東京, 2019年12月.
+							</li>
+							<li>
+								千賀崇浩、佐野正和、小倉彰悟、藤井愛実、近藤慎太郎、佐藤哲也、小島孝之、田口秀之 : 横滑り角による極超音速統合制御実験機( HIMICO)用ラムジェットエンジンへの影響,
+								令和元年度宇宙航行の力学シンポジウム, 東京, 2019年12月.
+							</li>
+							<li>
+								佐藤哲也、田口秀之、小林弘明 : 極超音速エアブリーザの研究状況, 宇宙科学技術連合講演会, 徳島, 1M09, 2019年11月.
+							</li>
+							<li>
+								丸祐介、小林弘明、大山聖、斉藤巧真、徳留真一郎、佐藤哲也 : エアターボロケットエンジンによる再使用ロケットの段階的発展, 宇宙科学技術連合講演会, 徳島, 1M10,
+								2019年11月.
+							</li>
+							<li>
+								小林弘明、徳留真一郎、澤井秀次郎、丸祐介、坂本勇樹、佐藤哲也 : 軌道間輸送ネットワークのシステム検討, 宇宙科学技術連合講演会, 徳島, 1M12, 2019年11月.
+							</li>
+							<li>
+								小松 湧介、山本 姫子、佐藤 哲也、溝渕 泰寛、南部 太介、田口 秀之 : 極超音速統合制御実験(HIMICO)用ラム燃焼器内の自己着火現象に関する数値解析,
+								第46回日本ガスタービン学会定期講演会, 函館, C20, 2019年9月.
+							</li>
+							<li>
+								丸 祐介, 佐藤 哲也, 小林 弘明, 徳留 真一郎, 野中 聡, 澤井 秀次郎 : 再使用型宇宙輸送システムにおける大気アシスト飛行の実証研究,
+								第2回観測ロケットシンポジウム, 相模原, SA6000142004, 2019年8月.
+							</li>
+							<li>
+								佐藤哲也, 田口秀之, 土屋武司, 藤川貴弘, 小林弘明, 増田和三, 鈴木宏二郎, 松尾亜紀子, 手塚亜聖, 宮路幸二, 青木 隆平, 横関智弘, 津江光洋, 中谷辰璽,
+								廣谷智成, 本郷 素行, 小島孝之 : 極超音速統合制御実験機(HIMICO)2号機の飛行実験提案, 第2回観測ロケットシンポジウム, 相模原, SA6000142008,
+								2019年8月.
+							</li>
+							<li>
+								佐藤哲也, 田口秀之, 土屋武司, 津江光洋, 鈴木宏二郎, 中谷辰璽,手塚亜聖,松尾亜紀子,宮路幸二,藤川貴弘,廣谷智成, 本郷 素行, 小島孝之 :
+								極超音速統合制御実験機(HIMICO)1号機の設計状況, 第2回観測ロケットシンポジウム, 相模原, SA6000142009, 2019年8月.
+							</li>
+							<li>
+								横井寿哉，吉田秀和，佐藤哲也，牧野好和，上野篤史 : 静粛超音速機用インテーク性能への機体干渉の影響に関する数値的研究,
+								第51回流体力学講演会/第37回航空宇宙数値シミュレーション技術シンポジウム, 東京, 2A13, 2019年7月.
+							</li>
+							<li>
+								中川篤紀, 古市敦大, 辻村光樹, 佐藤哲也: MPS法による配管内流れの数値解析に向けた Laplacian モデルの検討,
+								第37回航空宇宙数値シミュレーション技術シンポジウム, 東京, 1E16, 2019年6月.
+							</li>
+							<li>
+								横井寿哉，吉田秀和，佐藤哲也，牧野好和，上野篤史 : 静粛超音速機用インテークにおけるバズ発生条件に関する数値的研究, 日本航空宇宙学会第50期年会講演会, 東京, 2C02,
+								2019年4月.
+							</li>
+						</ol>
+
+						<font color="#003399">その他 / The others</font><br><br>
+						<ol class="list_brackets">
+
+							<!-- 20191209更新 -->
+
+							<li>≪解説記事≫
+								<br>
+								佐藤哲也, 山本姫子, 樺山昂生, 辻村光樹, 坂野友香理: 推進工学への機械学習の適用, 日本ガスタービン学会誌, <b>47</b> (2019), pp.
+								323&ndash;328.
+							</li>
+
+						</ol>
+					</div>
+
+					<h1 id="Pub018" class="midashi">
+						2018年度
+					</h1>
+					<div class="mainpara">
+						<font color="#003399">論文 / Journal Articles</font><br><br>
+						<ol class="list_brackets">
+							<li>
+								Sakamoto, Y., Peveroni, L., Kobayashi, H., Sato, T., Steelant, J., and Buchlin, J. M.:
+								Void Fraction Measurement in Cryogenic Flows. Part II: Void Fraction Capacitive Sensor
+								Performances in Chilldown Experiments, <i>Cryogenics</i>, <b>96</b> (2018), pp.
+								25&ndash;33.
+							</li>
+							<li>
+								Sakamoto, Y., Peveroni, L., Kobayashi, H., Sato, T., Steelant, J., and Vetrano, R.: Void
+								fraction measurement in cryogenic flows. Part I : Design and validation of a void
+								fraction capacitive sensor, <i>Cryogenics</i>, <b>94</b> (2018), pp. 36&ndash;44.
+							</li>
+							<li>
+								小林弘明, 坂本勇樹, 杵淵紀世志, 佐藤哲也: 微小重力環境下における極低温二相流のボイド率計測, 日本航空宇宙学会論文集, <b>66</b>, 6 (2018), pp.
+								147&ndash;152.
+							</li>
+
+						</ol>
+						<font color="#003399">国際会議 / International Conferences</font><br><br>
+						<ol class="list_brackets">
+							<li>
+								Wakabayashi, S., Yoshida, H., Chiga, T., Sato, T., Taguchi, H., Kojima, T., Okamoto, T.,
+								Ikeda, Y., Nakaya S., and Tsue, M.: Research and Development of Ramjet Engine for
+								High-Mach Integrated Control Experiment (HIMICO), 22nd AIAA International Space Planes
+								and Hypersonics Systems and Technologies Conference, Orlando, Florida, AIAA 2018-5319,
+								Sep. 2018.
+							</li>
+							<li>
+								Yamamoto, H., Toyonaga, R., Komatsu, Y., Kabayama, K., Mizobuchi, Y., and Sato, T.:
+								Generation of Thermochemical Database Using Artificial Neural Network for Compressible
+								Flamelet Approach, 37th International Symposium on Combustion, Work-in-Progress Poster
+								(WiPP) session, Dublin, Ireland, Aug. 2018.
+							</li>
+							<li>
+								Toyonaga, R., Yamamoto, H., Komatsu, Y., Kabayama, K., Mizobuchi, Y., and Sato, T.:
+								Evaluation of Compressible Flamelet Tabulation Method Using Artificial Neural Network,
+								Asian Congress on Gas Turbine 2018, Morioka, Japan, ACGT 2018-TS66, Aug. 2018.
+							</li>
+							<li>
+								Sakamoto, Y., Kobayashi, H., Naruo, Y., Takesaki, Y., Tane, S., Minote, K., Nakajima,
+								Y., Furuichi, A., Tsujimura, H, Kabayama, K., and Sato, T.: Thermal Fluid
+								Characteristics of Boiling Hydrogen in a Horizontal Circular Pipe Flow, 15th
+								International Space Conference of Pacific-basin Societies, Montreal, Canada, Jul. 2018.
+							</li>
+							<li>
+								Sano, M., Yoshida, H., Wakabayashi, S., Chiga, T., Sato, T., Hashimoto, A., and Kojima,
+								T.: Numerical Simulation of the Side-Clearance Effect on the Supersonic Air-Inlet
+								Performance for High Mach Integrated Control Experiment “HIMICO,” 2018 AIAA Joint
+								Propulsion Conference, AIAA Propulsion and Energy Forum, Cincinnati, Ohio, AIAA
+								2018-4539, Jul. 2018.
+							</li>
+							<li>
+								Sato, T.: Overview of the Design and Performance on ATREX and PCTJ Engines, Emerging
+								Concepts in High Speed Air-Breathing Propulsion, AIAA Propulaion and Energy Forum 2018,
+								Cincinnati, Ohio, Jul. 2018.
+							</li>
+							<li>
+								Tokawa, S., Kinoshita, Y., Kurata, T., Osumi, R., and Sato, T.: 9th Asian Conference on
+								Refrigeration and Air-conditioning, Experimental Study of Delaying Effect of the Frost
+								Formation on Cryogenic Heat Exchanger Tube Surfaces Using Super-Hydrophobicity Tube by
+								Anodic Oxidation Method, Sapporo, Japan, ACRA2018-B223, Jun. 2018.
+							</li>
+							<li>
+								Sakamoto, Y., Sato, T., Kobayashi, H., Kinefuchi, K., Sugimori, D., Higashi, K., and
+								Nagao, N.: Development of a Capacitive Void Fraction Sensor to Mount on a Space
+								Propulsion System for a Ground Firing Test, Space Propulsion 2018, Seville, Spain, May
+								2018.
+							</li>
+						</ol>
+					</div>
+
+					<h1 id="PubPre" class="midashi">
+						2017年度以前
+					</h1>
+					<div class="mainpara">
+						<a href="https://w-rdb.waseda.jp/html/100000915_ronbn_ja.html">こちらから御覧ください</a>
+					</div>
+
+
+
+					<!--
 						<h1 id="Pub2012" class="midashi">
 							2012年度
 						</h1>
@@ -738,21 +1258,22 @@
 						</div>
 						-->
 
-					</div>
 				</div>
 			</div>
-			<!--footer-->
-			<div class="footer container-fluid">
-				無断転載を禁止します
-				copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
-			</div>
 		</div>
+		<!--footer-->
+		<div class="footer container-fluid">
+			無断転載を禁止します
+			copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
+		</div>
+	</div>
 
 
-		<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../bootstrap/jquery/dist/jquery.slim.min.js"></script>
-    <script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-	</body>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="../bootstrap/jquery/dist/jquery.slim.min.js"></script>
+	<script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+
 </html>

@@ -114,9 +114,9 @@ input, select {
 }
 /*画像を縦に並べたときに余白が出てしまわないように*/
 img {
-　　　vertical-align: top;
-　　　font-size:0;
-　　　line-height: 0;
+	vertical-align: top;
+	font-size:0;
+	line-height: 0;
 }
 
 @font-face { font-family: "Huiji" ;

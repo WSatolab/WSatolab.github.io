@@ -155,6 +155,33 @@ ul{
 	font-family: Verdana,"メイリオ","Meiryo" ,arial, helvetica, geneva, sans-serif,"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
 }
 
+/*bootstrap用の変数. 実際に更新しているのは, bootstrap.min.cssの中であることに注意してください.*/
+/*
+:root {
+	paddingの設定
+	--bs-navbar-padding-y: 0.5rem;
+	--bs-navbar-padding-x: 1rem;
+}
+*/
+
+/*npmを導入すると恐らくHPの管理が大変面倒になるため, 強引でほめられた方法ではないが, 古いbootstrapの一部のルールを持ってきている. */
+/*navbarのlinkの色の設定. かなり強引だが. */
+.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255,255,255,.5);
+  }
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+	color: rgba(255, 255, 255, 0.75);
+  }
+
+/*bootstrapで.navbar-dark .navbar-nav .activeの子要素のnav-linkに対しては白色にするというbootstrap2とかの約束ごと. 
+これを元にstyle.cssのルールは書かれているためこれを追加しないと色が崩れる. */
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
 /*リンク部の色　初期*/
 a:link {
 	color:#59B3FB;
@@ -467,7 +494,7 @@ p.seminar1{
 
 /*Member page*/
 .block {
-	margin 0.5rem;
+  margin: 0.5rem;
   padding: 20px 0px;
   background: #fff;
   border: 4px #591f0a solid;

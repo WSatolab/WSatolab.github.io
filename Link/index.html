@@ -33,7 +33,7 @@
 		<meta http-equiv="default-style" content="default">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" >
-		<link rel="stylesheet" href="../style.css?20190720" title="default">
+		<link rel="stylesheet" href="../style.css?<?php echo date('Ymd-H'); ?>" title="default">
 
 		<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
@@ -66,11 +66,11 @@
 			</header>
 
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-				<a class="navbar-brand" href="../index.html">
+				<a class="navbar-brand text-white" href="../index.html">
 					<img src="../image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
 					Sato Lab.
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -106,7 +106,7 @@
 						<li class="nav-link active">
 							<a class="nav-link" href="../Link/index.html">
 								Link
-								<span class="sr-only">HOME</span>
+								<span class="visually-hidden">HOME</span>
 							</a>
 						</li>
 					</ul>
@@ -114,7 +114,7 @@
 			</nav>
 
 			<div class="punkz" align="bottom">
-				<a href="../index.html">[HOME]</a>>[Link]
+				<a class="text-decoration-none" href="../index.html">[HOME]</a>>[Link]
 			</div>
 
 			<div class="container-fluid basecontainer">
@@ -131,10 +131,10 @@
 							</div>
 							<ul class="sidebarNav">
 								<li>
-									<a href=#university>大学</a>
+									<a class="text-decoration-none" href=#university>大学</a>
 								</li>
 								<li>
-									<a href=#jaxa>JAXA</a>
+									<a class="text-decoration-none" href=#jaxa>JAXA</a>
 								</li>
 							</ul>
 
@@ -148,10 +148,10 @@
 						</h1>
 						<div class="mainpara">
 							<ul class="inside_itemize">
-								<li><a href="http://www.waseda.jp/">早稲田大学</a></li>
-								<li><a href="http://www.sci.waseda.ac.jp/">早稲田大学 理工学術院</a></li>
-								<li><a href="http://www.waseda.jp/fse/">早稲田大学 基幹理工学部</a></li>
-								<li><a href="http://www.amech.waseda.ac.jp/">早稲田大学 基幹理工学部 機械科学・航空宇宙学科</a></li>
+								<li><a class="text-decoration-none"href="http://www.waseda.jp/">早稲田大学</a></li>
+								<li><a class="text-decoration-none"href="http://www.sci.waseda.ac.jp/">早稲田大学 理工学術院</a></li>
+								<li><a class="text-decoration-none"href="http://www.waseda.jp/fse/">早稲田大学 基幹理工学部</a></li>
+								<li><a class="text-decoration-none"href="http://www.amech.waseda.ac.jp/">早稲田大学 基幹理工学部 機械科学・航空宇宙学科</a></li>
 								<br><br>
 							</ul>
 						</div>
@@ -173,7 +173,9 @@
 			</div>
 		</div>
 
-
-
+		<!-- Optional JavaScript -->
+    <!-- Popper.js frist, then Bootstrap JS -->
+		<script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
+		<script src="../bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

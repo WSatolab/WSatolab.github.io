@@ -33,7 +33,7 @@
 		<meta http-equiv="default-style" content="default">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" >
-		<link rel="stylesheet" href="../style.css?20190720" title="default">
+		<link rel="stylesheet" href="../style.css?<?php echo date('Ymd-H'); ?>" title="default">
 
 		<!--RSS用xml形式ファイルの作成　http://www.nishishi.com/soft/rssmaker/により作成-->
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
@@ -66,11 +66,11 @@
 			</header>
 
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-				<a class="navbar-brand" href="../index.html">
+				<a class="navbar-brand text-white" href="../index.html">
 					<img src="../image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
 					Sato Lab.
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -85,36 +85,36 @@
 						<li class="nav-link active">
 							<a class="nav-link" href="../research/index.html">
 								Research
-								<span class="sr-only">Research</span>
+								<span class="visually-hidden">Research</span>
 							</a>
 						</li>
 						<li class="nav-link">
-							<a class="nav-link" href="../himico/index.html">HIMICO</a>
+							<a class="nav-link text-decoration-none" href="../himico/index.html">HIMICO</a>
 						</li>
 						<li class="nav-link">
-							<a class="nav-link" href="../professor/index.html">Professor</a>
+							<a class="nav-link text-decoration-none" href="../professor/index.html">Professor</a>
 						</li>
 						<li class="nav-link">
-							<a class="nav-link" href="../member/index.html">Member</a>
+							<a class="nav-link text-decoration-none" href="../member/index.html">Member</a>
 						</li>
 						<li class="nav-link">
-							<a class="nav-link" href="../publications/index.html">Publications</a>
+							<a class="nav-link text-decoration-none" href="../publications/index.html">Publications</a>
 						</li>
 						<li class="nav-link">
-							<a class="nav-link" href="../events/index.html">Events</a>
+							<a class="nav-link text-decoration-none" href="../events/index.html">Events</a>
 						</li>
 						<li class="nav-link">
-							<a class="nav-link" href="../access/index.html">Access</a>
+							<a class="nav-link text-decoration-none" href="../access/index.html">Access</a>
 						</li>
 						<li class="nav-link">
-							<a class="nav-link" href="../Link/index.html">Link</a>
+							<a class="nav-link text-decoration-none" href="../Link/index.html">Link</a>
 						</li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</nav>
 
 			<div class="punkz" align="bottom">
-				<a href="../index.html">[HOME]</a>>[Research]
+				<a class="text-decoration-none" href="../index.html">[HOME]</a>>[Research]
 			</div>
 
 			<div class="container-fluid basecontainer">
@@ -131,28 +131,28 @@
 						</div>
 							<ul class="sidebarNav">
 								<li>
-									<a href=#research1>主な研究対象： <br> 予冷ターボジェットエンジン</a>
+									<a class="text-decoration-none" href=#research1>主な研究対象： <br> 予冷ターボジェットエンジン</a>
 								</li>
 								<li>
-									<a href=#research2>エンジンシステム班 </a>
+									<a class="text-decoration-none" href=#research2>エンジンシステム班 </a>
 								</li>
 								<li>
-									<a href=#research3>インテーク班</a>
+									<a class="text-decoration-none" href=#research3>インテーク班</a>
 								</li>
 								<li>
-									<a href=#research4>予冷却班</a>
+									<a class="text-decoration-none" href=#research4>予冷却班</a>
 								</li>
 								<li>
-									<a href=#research5>二相流班</a>
+									<a class="text-decoration-none" href=#research5>二相流班</a>
 								</li>
 								<li>
-									<a href=#research6>燃焼班</a>
+									<a class="text-decoration-none" href=#research6>燃焼班</a>
 								</li>
 								<li>
-									<a href=#research7>BLI班</a>
+									<a class="text-decoration-none" href=#research7>BLI班</a>
 								</li>
 								<li>
-									<a href=#research8>JAXA班</a>
+									<a class="text-decoration-none" href=#research8>JAXA班</a>
 								</li>
 							</ul>
 
@@ -502,7 +502,6 @@
 
 		<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../bootstrap/jquery/dist/jquery.slim.min.js"></script>
     <script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
 	</body>

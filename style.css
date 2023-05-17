@@ -182,20 +182,20 @@ ul{
   color: #fff;
 }
 
-/*リンク部の色　初期*/
+/*リンク部の色 初期*/
 a:link {
 	color:#59B3FB;
 }
-/*リンク部の色　一度開いたリンク*/
+/*リンク部の色 一度開いたリンク*/
 a:visited {
 	color:#0b39b9;
 }
-/*リンク部の色　マウスオーバー時*/
+/*リンク部の色 マウスオーバー時*/
 a:hover {
 	color:#072474;
 	text-decoration:none;
 }
-/*リンク部の色　クリック時*/
+/*リンク部の色 クリック時*/
 a:active {
 	color:#072474;
 	text-decoration:none;
@@ -245,7 +245,7 @@ header{
 	background-color:#072474;
 	text-decoration:none;
 }
-/*リンク部の色　クリック時*/
+/*リンク部の色 クリック時*/
 .punkz a:active{
 	color: rgb(250, 255, 0);
 	background-color:#072474;
@@ -376,6 +376,10 @@ h1.midashi{
 	text-align: center;
 }
 
+.img_center img{
+	padding: 0.1rem;
+}
+
 .imgtitle{
 	font-size: 0.9rem;
 	padding: 0.4rem 0px;
@@ -401,11 +405,35 @@ h1.midashi{
 	padding: 0 1rem;
 }
 
+/*横並び*/
+.img_flex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.1rem;
+	padding: 0.3rem;
+	justify-content: center;
+}
+
+.img_flex  img {
+	width: calc(40% - 0.3rem);
+}
+
+@media (max-width: 600px) {
+	.img_flex  img {
+		width: calc(40% - 0.1rem);
+	}
+}
+
 /*箇条書き部分*/
+/*この書き方は本当は良くなくて, 例えば文中で箇条書きを使いたい時にliを使うと, research ul liのルールに引っかかってしまう. */
+
 .inside_itemize{
 	font-size: 1rem;
 	padding-left: 3rem;
-	list-style: initial;
+}
+
+.init_list_style{
+	list-style:initial;
 }
 
 .inside_itemize p{
@@ -417,10 +445,26 @@ h1.midashi{
 	padding-bottom: 0.5rem;
 	margin-right: 1rem;
 }
+
 .research ul li{
-	font-size: 1.2rem;
+  font-size: 1.2rem;
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  /*下のは, ネットから取って来たデザイン*/
+  color: #494949;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
 }
 
+.inside_itemize ol li{
+	list-style:decimal;
+	font-size: 1rem;
+	margin-left: 2rem;
+	color: #000;/*文字色*/
+  	background: #fff;/*背景色*/
+  	border-left: none;/*左線*/
+  	border-bottom: none;/*下線*/
+}
 /*Google map - Access*/
 #gmap{
 	width: 100%;

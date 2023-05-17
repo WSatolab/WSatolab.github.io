@@ -376,6 +376,10 @@ h1.midashi{
 	text-align: center;
 }
 
+.img_center img{
+	padding: 0.1rem;
+}
+
 .imgtitle{
 	font-size: 0.9rem;
 	padding: 0.4rem 0px;
@@ -399,6 +403,25 @@ h1.midashi{
 
 .home p{
 	padding: 0 1rem;
+}
+
+/*横並び*/
+.img_flex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.1rem;
+	padding: 0.3rem;
+	justify-content: center;
+}
+
+.img_flex  img {
+	width: calc(40% - 0.3rem);
+}
+
+@media (max-width: 600px) {
+	.img_flex  img {
+		width: calc(40% - 0.1rem);
+	}
 }
 
 /*箇条書き部分*/

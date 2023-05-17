@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 
-	<!--==============================head===================================-->
-	<head>
-		<!--文字コードの指定-->
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Style-Type" content="text/css">
-		<meta http-equiv="Content-Script-Type" content="text/javascript">
+<!--==============================head===================================-->
 
-		<!--スマホ画面対応-->
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+	<!--文字コードの指定-->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
 
-		<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。">
-		<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
+	<!--スマホ画面対応-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
+	<meta name="description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。">
+	<meta name="keywords" content="早稲田,基幹,理工,佐藤研,航空,佐藤,哲也,機械,プリクーラ,インテーク,着霜,超音速,エンジン,buzz,hypersonic,precooler">
 
-		<!--IEの互換表示設定の指示-->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--クロスサイト スクリプティング攻撃の対策：content security policyを適用-->
+	<meta http-equiv="Content-Security-Policy"
+		content="script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com/gtag/js; connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net ; object-src 'none'">
 
-		<!--SNS共有用情報の指定 使うときに有効化-->
-		<!--
+	<!--IEの互換表示設定の指示-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!--SNS共有用情報の指定 使うときに有効化-->
+	<!--
 		<meta property="og:title" content="佐藤研究室｜早稲田大学 基幹理工学部 機械科学・航空学科" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://www.waseda.jp/sem-sato/" />
@@ -29,480 +31,481 @@
 		<meta property="og:description" content="早稲田大学 基幹理工学部 機械科学・航空学科／大学院 基幹理工学研究科 機械科学専攻 佐藤哲也研究室のWebサイトです。" />
 		-->
 
-		<!--styleの指定-->
-		<meta http-equiv="default-style" content="default">
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" >
-		<link rel="stylesheet" href="../style.css?<?php echo date('Ymd-H'); ?>" title="default">
+	<!--styleの指定-->
+	<meta http-equiv="default-style" content="default">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../style.css?<?php echo date('Ymd-H'); ?>" title="default">
 
-		<!--RSS用xml形式ファイルの作成 http://www.nishishi.com/soft/rssmaker/により作成-->
-		<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
+	<!--RSS用xml形式ファイルの作成 http://www.nishishi.com/soft/rssmaker/により作成-->
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="./rss20.xml">
 
-		<!--アイコン用画像の指定-->
-		<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+	<!--アイコン用画像の指定-->
+	<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
 
-		<title>Research｜早稲田大学 基幹理工学部 佐藤研究室</title>
+	<title>Research｜早稲田大学 基幹理工学部 佐藤研究室</title>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
-		<script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139184956-1"></script>
+	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'UA-139184956-1');
-		</script>
-	</head>
+	</script>
+</head>
 
-	<!--==============================body===================================-->
-	<body>
-		<div class="base">
-			<header>
-				<div class="titlebar">
-					<a href="../index.html">
-						<p class="toplogo" align="center"><img src="../image/lablogo.png"></p>
-					</a>
-				</div>
-			</header>
+<!--==============================body===================================-->
 
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-				<a class="navbar-brand text-white" href="../index.html">
-					<img src="../image/logo.png" style="background-color:#ffffff"  width="30" height="30" class="d-inline-block align-top rounded" alt="ブランド">
-					Sato Lab.
+<body>
+	<div class="base">
+		<header>
+			<div class="titlebar">
+				<a href="../index.html">
+					<p class="toplogo" align="center"><img src="../image/lablogo.png"></p>
 				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-link">
-							<a class="nav-link" href="../index.html">Home</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link" href="../topics/index.html">Topics</a>
-						</li>
-						<li class="nav-link active">
-							<a class="nav-link" href="../research/index.html">
-								Research
-								<span class="visually-hidden">Research</span>
-							</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link text-decoration-none" href="../himico/index.html">HIMICO</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link text-decoration-none" href="../professor/index.html">Professor</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link text-decoration-none" href="../member/index.html">Member</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link text-decoration-none" href="../publications/index.html">Publications</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link text-decoration-none" href="../events/index.html">Events</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link text-decoration-none" href="../access/index.html">Access</a>
-						</li>
-						<li class="nav-link">
-							<a class="nav-link text-decoration-none" href="../Link/index.html">Link</a>
-						</li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</nav>
-
-			<div class="punkz" align="bottom">
-				<a class="text-decoration-none" href="../index.html">[HOME]</a>>[Research]
 			</div>
+		</header>
 
-			<div class="container-fluid basecontainer">
-				<div class="row">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+			<a class="navbar-brand text-white" href="../index.html">
+				<img src="../image/logo.png" style="background-color:#ffffff" width="30" height="30"
+					class="d-inline-block align-top rounded" alt="ブランド">
+				Sato Lab.
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-					<!--サイドバー部分-->
-					<div class="sidebar col-md-4 d-none d-md-block">
-						<div class="midashibig">
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-link">
+						<a class="nav-link" href="../index.html">Home</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link" href="../topics/index.html">Topics</a>
+					</li>
+					<li class="nav-link active">
+						<a class="nav-link" href="../research/index.html">
 							Research
-						</div>
-						<div class="sticky_sidebar">
+							<span class="visually-hidden">Research</span>
+						</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link text-decoration-none" href="../himico/index.html">HIMICO</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link text-decoration-none" href="../professor/index.html">Professor</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link text-decoration-none" href="../member/index.html">Member</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link text-decoration-none" href="../publications/index.html">Publications</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link text-decoration-none" href="../events/index.html">Events</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link text-decoration-none" href="../access/index.html">Access</a>
+					</li>
+					<li class="nav-link">
+						<a class="nav-link text-decoration-none" href="../Link/index.html">Link</a>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+
+		<div class="punkz" align="bottom">
+			<a class="text-decoration-none" href="../index.html">[HOME]</a>>[Research]
+		</div>
+
+		<div class="container-fluid basecontainer">
+			<div class="row">
+
+				<!--サイドバー部分-->
+				<div class="sidebar col-md-4 d-none d-md-block">
+					<div class="midashibig">
+						Research
+					</div>
+					<div class="sticky_sidebar">
 						<div class="contents_label">
 							<strong>Contents</strong>
 						</div>
-							<ul class="sidebarNav">
-								<li>
-									<a class="text-decoration-none" href=#research1>主な研究対象： <br> 予冷ターボジェットエンジン</a>
-								</li>
-								<li>
-									<a class="text-decoration-none" href=#research2>エンジンシステム班 </a>
-								</li>
-								<li>
-									<a class="text-decoration-none" href=#research3>インテーク班</a>
-								</li>
-								<li>
-									<a class="text-decoration-none" href=#research4>予冷却班</a>
-								</li>
-								<li>
-									<a class="text-decoration-none" href=#research5>二相流班</a>
-								</li>
-								<li>
-									<a class="text-decoration-none" href=#research6>燃焼班</a>
-								</li>
-								<li>
-									<a class="text-decoration-none" href=#research7>BLI班</a>
-								</li>
-								<li>
-									<a class="text-decoration-none" href=#research8>JAXA班</a>
-								</li>
-							</ul>
-
-						</div>
-					</div>
-
-					<!--本文部分-->
-					<div class="col-md-8 maincontainer">
-						<h1 id="research1" class="midashi">
-							主な研究対象：予冷ターボジェットエンジン
-						</h1>
-						<div class="mainpara research">
-							<ul class="inside_itemize">
-								<li>
-									予冷ターボジェットエンジンとは
-								</li>
-								<p>
-									&emsp;佐藤研究室の主な研究対象である予冷ターボジェットエンジンとは，ジェットエンジンにおけるインテークと圧縮機の間に熱交換器(予冷器)を置き、圧縮機に流入する空気をあらかじめ冷やす極超音速機用ジェットエンジンです。<br>
-									&emsp;高マッハ数での飛行ではインテークにおいて流入する空気の速度が減速され、運動エネルギが熱エネルギに変換されるため、インテーク後の温度が非常に高くなります(大気温度と比べてマッハ5で1000度以上高くなる)。さらに圧縮機で空気が圧縮されることで、その温度はより高くなります。<br>
-									&emsp;このままでは圧縮機の翼が溶けてしまうので、予冷器を設置して空気を冷やすことにより高いマッハ数でも作動可能にしようということが、このエンジンの狙いです。
-								</p>
-								<div class="image img_center">
-									<img src="../home/coen.jpg" width="80%">
-									<div class="imgtitle">
-										予冷ターボジェット（Sエンジン） (JAXA提供)
-									</div>
-								</div>
-							</ul>
-						</div>
-
-
-						<h1 id="research2" class="midashi">
-							エンジンシミュレータの研究：エンジンシステム班 ～複雑なエンジンを丸裸に～
-						</h1>
-						<div class="mainpara research">
-							<ul class="inside_itemize">
-								<li>
-									極超音速予冷ターボジェットエンジンを対象とした非定常シミュレータの研究
-								</li>
-								<p>
-									&emsp;エンジントラブル発生時に、原因究明のための有力な手法として数値シミュレーションが挙げられる。 また、エンジンの信頼性向上においても、開発設計段階で燃焼試験前にエンジンシステム全体の始動、停止、故障時などの過渡特性を把握しておくことが重要である。<br>
-									&emsp;そこで、本研究ではJAXAで開発中の小型予冷ターボジェットエンジンの過渡特性を解析する能力を有するシミュレータプログラムを開発することに加え、実際に運用した時の性能解析を行うことを目的とする。
-								</p>
-								<div class="image img_center">
-									<img src="./img/EngineSystem/Sengine_model.png" width="80%">
-									<br>
-									<div class="imgtitle">
-										Sエンジンモデル(JAXA提供)
-									</div>
-								</div>
-							</ul>
-						</div>
-
-						<h1 id="research3" class="midashi">
-							エアインテークの研究： インテーク班
-						</h1>
-						<div class="mainpara research">
-							<ul class="inside_itemize">
-								<li>
-									HIMICO計画
-								</li>
-								<p>
-									&emsp;JAXAや他大学と共同でHIMICO(High-Mach Integrated Control Experiment,極超音速統合制御実験)計画に取り組んでいます。
-									この計画の目的は、運用方法が確立されているS-520観測ロケットを用いて短期間かつ低コストで実現できる極超音速飛行実験手段の確立と、機体・エンジンの相互干渉を含む統合制御技術実証です。<br>
-									&emsp;佐藤研では実験機に搭載するラムジェットエンジンについて研究しています。
-								</p>
-								<div class="image img_center">
-									<img src="./img/HIMICO/HIMICO.jpg" width="80%">
-									<br>
-									<div class="imgtitle">
-										極超音速統合制御実験機
-									</div>
-								</div>
-
-								<li>
-									空気取込口(エアインテーク)
-								</li>
-								<p>
-									&emsp;ラムジェットエンジンは圧縮機を持たず、エアインテークで流入する空気の運動量を直接圧力に変換しています。エアインエークの性能はエンジンに流入する空気流に影響し、エンジン全体の性能に関わるため、詳細な調査が必要です。<br>
-									&emsp;JAXA相模原キャンパスの超音速風洞を用いて毎年2週間程度の風洞試験を行い、エンジンの性能取得、バズ特性やオイルフローを用いた流れ場の調査を行っています。
-
-								</p>
-								<div class="image img_center">
-									<img src="./img/HIMICO/supersonic.png" width="80%">
-									<br>
-								</div>
-
-								<li>
-									CFDによる詳細解析
-								</li>
-								<p>
-									&emsp;JAXAが開発した高速流体ソルバ「FaSTAR」を用いて、実験では見ることのできないエアインテーク内部の流れ場やバズ特性に関して数値解析を行っています。<br>
-									&emsp;HIMICO用エアインテークだけでなく、JAXAで開発が行われている様々な機体のエアインテークを対象に解析を行っています。
-								</p>
-								<div class="image img_center">
-									<img src="./img/Intake/fig1.jpg" width="80%">
-									<div class="imgtitle">
-										計算格子（静粛超音速機）
-									</div>
-									<br>
-								</div>
-								<div class="image img_center">
-									<img src="./img/Intake/fig6.png" width="80%">
-									<div class="imgtitle">
-										（左）HIMICOの数値解析結果&emsp;（右）静粛超音速機の数値解析結果&emsp;（ともにMach数分布）
-									</div>
-									<br>
-								</div>
-
-							</ul>
-						</div>
-
-
-						<h1 id="research4" class="midashi">
-							熱流体要素に関する研究：予冷却班 ～霜と〇〇～
-						</h1>
-						<div class="mainpara research">
-							<ul class="inside_itemize">
-								<p>
-									&emsp;予冷ターボジェットエンジンには燃料の<b>液体水素（LH2）</b>を用いて、流入空気を冷却する<B>空気予冷器</B>が搭載される。
-									空気予冷器を搭載することで、熱負荷の低減や中間冷却効果によるサイクル性能の向上が見込まれる。
-									しかし、低マッハ領域で伝熱管表面に着霜し、<b>熱交換量の低下</b>や<b>流路閉塞</b>などの問題が生じる。
-									そこで、予冷却班では以下の2つのテーマに取り組んでいる。
-								</p>
-								<li>
-									表面微細加工を用いた着霜低減手法の提案
-								</li>
-								<p>
-									&emsp;空気予冷器の伝熱管表面で空気中の水分が凝結することによる着霜は、
-									圧力損失や流路閉塞などにつながり、大きな課題となっている。
-									そこで、機体重量の増加やシステムの複雑化を避けるために、
-									新たな機構を必要としない着霜抑制法として伝熱管表面の超撥水性に着目し、
-									伝熱管表面性状による着霜低減効果や伝熱効率の改善に関して研究を行っている。
-								</p>
-								<div class="image img_center">
-									<img src="./img/Precooler/precooler4.PNG" width="80%">
-									<br>
-									<div class="imgtitle">
-										表面微細加工(左) &emsp;&emsp;&emsp; 着霜実験(右)
-									</div>
-								</div>
-
-
-								<li>
-									CFDによる着霜予測
-								</li>
-								<p>
-									予冷却班では、強制対流下での低温表面への着霜現象を数値シミュレーションする手法の開発も行っている。
-									実際の飛行条件を実験で再現することは困難であり、
-									着霜現象を数値シミュレーションにより予測できる手法を開発することが求められる。
-									現在は平板上の着霜現象に関する数値シミュレーション手法の開発を行っているが
-									円管表面上などのさらに複雑な形状への応用を目指している。
-									<div class="image img_center">
-										<img src="./img/Precooler/precooler5.PNG" width="80%">
-										<br>
-										<div class="imgtitle">
-											着霜現象数値シミュレーション
-										</div>
-									</div>
-
-
-								</p>
-							</ul>
-						</div>
-
-<!--二相流班はじめ-->
-<!--
-	作成 2019/05/30 (辻村)
-	更新 2019/05/30 (辻村)
-	更新 2020/04/10 (内山)
--->
-<h1 id="research5" class="midashi">
-	熱流体要素に関する研究：二相流班
-</h1>
-<div class="mainpara research">
-<ul class="inside_itemize">
-<!--二相流班全体の紹介-->
-<p>
-	予冷ターボジェットエンジンの燃料には<b>液体水素（LH2）</b>が使用されます。
-	液体水素は沸点がおよそ-253&deg;C（20K）の「極低温流体」であるため、<b>配管内で容易に沸騰し、気相と液相が共存する「気液二相状態」に遷移します</b>。
-	配管内が気液二相状態になると、流量の高精度な制御が困難となることが、エンジン運用上の課題となっています。
-	そこで二相流班では、<b>気液二相流現象の流動特性の把握と現象解明</b>のため、以下の3つのテーマに取り組んでいます。
-</p>
-<li>
-	ボイド率計測技術の開発
-</li>
-<p>
-	気液二相流の高精度な流量制御のためには、流動特性を正確に把握する必要があります。
-	気液の体積割合である<b>「ボイド率」は、流動特性を決定づける主要なパラメータである</b>ため、その計測技術が重要となります。
-	そこで二相流班では、ボイド率の計測装置の開発に取り組んでいます。
-	開発中の「静電容量型ボイド率計」は、小型で軽量、そして堅牢なため、<b>実験室レベルの流動特性取得実験のみならず、航空宇宙機へ実機搭載したリアルタイム計測においても活躍しうる高いポテンシャル</b>を持っています。
-	また、冷凍空調機器における冷媒流のボイド率計測技術の開発も行っています。近年、次世代冷媒の導入が進められていますが、電気的特性が従来と異なることや、
-	複数の冷媒が混合した非共沸混合冷媒であることによって、<b>流動状態の把握が困難</b>となっています。
-	二相流班では、非共沸混合冷媒のボイド率計測といった先行例の少ないテーマを通して、<b>次世代冷媒の性能向上を目指した研究</b>にも取り組んでいます。
-</p>
-<li>
-	粒子法を用いた気液二相流の数値シミュレーション
-</li>
-<p>
-	配管内流動や燃料噴射において生じる気液二相流を数値シミュレーションする手法として<b>粒子法</b>を採用し、研究しています。
-	粒子法は流体を「動く粒子」で離散化するラグランジュ型の解法であり、国内では原子力や海岸工学を適用先として、ここ20年ほどで急速に発展してきました。
-	二相流班では、「燃料配管内の流動解析」と「燃焼器での燃料微粒化の挙動解析」の2つを適用先に設定しました。
-	そして、<b>相変化や、格子法と組み合わせたハイブリッド解析という挑戦的テーマ</b>への取り組みをとおして、<b>粒子法の使用例がいまだ少ない航空宇宙分野への適用</b>を目指した研究を行っています。
-</p>
-<li>
-	機械学習を用いた二相流現象の解明に関する研究
-</li>
-<p>
-	気液二相流は、液体水素を用いる航空宇宙エンジンに加え、各種発電プラントや流体機械など、多くの分野で重要な役割を持つ現象です。
-	それにも関わらず、時間的・空間的に複雑な変動を伴う現象であるため、<b>その理論化が困難</b>な現状にあります。
-	そこで二相流班では、従来のような理論的・演繹的アプローチではなく、<b>データドリブンな機械学習を用いた帰納的アプローチ</b>によって、気液二相流現象の解明を試みています。
-	現在は「深層学習を用いた気液二相流の流動様式判別」「機械学習を用いた任意形状液滴の界面上圧力分布予測」などのテーマに取り組んでいます。
-</p>
-<div class="image img_center">
-<img src="./img/TwoPhaseFlow/twophase190530.png" width="80%">
-<br>
-<div class="imgtitle">
-	上昇流における気泡挙動の実験観察例
-</div>
-</div>
-</ul>
-</div>
-<!--二相流班おわり-->
-
-						<h1 id="research6" class="midashi">
-							燃焼数値解析の研究：燃焼班
-						</h1>
-						<div class="mainpara research">
-							<ul class="inside_itemize">
-								<li>
-									計算コスト削減チーム
-								</li>
-								<p>
-									&emsp;各化学物質の輸送や反応を追い膨大な計算時間となる燃焼解析を革新するため、複雑な燃焼現象を単純な火炎の組み合わせで表す高速化手法に関する研究を行っています。本手法では様々な火炎の化学反応と流れの関係を予めデータベース化し、数値計算中に活用することで、従来よりも高速に燃焼現象を再現することができます。これらの手法を基盤に、実際の燃焼器で生じる様々な影響（圧力伝播、燃料噴霧、壁面熱損失など）を考慮する方法や、化学反応と流れのデータベースを機械学習技術（ニューラルネットワーク）により効率化する方法の確立などを目指す研究を行っています。
-								</p>
-
-								<li>
-									詳細解析チーム
-								</li>
-								<p>
-									&emsp;ラム・スクラムジェットエンジンの燃焼器では、流入する空気が空力加熱によって昇温されるため、燃料を自己着火させることができます。この自己着火現象を数値シミュレーションで捉えるために、詳細な化学反応機構を考慮した反応性流体解析ソルバの開発を行っています。当研究室で研究開発を行っている極超音速統合制御実験用ラムジェットエンジンの燃焼器を対象に、開発したソルバを用いた数値シミュレーションを  行っており、実験では見ることができない燃焼器内部の燃料と空気の流れや化学反応の様子を調査しています。最終的には燃料が自己着火するかどうかを、数値シミュレーションによって判定する手法の確立を目指しています。
-								</p>
-								<div class="image img_center">
-									<img src="./img/Combustion/combustion1.PNG" width="80%">
-									<br>
-									<div class="imgtitle">
-										極超音速統合制御実験用ラム燃焼器の数値解析結果<br>(温度等値面、コンタはH2O質量分率)
-									</div>
-								</div>
-							</ul>
-						</div>
-
-						<h1 id="research7" class="midashi">
-							境界層吸い込み（BLI）に関する基盤研究：BLI班
-						</h1>
-						<div class="mainpara research">
-							<ul class="inside_itemize">
-								<li>
-									研究背景
-								</li>
-								<p>
-									&emsp;将来の航空需要の高まりから，環境負荷低減，騒音対策，燃費改善が求められています．
-									これを達成するための有望な候補として，境界層吸い込み（BLI; Boundary Layer Ingestion）という技術が注目されています．
-									BLIは機体表面に発生する境界層（抗力の原因）をエンジンに吸い込ませることで全機抵抗を低下させ，機体運航における消費エネルギーの低減が期待されています．
-									<br>佐藤研究室BLI班では，BLIを採用した航空機の実現に向けた課題を抽出し，必要な基盤技術獲得を目的とした研究を進めています．
-								</p>
-
-								<li>
-									従来の航空機との違い
-								</li>
-								<p>
-									&emsp;飛行中，航空機の機体表面付近を流れる空気の速さは，その他の領域に対し遅くなります（境界層）．
-									エンジンがこの境界層を吸い込むと，その性能が低下するため，通常はエンジンは機体から離れた位置に設置されています．
-									一方で、機体側の視点に立つと，境界層をエンジンに吸い込ませることで全機抵抗が低減し，エンジンの消費動力を低減できると考えられます．
-									BLIはエンジンに境界層を吸い込ませることで，抵抗低減，燃費改善を目指します．
-								</p>
-								<br>
-								<div class="image img_center">
-									<img src="./img/BLI/BLIimg01.png" width="100%">
-									<br>
-									<div class="imgtitle">
-										Emission Free Aircraft（JAXA提供）（左）&emsp;従来式エンジン配置（右上）&emsp;BLI式エンジン配置（右下）
-									</div>
-								</div>
-								<br>
-								<li>
-									研究内容
-								</li>
-								<p>
-									&emsp;BLIの効果や，エンジンの配置位置検討のため，一般的な翼型（NACA0012）の異なる位置に電動のダクテッドファンエンジンを配置し，
-									エンジン消費電力と機体抗力の関係を把握するための実験データを取得しました．エンジンに流入する境界層分布や機体に加わる力等を計測しています．
-									また同様の形状に対し数値解析も進めています．
-									<br>
-									今後はこれまでの実験結果を踏まえ，境界層吸い込み条件に適応したファンの設計手法を構築し，設計したファンを風洞試験にフィードバックすることで，
-									BLI効果のさらなる向上を目指します．また，BLIの詳細解明，性能予測に向けた基礎情報を取得していきます．
-								</p>
-
-								<div class="image img_center">
-									<img src="./img/BLI/BLIimg02.png" width="100%">
-									<br>
-									<div class="imgtitle">
-										機体・エンジン統合風洞実験（右）&emsp; 風洞の数値解析結果（左）
-									</div>
-								</div>
-
-							</ul>
-						</div>
-
-						<h1 id="research8" class="midashi">
-							燃料電池の研究：～ JAXA班 ～
-						</h1>
-						<div class="mainpara research">
-							<ul class="inside_itemize">
-								<li>
-									PEFC
-								</li>
-								<p>
-									&emsp;佐藤研究室ではJAXAと共同で燃料電池の一種であるPEFC（高分子電解質型燃料電池）の研究をしています。<br>
-									&emsp;燃料電池とは、水素ガスと空気を反応させて電力を得る電池のことで、発電する際に二酸化炭素などの温室効果ガスが排出されないクリーンな電池です。<br>
-									&emsp;電動航空機に搭載する発電機用の燃料電池を対象に性能試験を行い、低温の燃料ガスを用いても性能が落ちない燃料電池の開発を目指しています。<br>
-								</p>
-								<div class="image img_center">
-									<img src="./img/FuelCell/EFA.png" width="80%">
-									<br>
-									<div class="imgtitle">
-										エミッションフリー航空機(JAXA提供)
-									</div>
-								</div>
-								</p>
-							</ul>
-						</div>
-
-
-
-
+						<ul class="sidebarNav">
+							<li>
+								<a class="text-decoration-none" href=#research1>主な研究対象： <br> 予冷ターボジェットエンジン</a>
+							</li>
+							<li>
+								<a class="text-decoration-none" href=#research2>インテーク班</a>
+							</li>
+							<li>
+								<a class="text-decoration-none" href=#research3>予冷却班</a>
+							</li>
+							<li>
+								<a class="text-decoration-none" href=#research4>二相流班</a>
+							</li>
+							<li>
+								<a class="text-decoration-none" href=#research5>BLI班</a>
+							</li>
+							<li>
+								<a class="text-decoration-none" href=#research6>ATR班</a>
+							</li>
+							<li>
+								<a class="text-decoration-none" href=#research7>TBCC班</a>
+							</li>
+						</ul>
 
 					</div>
 				</div>
-			</div>
-			<!--footer-->
-			<div class="footer container-fluid">
-				無断転載を禁止します
-				copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
+
+				<!--本文部分-->
+				<div class="col-md-8 maincontainer">
+					<h1 id="research1" class="midashi">
+						主な研究対象：予冷ターボジェットエンジン
+					</h1>
+					<div class="mainpara research">
+						<ul class="inside_itemize">
+							<li>
+								予冷ターボジェットエンジンとは
+							</li>
+							<p>
+								&emsp;佐藤研究室の主な研究対象である予冷ターボジェットエンジンとは，ジェットエンジンにおけるインテークと圧縮機の間に熱交換器(予冷器)を置き、圧縮機に流入する空気をあらかじめ冷やす極超音速機用ジェットエンジンです。<br>
+								&emsp;高マッハ数での飛行ではインテークにおいて流入する空気の速度が減速され、運動エネルギが熱エネルギに変換されるため、インテーク後の温度が非常に高くなります(大気温度と比べてマッハ5で1000度以上高くなる)。さらに圧縮機で空気が圧縮されることで、その温度はより高くなります。<br>
+								&emsp;このままでは圧縮機の翼が溶けてしまうので、予冷器を設置して空気を冷やすことにより高いマッハ数でも作動可能にしようということが、このエンジンの狙いです。
+							</p>
+							<div class="image img_center">
+								<img src="../home/coen.jpg" width="80%">
+								<div class="imgtitle">
+									予冷ターボジェット（Sエンジン） (JAXA提供)
+								</div>
+							</div>
+						</ul>
+					</div>
+
+					<h1 id="research2" class="midashi">
+						エアインテークの研究： インテーク班
+					</h1>
+					<div class="mainpara research">
+						<ul class="inside_itemize">
+							<li>
+								HIMICO計画
+							</li>
+							<p>
+								&emsp;JAXAや他大学と共同で極超音速旅客機の実用化に向けて<b>HIMICO(High Mach Integrated Control
+									Experiment,極超音速統合制御実験)計画</b>が進められています。HIMICO計画とは運用方法が確立されているS-520観測ロケットにHIMICO実験機を搭載してJAXA
+								内之浦宇空間観測所より打ち上げる<b>飛行実験</b>です。主な目的は以下の２つです。<br>
+							<ol>
+								<li>極超音速飛行環境下での<b>機体とエンジン</b>の統合制御技術の実証</li>
+								<li>短期間かつ低コストに再現できる<b>極超音速飛行実験</b>の確立</li>
+							</ol><br>
+							佐藤研究室では実験機に搭載される<b>ラムジェットエンジン</b>について研究しています。
+							</p>
+							<div class="image img_center">
+								<img src="./img/HIMICO/HIMICO.jpg" width="80%">
+								<br>
+								<div class="imgtitle">
+									極超音速統合制御実験機
+								</div>
+							</div>
+
+							<li>
+								空気取込口(エアインテーク)
+							</li>
+							<p>
+								&emsp;ラムジェットエンジンは圧縮機を持たず、エアインテークで流入する空気の運動量を衝撃波により、圧力に変換しています。エアインエークの性能はエンジンに流入する空気流に
+								影響し、エンジン全体の性能に関わるため、詳細な調査が必要です。 JAXA 相模原キャン
+								パスの超音速風洞や JAXA
+								調布キャンパスの極超音速風洞を用いて<b>風洞試験</b>を行い、エンジンの性能取得、衝撃波の撮影（シュリーレン）、バズ特性やオイルフローを用いた流れ場の調査を行っています。
+
+							</p>
+							<div class="image img_center">
+								<img src="./img/HIMICO/HIMICOTestUnit.png" width="80%">
+								<br>
+							</div>
+
+							<li>
+								CFDによる詳細解析
+							</li>
+							<p>
+								&emsp;JAXAが開発した高速流体ソルバ「<b>FaSTAR</b>」を用いて、実験では見ることのできないエアインテーク内部の流れ場や<b>バズ特性</b>に関して<b>数値解析</b>を行っています。
+							</p>
+							<div class="image img_center">
+								<img src="./img/Intake/fig1.jpg" width="80%">
+								<div class="imgtitle">
+									計算格子（静粛超音速機）
+								</div>
+								<br>
+							</div>
+							<div class="image img_center">
+								<img src="./img/Intake/fig6.png" width="80%">
+								<div class="imgtitle">
+									（左）HIMICOの数値解析結果&emsp;（右）静粛超音速機の数値解析結果&emsp;（ともにMach数分布）
+								</div>
+								<br>
+							</div>
+
+						</ul>
+					</div>
+
+
+					<h1 id="research3" class="midashi">
+						熱流体要素に関する研究：予冷却班 ～霜と〇〇～
+					</h1>
+					<div class="mainpara research">
+						<ul class="inside_itemize">
+							<p>
+								&emsp;予冷ターボジェットエンジンには燃料の<b>液体水素（LH2）</b>を用いて、流入空気を冷却する<B>空気予冷器</B>が搭載されます。
+								空気予冷器を搭載することで、熱負荷の低減や中間冷却効果によるサイクル性能の向上が見込まれます。
+								しかし、低マッハ領域で伝熱管表面に着霜し、<b>熱交換量の低下</b>や<b>流路閉塞</b>などの問題が生じます。
+								そこで、予冷却班では以下の2つのテーマに取り組んでいます。
+							</p>
+							<li>
+								エアロゾル(小さい粒子)を用いた着霜抑制
+							</li>
+							<p>
+								&emsp;空気予冷器の伝熱管表面で空気中の水分が凝結することによる着霜は、 圧力損失や流路閉塞などにつながり、大きな課題となっています。
+								そこで空気中にエアロゾルを流すことで空気中の水蒸気がミストになることを促進し、霜がつく量を抑制することを目指しています。ミスト化を促進することで後方に水蒸気が飛んでいき着霜量が減るというメカニズムです。
+							</p>
+							<div class="image img_center">
+								<img src="./img/Precooler/mistExp1.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									平板に着霜している様子
+								</div>
+							</div>
+							<div class="image img_center">
+								<img src="./img/Precooler/mistExp2.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									上の写真でミストを可視化した図
+								</div>
+							</div>
+
+
+							<li>
+								極低温伝熱面上での着霜現象の数理モデル化
+							</li>
+							<p>
+								&emsp;着霜現象を数理モデル化することで、実験では計測が困難な現象の解明や、着霜予測の実現を目指しています。
+								佐藤研究室では、特に極低温伝熱面上での着霜現象に着目した数理モデル化に取り組んでいます。
+								極低温伝熱面上では、霜の形成と水蒸気のミスト化（微小な液滴や氷粒子となる現象）が同時に発生し、非常に複雑な現象となります。
+								従来の水蒸気と霜だけを考慮したモデルではなく、ミストの生成や堆積の影響も考慮した新しい数理モデルの研究に取り組んでいます
+							<div class="image img_center">
+								<img src="./img/Precooler/MoedelingForFrostFormation.gif" width="80%">
+								<br>
+								<div class="imgtitle">
+									着霜現象のモデリング
+								</div>
+							</div>
+							</p>
+						</ul>
+					</div>
+
+
+					<h1 id="research4" class="midashi">
+						熱流体要素に関する研究：二相流班
+					</h1>
+					<div class="mainpara research">
+						<ul class="inside_itemize">
+							<!--二相流班全体の紹介-->
+							<p>
+								&emsp;予冷ターボジェットエンジンの燃料には<b>液体水素（LH2）</b>が使用されます。
+								液体水素は沸点がおよそ-253&deg;C（20K）の「極低温流体」であるため、<b>配管内で容易に沸騰し、気相と液相が共存する「気液二相状態」に遷移します</b>。
+								配管内が気液二相状態になると、流量の高精度な制御が困難となることが、エンジン運用上の課題となっています。
+								そこで二相流班では、<b>気液二相流現象の流動特性の把握と現象解明</b>のため、以下の3つのテーマに取り組んでいます。
+							</p>
+							<li>
+								ボイド率計測技術の開発
+							</li>
+							<p>
+								&emsp;「ボイド率」とは気液二相流中における、気相の体積割合のことです。この<b>ボイド率は気液二相流の流動特性を決定づける主要なパラメータ</b>であるため、ボイド率の計測技術は重要となります。そこで、二相流班では極低温でのボイド率の計測技術の開発に取り組んでいます。開発中の「静電容量型ボイド率計」は配管内の静電容量を計測し、それをボイド率に変換することでボイド率を計測しています。さらに、このボイド率計には<b>小型で堅牢</b>であるという特徴があり、<b>航空宇宙機に実機搭載してのリアルタイム計測</b>ができることを目標にしています。また、ボイド率計を用いた極低温下におけるキャビテーションの体積計測のほか、冷凍空調機における冷媒流のボイド率計測技術の開発などにも挑戦しています。現在は、金属のみでパーツを構成することで高圧下での強度の信頼性向上を図ったボイド率計や、局所での測定が可能な探針式のボイド率計の開発を行っています。
+							</p>
+
+							<div class="image img_flex">
+								<img src="./img/TwoPhaseFlow/voidSensorCAD.png" width="80%">
+								<img src="./img/TwoPhaseFlow/EFAnalysis.png" width="80%">
+								<div class="imgtitle">
+									設計中の静電容量型ボイド率計(左)&emsp;静電容量型ボイド率計の電場解析(右)
+								</div>
+							</div>
+							
+							<li>
+								機械学習を用いた二相流現象の解明に関する研究
+							</li>
+							<p>
+								&emsp;気液二相流は、液体水素を用いる航空宇宙エンジンに加え、各種発電プラントや流体機械など、多くの分野で重要な役割を持つ現象です。
+								それにも関わらず、時間的・空間的に複雑な変動を伴う現象であるため、<b>その理論化が困難</b>な現状にあります。
+								そこで二相流班では、従来のような理論的・演繹的アプローチではなく、<b>データドリブンな機械学習を用いた帰納的アプローチ</b>によって、気液二相流現象の解明を試みています。
+								現在は「深層学習を用いた気液二相流の流動様式判別」「深層学習を用いた流動様式線図作成」などのテーマに取り組んでいます。
+							</p>
+							<div class="image img_center">
+								<img src="./img/TwoPhaseFlow/twophase190530.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									上昇流における気泡挙動の実験観察例
+								</div>
+							</div>
+						</ul>
+					</div>
+
+					<h1 id="research5" class="midashi">
+						境界層吸い込み（BLI）に関する基盤研究：BLI班
+					</h1>
+					<div class="mainpara research">
+						<ul class="inside_itemize">
+							<li>
+								BLIについて
+							</li>
+							<p>
+								&emsp;航空機需要はコロナ禍による一時的な落ち込みがあったものの順調に回復の道を辿っており、以前の増加トレンドにしたがって再拡大が見込まれています。
+								一方で、世界的に環境保全意識が高まっており、航空機の燃費性能向上などを掲げ、様々な研究がおこなわれてきています。BLIはそのうちの1つです。<b>Boundary Layer
+									Ingestion</b>の頭文字をとってBLIと表記しますが、日本語では<b>境界層吸い込み</b>と呼ばれます。
+							</p>
+
+							<div class="image img_center">
+								<img src="./img/BLI/AirplaneUsingBLI.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									図1 BLIの適用事例(©2023 JAXA)
+								</div>
+							</div>
+
+							<p>
+								&emsp;飛行中の航空機の表面には、低速の気流層が形成されており、これを<b>境界層(Boundary
+									Layer)</b>と称します。通常の航空機は、機体とエンジンが分離していることによって境界層を吸い込まないようになっていますが、BLIを適用する航空機では、機体にエンジンを埋め込むことなどによって、この境界層をエンジンに吸い込ませるように設計します。BLIによって飛行時に必要なエネルギ―の削減が見込まれますが、エンジンにとっては質の悪い流れを吸い込むことになり、性能低下が考えられます。BLI班ではこのようなメリットとデメリットを理解した上で、総合的にBLIの利得を評価することを行っています。
+							</p>
+
+							<div class="image img_center">
+								<img src="./img/BLI/simpleGraphForNonBLI.png" width="80%">
+								<img src="./img/BLI/simpleGraphForBLI.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									図2 BLI概略図(上：non-BLI&emsp;下：BLI)
+								</div>
+							</div>
+
+							<li>
+								エンジンに関する研究
+							</li>
+							<p>
+								&emsp;BLIの課題の一つであるエンジンファン効率低下を抑制するために、JAXAが開発した流体解析プログラム「UPACS」を用いて回転するファン動翼周辺の流れについて数値解析を行っています。
+								これまでの研究で効率低下の要因である損失の発生箇所について調査し、現在はその損失を低減して効率低下を抑制するためにファンの形状を3次元的に変形させた解析を行っています。
+							</p>
+							<br>
+							<div class="img_flex">
+								<img src="./img/BLI/BLIFan1.png">
+								<img src="./img/BLI/BLIFan2.png">
+								<br>
+								<div class="imgtitle">
+									図3 解析対象のファン(左)&emsp;損失に関する解析結果（右）
+								</div>
+							</div>
+							<br>
+							<li>
+								全機に関する研究
+							</li>
+							<p>
+								&emsp;現在、宇宙航空研究開発機構(JAXA)と共同で図に示すようなBWB機体にBLIを適用した航空機についての性能評価を行っています。BWBはBlended Wing
+								Bodyの略で、翼と胴体が一体化した平たい形状の航空機の呼称です。図4には数値解析に用いた供試体を、図6には結果を示します。この数値解析結果からは、BLIによって必要なパワーが18.2%、電力にして15.2%削減できることが示されました。今後は機体の形状やエンジンの設計など、最適化を行うことによって今後さらなる利得性能の解析を行うことを想定しています。
+							</p>
+
+							<div class="image img_center">
+								<img src="./img/BLI/BWB-1.png" width="80%">
+								<img src="./img/BLI/BWB-2.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									図4 数値解析対象のBWB機体形状
+								</div>
+							</div>
+							<div class="image img_center">
+								<img src="./img/BLI/CFD-1.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									図5 数値解析の様子
+								</div>
+							</div>
+							<div class="image img_center">
+								<img src="./img/BLI/BLIGain.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									図6 BLIの利得評価
+								</div>
+							</div>
+
+						</ul>
+					</div>
+
+
+					<h1 id="research6" class="midashi">
+						ATR班
+					</h1>
+					<div class="mainpara research">
+						<ul class="inside_itemize">
+							<li>
+								再使用観測ロケットの開発
+							</li>
+							<p>
+								&emsp;JAXA宇宙科学研究所では大学や企業と連携して、垂直離着陸式の大気アシスト型再使用観測ロケット（新観測ロケット）の開発研究が進められています。新観測ロケットの推進システムには、ロケットエンジンにエアターボエンジンを複合させたATRIUM（AirTurbo Rocket for Innovative Unmanned Mission）エンジンが採用されています。大気を利用できる高度でエアターボエンジンを作動させることで、観測ミッションに必要な燃料を大幅に削減できるため、ロケットの軽量コンパクト化やペイロード能力の向上が期待されています。<br>
+								本研究室では、ATRIUMエンジン用のインテーク（空気取入口）の設計を行い、風洞実験と数値シミュレーションを利用して、ロケットの機体やインテークの流れ場の調査および性能評価に取り組んでいます。2023年度からはATRIUMエンジンのシステム解析にも着手しています。
+							</p>
+
+							<div class="image img_center">
+								<img src="./img/ATR/ATRCFD1.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									機体周辺の流れ場（上：シミュレーション結果&emsp;下：実験結果）
+								</div>
+							</div>
+
+							<div class="image img_center">
+								<img src="./img/ATR/ATRCFD2.png" width="80%">
+								<br>
+								<div class="imgtitle">
+									インテーク周辺の流れ場（上：シミュレーション結果&emsp;下：実験結果）
+								</div>
+							</div>
+
+						</ul>
+					</div>
+
+					<h1 id="research7" class="midashi">
+						TBCC(Turbine Based Combined Cycle)班
+					</h1>
+					<div class="mainpara research">
+						<ul class="inside_itemize">
+							<li>
+								宇宙輸送機用に搭載される複合エンジン切替システムのモデル化
+							</li>
+							<p>
+								&emsp;本班では、ターボジェットエンジン(~マッハ 2.5)とスクラムジェットエンジン(マッハ
+								2.5~5.0)を組み合わせた複合エンジン"TBCC" を研究しています。2022年度にできた新しい班で、現在はエンジンを切替える際の流体解析をメインに扱っています。<br>
+								TBCCは広範囲のマッハ数で利用可能で、多くのペイロードを積み込める、水平離着陸
+								で安全性が高い等の理由から高速二地点間輸送（P2P）や二段式宇宙輸送機（TSTO）に応用可能といわれています。今後はインテーク切替機構を模した装置を作成し、実験データの取得も目指す予定で
+								す。
+							</p>
+						</ul>
+					</div>
+
+
+					<!--ここまでが内容本体.-->
+				</div>
 			</div>
 		</div>
+		<!--footer-->
+		<div class="footer container-fluid">
+			無断転載を禁止します
+			copyright &#169; 2007 SATO Tetsuya,OGAWA Shunyo. All rights reserved.<!--ほんまは俺やで-->
+		</div>
+	</div>
 
 
-		<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-	</body>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="../bootstrap/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+
 </html>
